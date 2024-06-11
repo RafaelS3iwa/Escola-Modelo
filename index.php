@@ -6,8 +6,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 <main>
     <div class="index">
         <div class="texto">
-            <h1 class="titulo">MERGULHE NA BELEZA DA LÍNGUA JAPONESA</h1>
-            <p>Seja bem-vindo à Escola Modelo de Lingua Japonesa de Marilia onde cada aula<br>é uma aventura cultural única!</p>
+            <h1 class="titulo">MERGULHE NA BELEZA</h1>
+            <p class="paragrafo_index">Seja bem-vindo à Escola Modelo de Lingua Japonesa</p>
 
             <div class="botao">
                 <button><a href="/paginas/parte.php">Faça Parte!</a></button>
@@ -20,7 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <img src="/assets/img/icons/Whatsapp.png" alt="">
             <div class="conteudo">
                 <h1 class="titulo_sobre">UM BREVE RESUMO<br>SOBRE A NOSSA ESCOLA</h1>
-                <p class="paragrafo">A Escola de Língua Japonesa de Shinjuku (SNG) tem uma história de mais de 48 anos em educação de língua japonesa.<br>É uma escola de língua japonesa da corporação escolar com várias aprovações da escola do Governador Metropolitano de Tóquio<br>e um currículo de preparação designado pelo Ministro da Educação, Cultura, Esportes, Ciência e Tecnologia. <br>Nossa escola está localizada em Takadanobaba, uma cidade estudantil em Tóquio. Vários metros passam pela Estação Takadanobaba, facilitando o acesso à escola.</p>
+                <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laudantium expedita numquam, eum vero at labore accusamus quod alias sunt nesciunt voluptatibus molestias non ipsa quaerat tenetur, dolor officia. Accusantium veritatis et voluptatem excepturi? Expedita dolorem libero possimus autem eaque quis. Quas in unde labore quis accusantium dicta eos natus, vero, distinctio asperiores at rem molestias facilis delectus corporis quod cumque soluta quasi? Exercitationem et totam inventore impedit natus, rem repellat quam reiciendis culpa distinctio veritatis dolorem quod sint tempora minima sed recusandae at corrupti! </p>
 
                 <div id="botoes">
                     <div class="botoes_sobre">

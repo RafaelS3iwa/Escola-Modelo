@@ -29,22 +29,26 @@
                         LÍNGUA JAPONESA
                     </p>
                 </div>
-                <ul class="menu-desktop">
-                    <li><a href="/paginas/metodos.php" class="active">MÉTODOS</a></li>
-                    <li>/</li>
-                    <li><a href="/paginas/cursos.php">CURSOS</a></li>
-                    <li>/</li>
-                    <li><a href="/paginas/parte.php">FAÇA PARTE</a></li>
-                    <li>/</li>
-                    <li><a href="/paginas/sobre.php">SOBRE</a></li>
-                </ul>
+                <div class="menu_desktop">
+                    <ul>
+                        <li><a href="/paginas/metodos.php" class="active">MÉTODOS</a></li>
+                        <li>/</li>
+                        <li><a href="/paginas/cursos.php">CURSOS</a></li>
+                        <li>/</li>
+                        <li><a href="/paginas/parte.php">FAÇA PARTE</a></li>
+                        <li>/</li>
+                        <li><a href="/paginas/sobre.php">SOBRE</a></li>
+                    </ul>
+                </div>
 
-                <div class="menu_mobile">
-                    <div class="btn-fechar">
-                        <i class="bi bi-x-lg"></i>
-                    </div>
+                <div onclick="animar()" id="btn_fechar">
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                </div>
 
-                    <ul class="nav">
+                <div class="menu_mobile" id="menu_mobile">
+                    <ul>
                         <li><a href="/paginas/metodos.php" class="active">MÉTODOS</a></li>
                         <li><a href="/paginas/cursos.php">CURSOS</a></li>
                         <li><a href="/paginas/parte.php">FAÇA PARTE</a></li>

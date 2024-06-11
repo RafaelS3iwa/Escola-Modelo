@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="informacoes">
-                    <img src="/assets/img/icons/Telefone Icon.png" alt="1499742-6005" id="telefone">
+                    <img src="/assets/img/icons/Telefone Icon.png" alt="1499742-6005">
                     <p id="telefone">(14)99742-6005</p>
                 </div>
             </div>

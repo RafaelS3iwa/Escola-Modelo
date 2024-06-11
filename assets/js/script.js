@@ -91,3 +91,16 @@ function changeBg(bg, title) {
         }
     })
 }
+
+//Animação Botão Cabeçalho 
+function animar(){
+    const btn = document.getElementById('btn_fechar')
+    //toggle verifica se existe, se existe remove, se não, adiciona
+    btn.classList.toggle('ativar')
+
+    const div = document.getElementById('menu_mobile')
+    div.classList.toggle('abrir')
+
+    }
+    
+
