@@ -888,6 +888,58 @@ main{
     object-position: center;
 }
 
+/* sobre nós  */
+.sobre_nos, .historia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    padding: 20px;
+    gap: 100px;
+}
+
+.sobre_nos img{
+    margin-right: 100px;
+    width: 599px !important;
+    height: 354.88px;
+}
+
+.sobre_nos .conteudo_sobre, .historia .conteudo_sobre{
+    text-align: left;
+    padding-left: 100px;
+    padding-right: calc(599px - 100px);
+}   
+
+.sobre_nos .title1{
+    font-size: 2.5rem;
+}
+
+.sobre_nos p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 1.125rem;
+    color: var(--texto);
+
+}
+
+.historia{
+    margin-top: 100px;
+}
+
+.imagens{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imagens img{
+    width: 319px;
+    height: 354.88px;
+}
+
+.historia .title1{
+    font-size: 3rem;
+}
 
 /* footer */
 footer{
