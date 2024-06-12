@@ -36,7 +36,7 @@ header {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -58,11 +58,14 @@ header {
     font-size: 1rem;
     color: var(--titulo);
     margin-right: 50px;
+    white-space: nowrap;
 }
 
 .logo img {
-    width: 134.36px;
-    height: 117.1px;
+    width: 100%;
+    height: auto;
+    max-width: 134.36px;
+    max-height: 117.1px; 
 }
 
 .navbar .menu_desktop {
@@ -91,6 +94,7 @@ header .menu_desktop ul li a {
     font-weight: bold;
     font-size: 20px;
     color: var(--titulo);
+    white-space: nowrap;
 }
 
 .menu_mobile{
@@ -129,7 +133,7 @@ header .menu_desktop ul li a {
 
 /* index */
 main{
-    padding-top: 50px;
+    padding-top: 2%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -303,6 +307,7 @@ main{
 #kappa{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 75px;
 }
@@ -344,11 +349,13 @@ main{
 
 /* Card Kappa */
 #card_kappa{
-    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    max-width: 889px;
+    max-height: 340px;
     padding: 10px;
     border: 5px solid var(--primaria);
-    border-radius: 25px;
-    margin: 10px auto;
+    border-radius: 25px;    
 }
 
 #textos_kappa #title_kappa, #textos_kappa p{
@@ -382,8 +389,11 @@ main{
     align-items: center;
     margin-top: 200px;
     margin-bottom: 100px;
-    padding: 20px;
-    gap: 100px;
+    gap: 50px;
+}
+
+.conteudo_metodo{
+    margin-left: 50px;
 }
 
 #titulo_metodo{
@@ -407,8 +417,11 @@ main{
 }
 
 #metodo_img{
-    width: 937.8px;
-    height: 541.12px;
+    margin-top: 125px;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    max-height: 641.12px;
 }
 
 #cards_metodos{
@@ -467,38 +480,48 @@ main{
     justify-content: center;
     align-items: center;
     margin-bottom: 100px; 
-    gap: 25px;
+    margin-left: 200px;
 }
 
 #lexical, #comunicativo{
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s, transform 1.5s;
 }
 
 #lexical.show, #comunicativo.show{
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes show{
+@keyframes show {
     0% {
         opacity: 0;
+        transform: translateY(20px);
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes hide{
-    0%{
+@keyframes hide {
+    0% {
         opacity: 1;
+        transform: translateY(0);
     }
-    100%{
+    100% {
         opacity: 0;
+        transform: translateY(20px);
     }
 }
 
 #lexical_texto{
-    margin-right: 150px;
+    margin-bottom: 75px;
+    margin-right: 100px;
     text-align: left;
 }
 
@@ -508,6 +531,7 @@ main{
 
 #lexical_texto p{
     margin-top: 10px;
+    margin-bottom: 50px;
     font-family: "Nunito", sans-serif;
     font-size: 20px;
     color: var(--texto);
@@ -530,7 +554,8 @@ main{
 .card{
     align-items: center;
     text-align: center;
-    width: 300px;
+    width: 300px; 
+    height: 369px;
     padding: 40px 20px 20px;
     border: 2px solid var(--primaria) !important;
     border-radius: 25px !important;
@@ -542,6 +567,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: var(--primaria);
     border-radius: 50%;
     width: 100px;
@@ -558,10 +584,17 @@ main{
     font-weight: bolder;
     color: var(--primaria);
     -webkit-text-stroke: 2px var(--branco);
+    margin-bottom: 45px;
 }
 
 .card_textos{
-    padding: 40px 27px 27px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .titulo_card{
@@ -569,6 +602,7 @@ main{
     font-weight: bold;
     font-size: 32px;
     color: var(--primaria);
+    margin-bottom: -10px;
 }
 
 .card p{
@@ -576,6 +610,7 @@ main{
     font-size: 1rem;
     font-weight: normal;
     color: var(--texto);
+    padding-bottom: 25px;
 }
 
 /* método comunicativo */
@@ -589,14 +624,17 @@ main{
 
 .cima{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     gap: 50px;
+    margin-bottom: 60px;
 }
 
 #comunicativo_textos{
     width: 910px;
     height: 444px;
-    margin-left: 155px;
+    margin-left: 150px;
 }
 
 #comunicativo_textos .title1, #comunicativo_textos .title2, #comunicativo_textos .title3{
@@ -632,21 +670,21 @@ main{
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    gap: 100px;
+    gap: 50px;
     margin-left: 150px;
 }
 
 #comunicativo .card{
-    width: 350px;
+    width: 314px;
+    height: 433px;
 }
 
-#comunicativo .card_textos{
-    margin-top: -20px;
-    padding: 50px 30px 30px 50px;
+#comunicativo .card_textos .titulo_card{
+    font-size: 1.875rem;
 }
 
-#comunicativo .card_textos p{
-    margin-top: 25px;
+#comunicativo .card p{
+    font-size: 1rem;
 }
 
 /* faça parte */
@@ -780,11 +818,13 @@ main{
 
 /* cursos */
 .cursos{
+    margin-top: 50px;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 100vh;
     min-height: 100vh;
     padding: 0 100px;
     background: url(/assets/img/carousel/jovens_adultos.png) no-repeat;
@@ -862,11 +902,17 @@ main{
 
 .cursos .carousel-box{
     position: relative;
+    margin-left: 200px;
     min-width: 950px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 0) 0%, 
+        rgba(0, 0, 0, 0.2) 50%, 
+        rgba(0, 0, 0, 0) 100%
+    );
 }
 
 .carousel-box .carousel{
@@ -895,26 +941,25 @@ main{
     align-items: center;
     margin-top: 200px;
     padding: 20px;
-    gap: 100px;
 }
 
 .sobre_nos img{
-    margin-right: 100px;
-    width: 599px !important;
+    width: 700px;
     height: 354.88px;
+    margin-right: 125px;
 }
 
 .sobre_nos .conteudo_sobre, .historia .conteudo_sobre{
     text-align: left;
     padding-left: 100px;
-    padding-right: calc(599px - 100px);
+    padding-right: 100px;
 }   
 
 .sobre_nos .title1{
     font-size: 2.5rem;
 }
 
-.sobre_nos p{
+.sobre_nos p, .historia p{
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
     font-size: 1.125rem;
@@ -923,28 +968,88 @@ main{
 }
 
 .historia{
-    margin-top: 100px;
+    margin-top: 50px;
+    gap: 75px;
 }
 
 .imagens{
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;       
 }
 
 .imagens img{
     width: 319px;
     height: 354.88px;
-}
+    margin-left: 100px;
+}   
 
 .historia .title1{
     font-size: 3rem;
 }
 
+.faca_parte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 420px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(/assets/img/kappa/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.faca_parte::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+    z-index: 1;
+}
+
+.texto_parte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative; 
+    margin-bottom: 100px;
+    z-index: 2;
+}
+
+.faca_parte .title1, .faca_parte .title2{
+    color: var(--titulo);
+    margin-bottom: 15px;
+} 
+
+.faca_parte .title1{
+    font-size: 6rem;
+}
+
+.faca_parte .title2{
+    font-size: 2.5rem;
+}
+
+.faca_parte .title3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--primaria);
+    margin: 0; 
+    white-space: nowrap;
+    text-decoration: none;
+}
+
 /* footer */
 footer{
     background-color: var(--primaria);
-    margin-top: 25px;
     width: 100%;
     height: 350px;
 }
@@ -1018,11 +1123,16 @@ footer .barra{
 }
 
 /* Mobile ajustes */
-@media (max-width: 800px) {
+
+@media (max-width: 450px){
     .conteudo{
         margin-right: 0;
     }
 
+    html, body{
+        overflow-x: hidden;
+    }
+        
     /* Header mobile */
     header {
         align-items: center;
@@ -1246,6 +1356,56 @@ footer .barra{
         height: 117px;
     }
 
+    /* metodos mobile */
+    #metodos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 125px;
+    }
+
+    .conteudo_metodo{
+        margin-left: 0;
+    }
+
+    #titulo_metodo{
+        text-align: center;
+    }
+    
+    #titulo_metodo .title1{
+        font-size: 2rem;
+    }
+
+    #titulo_metodo .title2{
+        font-size: 3rem;
+    }
+
+    #metodos p{
+        font-size: 1rem;
+        color: var(--texto);
+    }
+    
+    #metodo_img{
+        display: none;
+    }
+
+    .card_metodo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 146.7px;
+        height: 49px;
+    }
+    
+    .card_metodo h1{
+        font-size: 0.875rem;
+    }
+
+    .botao_metodo button{
+    }
+
     /* Footer mobile*/
     footer{
         height: 100vh;
@@ -1301,4 +1461,10 @@ footer .barra{
     .informacoes p{
         font-size: 1rem;
     }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1024px){
+
+    
 }

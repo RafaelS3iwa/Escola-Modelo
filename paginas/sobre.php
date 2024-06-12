@@ -13,7 +13,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                 Em Agosto de 1.945, com o término da Guerra, foram retomadas as atividades. Com isso, nasceu a Associação Nipo- Brasileira de Marília, que foi o berço do atual Nikkey Marília que funciona desde aquela época no endereço da Rua Paes Leme, 543.
             </p>
         </div>
-        <img src="/assets/img/complementos/image.png" alt="">
+        <img src="/assets/img/complementos/retangulo.png" alt="">
     </div>
 
 
@@ -38,9 +38,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
     </div>
 
     <div class="faca_parte">
-        <h1 class="title1">VENHA</h1>
-        <h1 class="title2">CONTINUE COM ESSA HISTÓRIA FAZENDO</h1>
-        <h1 class="title3">PARTE DELA!</h1>
+        <div class="texto_parte">
+            <h1 class="title1">VENHA!</h1>
+            <h1 class="title2">CONTINUE COM ESSA HISTÓRIA FAZENDO</h1>
+            <a href="/paginas/parte.php" class="title3">PARTE DELA!</a>
+        </div>
     </div>
 </main>
 

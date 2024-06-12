@@ -6,7 +6,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 <main>
     <div class="container">
         <div id="metodos">
-            <div class="conteudo">
+            <div class="conteudo_metodo">
                 <div id="titulo_metodo">
                     <h1 class="title1">OS NOSSOS</h1>
                     <h1 class="title2">MÉTODO<br>DE ENSINO</h1>
@@ -17,15 +17,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                 <div id="cards_metodos">
                     <div class="card_metodo">
                         <h1>MÉTODO<br>LEXICAL</h1>
-                        <div class="botao_metodo">
-                            <button type="button" id="btnLexical">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
+                        <div class="botao_metodo" id="btnLexical">
+                            <button type="button">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
                         </div>
                     </div>
 
                     <div class="card_metodo">
                         <h1>ABORDAGEM<br>COMUNICATIVA</h1>
-                        <div class="botao_metodo">
-                            <button type="button" id="btnComunicativo">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
+                        <div class="botao_metodo" id="btnComunicativo">
+                            <button type="button">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
                         </div>
                     </div>
                 </div>

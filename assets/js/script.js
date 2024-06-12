@@ -15,20 +15,20 @@ document.querySelector("#btnLexical").addEventListener("click", () => {
             setTimeout(() => {
                 lexical.classList.add("show");
                 lexical.classList.remove("hide");
-            }, 500); 
-        }, 1000); 
+            }, 50); 
+        }, 1500); 
     } else if (!lexical.classList.contains("show")) {
         lexical.style.animationName = "show";
         setTimeout(() => {
             lexical.classList.add("show");
             lexical.classList.remove("hide");
-        }, 500); 
+        }, 50); 
     } else if (lexical.classList.contains("show")) {
         lexical.style.animationName = "hide";
         setTimeout(() => {
             lexical.classList.remove("show");
             lexical.classList.add("hide");
-        }, 1000); 
+        }, 1500); 
     }
 });
 
@@ -48,20 +48,20 @@ document.querySelector("#btnComunicativo").addEventListener("click", () => {
             setTimeout(() => {
                 comunicativo.classList.add("show");
                 comunicativo.classList.remove("hide");
-            }, 500); 
-        }, 1000); 
+            }, 50); 
+        }, 1500); 
     } else if (!comunicativo.classList.contains("show")) {
         comunicativo.style.animationName = "show";
         setTimeout(() => {
             comunicativo.classList.add("show");
             comunicativo.classList.remove("hide");
-        }, 500); 
+        }, 50); 
     } else if (comunicativo.classList.contains("show")) {
         comunicativo.style.animationName = "hide";
         setTimeout(() => {
             comunicativo.classList.remove("show");
             comunicativo.classList.add("hide");
-        }, 1000); 
+        }, 1500); 
     }
 });
 
