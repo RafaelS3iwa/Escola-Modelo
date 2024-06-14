@@ -22,7 +22,7 @@ document.querySelector("#btnLexical").addEventListener("click", () => {
         setTimeout(() => {
             lexical.classList.add("show");
             lexical.classList.remove("hide");
-        }, 50); 
+        }, 800); 
     } else if (lexical.classList.contains("show")) {
         lexical.style.animationName = "hide";
         setTimeout(() => {
@@ -55,7 +55,7 @@ document.querySelector("#btnComunicativo").addEventListener("click", () => {
         setTimeout(() => {
             comunicativo.classList.add("show");
             comunicativo.classList.remove("hide");
-        }, 50); 
+        }, 800); 
     } else if (comunicativo.classList.contains("show")) {
         comunicativo.style.animationName = "hide";
         setTimeout(() => {
@@ -64,7 +64,6 @@ document.querySelector("#btnComunicativo").addEventListener("click", () => {
         }, 1500); 
     }
 });
-
 
 //Muda curso
 function changeBg(bg, title) {

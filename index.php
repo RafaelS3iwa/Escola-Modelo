@@ -28,7 +28,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                             <button><a href="/paginas/sobre.php"><img src="/assets/img/icons/Relógio.png" alt="Botão Timeline"></a></button>
                         </div>
                         <div class="texto_sobre">
-                            <h1>Veja a Timeline da Escola Modelo</h1>
+                            <h1>Mais detalhes sobre nós!</h1>
                             <p>Texto Temporário</p>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="conteudo_metodo">
                 <div id="titulo_metodo">
                     <h1 class="title1">OS NOSSOS</h1>
-                    <h1 class="title2">MÉTODO<br>DE ENSINO</h1>
+                    <h1 class="title2">MÉTODOS<br>DE ENSINO</h1>
 
                     <p>A Escola Modelo se proporciona a oferecer da melhor forma possível os seus ensinamentos, sendo nossa especialidade os métodos:</p>
                 </div>
@@ -17,15 +17,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                 <div id="cards_metodos">
                     <div class="card_metodo">
                         <h1>MÉTODO<br>LEXICAL</h1>
-                        <div class="botao_metodo" id="btnLexical">
-                            <button type="button">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
+                        <div class="botao_metodo">
+                            <button type="button" id="btnLexical">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
                         </div>
                     </div>
 
                     <div class="card_metodo">
                         <h1>ABORDAGEM<br>COMUNICATIVA</h1>
-                        <div class="botao_metodo" id="btnComunicativo">
-                            <button type="button">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
+                        <div class="botao_metodo">
+                            <button type="button" id="btnComunicativo">Veja Mais!<img src="/assets/img/icons/Seta.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div id="lexical_texto">
                 <h1 class="title1">O MÉTODO LEXICAL</h1>
                 <p>Em vez de focar apenas em regras gramaticais isoladas, nosso método lexical foca nas palavras e expressões mais comuns e úteis, ajudando você a se comunicar de forma natural desde o início.<br><br>Aprender com chunks de linguagem - blocos de palavras que frequentemente aparecem juntos - torna o aprendizado dinâmico e rápido, permitindo que você pense e fale como um nativo.<br><br>Descubra como o método lexical pode transformar seu aprendizado do japonês em uma experiência envolvente e eficaz. Você não vai apenas aprender um novo idioma; <strong>você vai viver o japonês!</strong></p>
-                <img src="/assets/img/kappa/kappa de ladin - Esquerda.png" alt="">
+                <img class="kappa_desktop" src="/assets/img/kappa/kappa de ladin - Esquerda.png" alt="">
             </div>
 
             <div class="cards">
@@ -83,6 +83,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                     </div>
                 </div>
             </div>
+
+            <img class="kappa_mobile" src="/assets/img/kappa/kappa de ladin - Esquerda.png" alt="">
         </div>
     </div>
 
@@ -91,17 +93,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="conteudo">
                 <div class="cima">
                     <div id="comunicativo_textos">
-                        <h1 class="title1">ABORDAGEM COMUNICATIVA</h1>
+                        <h1 class="title1">ABORDAGEM</h1>
                         <p>A abordagem comunicativa adaptada à realidade sociocultural dos alunos foca na comunicação real e efetiva, levando em consideração o contexto cultural e social de cada estudante. Aqui estão alguns princípios-chave dessa metodologia:</p>
 
-                        <h1 class="title2">.COMUNICAÇÃO AUTÊNTICA</h1>
+                        <h1 class="title2">.COMUNICAÇÃO</h1>
                         <p>Aulas centradas em habilidades comunicativas práticas, como conversação, compreensão auditiva, leitura e escrita, essenciais para interações cotidianas.</p>
 
-                        <h1 class="title3">.CONTEXTUALIZAÇÃO CULTURAL</h1>
+                        <h1 class="title3">.CONTEXTUALIZAÇÃO</h1>
                         <p>Lições adaptadas à cultura e ao contexto sociocultural dos alunos, abordando temas, vocabulário e situações relevantes e significativas para os estudantes.</p>
                     </div>
 
-                    <img src="/assets/img/kappa/kappa de ladin.png" alt="">
+                    <img class="kappa_desktop" src="/assets/img/kappa/kappa de ladin - Esquerda.png" alt="">
                 </div>
 
                 <div class="cards">
@@ -118,7 +120,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                     <div class="card">
                         <div class="numero">
                             <h1>2</h1>
-                        </div>  
+                        </div>
                         <div class="card_textos">
                             <h1 class="titulo_card">INTERAÇÃO E COLABORAÇÃO</h1>
                             <p>Ênfase na interação entre alunos e entre aluno-professor, utilizando atividades de grupo, discussões e simulações de situações reais para promover a colaboração e o aprendizado ativo</p>
@@ -145,6 +147,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                         </div>
                     </div>
                 </div>
+                
+            <img class="kappa_mobile" src="/assets/img/kappa/kappa de ladin - Esquerda.png" alt="">
             </div>
         </div>
     </div>

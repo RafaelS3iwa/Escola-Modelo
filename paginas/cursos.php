@@ -183,34 +183,40 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                 <div class="carousel">
                     <div 
                         class="carousel-item"
-                        onClick="changeBg('jovens_adultos.png', 'jovens_adultos');"
+                        onClick="changeBg('adultoBg.jpg', 'jovens_adultos');"
                     >
-                        <img src="/assets/img/carousel/jovens_adultos.png" alt="">
+                        <h1>LÍNGUA JAPONESA PARA<br>JOVENS E ADULTOS</h1>
+                        <img src="/assets/img/carousel/adultoCard.jpg" alt="">
                     </div>
                     <div 
                         class="carousel-item"
-                        onClick="changeBg('criancas.png', 'criancas');">
-                        <img src="/assets/img/carousel/criancas.png" alt="">
+                        onClick="changeBg('crianca.jpeg', 'criancas');">
+                        <h1>LÍNGUA JAPONESA<br>PARA CRIANÇAS</h1>
+                        <img src="/assets/img/carousel/criancaCard.png" alt="">
                     </div>
                     <div 
                         class="carousel-item"
-                        onClick="changeBg('manga.png', 'manga');">
+                        onClick="changeBg('mangaBg.jpg', 'manga');">
+                        <h1>CURSO DE MANGÁ</h1>
                         <img src="/assets/img/carousel/manga.png" alt="">
                     </div>
                     <div 
                         class="carousel-item"
-                        onClick="changeBg('jlpt.png', 'jlpt');">
+                        onClick="changeBg('jlptBg.jpg', 'jlpt');">
+                        <h1>CURSO PREPARATÓRIO JLPT</h1>
                         <img src="/assets/img/carousel/jlpt.png" alt="">
                     </div>
                     <div 
                         class="carousel-item"
-                        onClick="changeBg('soroban.png', 'soroban');">
+                        onClick="changeBg('sorobanBg.png', 'soroban');">
+                        <h1>CURSO DE SOROBAN</h1>
                         <img src="/assets/img/carousel/soroban.png" alt="">
                     </div>
                     <div 
                         class="carousel-item"
-                        onClick="changeBg('culinaria.png', 'culinaria');">
-                        <img src="/assets/img/carousel/culinaria.png" alt="">
+                        onClick="changeBg('culinariaBg.jpg', 'culinaria');">
+                        <h1>CURSO DE CULINÁRIA<br>JAPONESA</h1>
+                        <img src="/assets/img/carousel/culinariaCard.png" alt="">
                     </div>
                 </div>
             </div>

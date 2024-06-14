@@ -1,26 +1,26 @@
 <?php
-$tituloPagina = "Desgraça";
+$tituloPagina = "Sobre nós";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 ?>
 
 <main>
     <div class="sobre_nos">
         <div class="conteudo_sobre">
-            <h1 class="title1">A MISSÃO DA ESCOLA MODELO</h1>
+            <h1 class="title1">A MISSÃO DA </h1>
             <p>
                 A cidade de Marília tem em suas raízes uma ligação bastante forte com a colônia japonesa visto que uma grande parte de sua população pioneira era formada de imigrantes japoneses.<br>
                 Em Agosto de 1.930 foi fundada a primeira Associação da colônia japonesa em Marília idealizada pelo Sr. ZENKITI SHIROMA, entidade esta que funcionou durante 10 anos, quando teve suas atividades paralisadas em virtude da proibição das reuniões em grupo devido a explosão da 2ª Guerra Mundial.<br>
                 Em Agosto de 1.945, com o término da Guerra, foram retomadas as atividades. Com isso, nasceu a Associação Nipo- Brasileira de Marília, que foi o berço do atual Nikkey Marília que funciona desde aquela época no endereço da Rua Paes Leme, 543.
             </p>
         </div>
-        <img src="/assets/img/complementos/retangulo.png" alt="">
+        <img src="/assets/img/complementos/kasato-maru.png" alt="">
     </div>
 
 
     <div class="historia">
         <div class="imagens">
-            <img src="/assets/img/complementos/image.png" alt="">
-            <img src="/assets/img/complementos/image.png" alt="">
+            <img class="imagem" src="/assets/img/complementos/sobre-2.jpg" alt="">
+            <img src="/assets/img/complementos/sobre-1.jpg" alt="">
         </div>
 
         <div class="conteudo_sobre">
@@ -40,7 +40,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
     <div class="faca_parte">
         <div class="texto_parte">
             <h1 class="title1">VENHA!</h1>
-            <h1 class="title2">CONTINUE COM ESSA HISTÓRIA FAZENDO</h1>
+            <h1 class="title2">CONTINUE COM</h1>
             <a href="/paginas/parte.php" class="title3">PARTE DELA!</a>
         </div>
     </div>

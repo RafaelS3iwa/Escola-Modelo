@@ -97,6 +97,10 @@ header .menu_desktop ul li a {
     white-space: nowrap;
 }
 
+header .menu_desktop ul li .contato{
+    color: #073682;
+}
+
 .menu_mobile{
     background-color: #0000008c;
     backdrop-filter: blur(10px);
@@ -533,13 +537,23 @@ main{
     margin-top: 10px;
     margin-bottom: 50px;
     font-family: "Nunito", sans-serif;
+    font-weight: normal;
     font-size: 20px;
     color: var(--texto);
 }   
 
-#lexical_texto img{
+#lexical_texto p strong{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#lexical_texto .kappa_desktop{
     width: 330px;
     height: 413px;
+}
+
+.kappa_mobile{
+    display: none;
 }
 
 .cards{
@@ -647,6 +661,18 @@ main{
     font-size: 60px;
 }
 
+#comunicativo_textos .title1::after{
+    content: " COMUNICATIVA";
+}
+
+#comunicativo_textos .title2::after{
+    content: "  AUTÊNTICA";
+}
+
+#comunicativo_textos .title3::after{
+    content: "  CULTURAL";
+}
+
 #comunicativo_textos .title2, #comunicativo_textos .title3{
     font-size: 32px;
     margin-top: 50px;
@@ -659,7 +685,7 @@ main{
     color: var(--texto);
 }
 
-#comunicativo img{
+#comunicativo .kappa_desktop{
     display: block;
     width: 331px;
     height: 413px;
@@ -698,8 +724,9 @@ main{
 
 #parte img{
     display: block;
-    width: 387px;
-    height: 354.88px;
+    width: 400px;
+    height: 360px;
+    border-radius: 25px;
 }
 
 #parte .title1{
@@ -715,14 +742,17 @@ main{
 
 #inscrever{
     display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
     align-items: center;
-    margin-top: 35px;
+    justify-content: center;
+    flex-direction: row;
     gap: 100px;
 }
 
 .conteudo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 433px;
     height: 340px;
 }
@@ -735,7 +765,7 @@ main{
 #inscrever p{
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: var(--texto);
 }
 
@@ -760,6 +790,7 @@ main{
     display: flex; 
     justify-content: center; 
     align-items: center; 
+    text-align: center;
 }
 
 #botoes_inscrever a{
@@ -774,37 +805,52 @@ main{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 100px;
 }
 
 .topico{
     display: flex;
     align-items: center;
-    margin-top: -75px;
+    text-align: left;
+    margin-top: -55px;
+    margin-bottom: 50px;
 }
 
-#topicos .titulo_card{
+#topicos .titulo_topico{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
     font-size: 25px;
+    color: var(--primaria);
+    margin-bottom: -10px;
 }
 
+#topicos .topico_texto{
+    display: flex;
+    text-align: left;
+    align-items: start;
+    justify-content: left;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 35px;
+}
 
 #topicos p{
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
     font-size: 1rem;
     color: var(--texto);
-    margin-top: -25px;
-    padding-bottom: 35px;
 }
 
 #topicos .numero_topico{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: var(--primaria);
     border-radius: 50%;
-    width: 76px;
-    height: 76px;
+    width: 80px;
+    height: 80px;
 }
 
 .numero_topico h1{
@@ -827,7 +873,7 @@ main{
     height: 100vh;
     min-height: 100vh;
     padding: 0 100px;
-    background: url(/assets/img/carousel/jovens_adultos.png) no-repeat;
+    background: url(/assets/img/carousel/adultoBg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -878,7 +924,7 @@ main{
     margin-top: 30px;
     background-color: var(--branco);
     border-radius: 25px;
-    border: 2px solid #8D77EC;
+    border: 2px solid  #CB8DC8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -889,9 +935,10 @@ main{
 }
 
 .content .title1{
+    position: relative;
     font-weight: bold;
     font-size: 30px;
-    color: #8D77EC;
+    color: #CB8DC8;
 }
 
 .content p{
@@ -924,6 +971,20 @@ main{
 .carousel .carousel-item{
     width: 250px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 100px;
+}
+
+.carousel-item h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #d9ddde;
+    z-index: 99;
+    position: absolute;
+    margin-left: 15px;
 }
 
 .carousel .carousel-item img{
@@ -944,9 +1005,13 @@ main{
 }
 
 .sobre_nos img{
-    width: 700px;
-    height: 354.88px;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    max-width: 650px;
     margin-right: 125px;
+    object-fit:fill;
+    border-radius: 45px;
 }
 
 .sobre_nos .conteudo_sobre, .historia .conteudo_sobre{
@@ -959,12 +1024,20 @@ main{
     font-size: 2.5rem;
 }
 
+.sobre_nos .title1::after{
+    content: " ESCOLA MODELO";
+}
+
 .sobre_nos p, .historia p{
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
     font-size: 1.125rem;
     color: var(--texto);
 
+}
+
+.sobre_nos p{
+    padding-right: 150px;
 }
 
 .historia{
@@ -981,6 +1054,8 @@ main{
     width: 319px;
     height: 354.88px;
     margin-left: 100px;
+    object-fit: cover;
+    border-radius: 25px;
 }   
 
 .historia .title1{
@@ -1037,6 +1112,10 @@ main{
     font-size: 2.5rem;
 }
 
+.faca_parte .title2::after{
+    content: " ESSA HISTÓRIA FAZENDO";
+}
+
 .faca_parte .title3{
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
@@ -1070,14 +1149,15 @@ footer .barra{
 
 #footer .logo{
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
     margin-left: 50px;
 }
 
 #footer .logo img{
-    width: 138.61px;
-    height: 158px;
+    width: 120px;
+    height: 145px;
     margin-bottom: 25px;
 }
 
@@ -1149,6 +1229,10 @@ footer .barra{
         height: 80.19px;
     }
 
+    header .logo .titulo_logo{
+        font-size: 1.15rem;
+    }
+
     #btn_fechar{
         display: block;
         width: 40px;
@@ -1215,7 +1299,7 @@ footer .barra{
 
     .titulo::after{
         content: "\A DA LÍNGUA JAPONESA";
-        white-space: pre;
+        white-space: pre-line;
     }
 
     .texto .paragrafo_index{
@@ -1303,6 +1387,9 @@ footer .barra{
     }
 
     #kappa_flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column-reverse;
         gap: 0;
     }
@@ -1327,6 +1414,7 @@ footer .barra{
     #kappa_flex p{
         font-size: 1rem;
         text-align: center;
+        height: 100%;
     }
 
     /* card_kappa */
@@ -1335,16 +1423,24 @@ footer .barra{
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 100%;
+        height: 100%;
+        max-width: 345px;
+        max-height: 425px;
+    }
+
+    #textos_kappa{
+        padding-top: 25px;
     }
 
     #textos_kappa #title_kappa, #textos_kappa p{
         padding: 0 5px;
-        min-width: 300px;
         margin: 15px 20px 15px 20px;
     }
 
     #title_kappa{
         font-size: 1.25rem;
+
     }
 
     #textos_kappa p{
@@ -1354,6 +1450,76 @@ footer .barra{
     #kappa img{
         width: 100%;
         height: 117px;
+        margin-bottom: -100px;
+    }
+
+    /* cursos mobile */
+    .cursos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column-reverse;
+        height: 100%;
+        margin-bottom: -100px;
+        margin-top: -50px;
+    }
+
+    .contents{
+        margin-top: 25px;
+    }
+
+    .contents.active{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        visibility: visible;
+        transform: scale(1);
+        transition: 0.5s;
+    }    
+
+    .contents .title1{
+        font-size: 2rem;
+    }
+
+    .contents .title2{
+        font-size: 2rem;
+    }
+
+    .conteudos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 350px;
+        height: auto;
+        max-width: 350px;
+        max-height: 500px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 0;
+        border-radius: 10px;
+    }
+
+    .content .title1{
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+    .content p{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .carousel-box{
+        margin-top: 100px;
     }
 
     /* metodos mobile */
@@ -1363,6 +1529,7 @@ footer .barra{
         align-items: center;
         flex-direction: column;
         margin-top: 125px;
+        margin-bottom: 50px;
     }
 
     .conteudo_metodo{
@@ -1390,24 +1557,396 @@ footer .barra{
         display: none;
     }
 
-    .card_metodo{
+    .card_metodo {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         width: 146.7px;
         height: 49px;
+        position: relative;
     }
-    
-    .card_metodo h1{
+
+    #btnLexical{
+        position: absolute;
+        transform: translateX(-38%);
+    }
+
+    #btnComunicativo{
+        position: absolute;
+        transform: translateX(-55%);
+    }
+
+    .card_metodo h1 {
         font-size: 0.875rem;
     }
 
+    .botao_metodo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .botao_metodo button{
+        opacity: 0;
+        z-index: 999;
+        width: 140px;
+        height: 40px;
+        border-radius: 25px;
+        font-size: 1px;
+    }
+
+    .botao_metodo img{
+        display: none;
+    }
+
+    /* método lexical mobile */
+    #lexical{
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    #lexical_texto{
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #lexical_texto h1{
+        font-size: 2rem;
+    }
+
+    #lexical_texto p{
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    #lexical_texto p strong{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    #lexical_texto .kappa_desktop{
+        display: none;
+    }
+
+    .kappa_mobile{
+        display: flex;
+        width: 330px;
+        height: 413px;
+    }
+
+    .cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card{
+        width: 275px;
+        height: 345px;
+    }
+
+    .numero{
+        width: 75px;
+        height: 75px;
+    }
+
+    .numero h1{
+        font-size: 4rem;
+        -webkit-text-stroke: 1px var(--branco);
+    }
+
+    .titulo_card{
+        margin-top: -5px;
+    }
+
+    /* comunicativo mobile */
+    #comunicativo.show{
+        margin-top: -80px;
+    }
+
+    #comunicativo_textos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        width: 350px;
+        height: auto;
+        margin-left: 0;
+    }
+    
+    .cima{
+        gap: 0;
+    }
+
+    #comunicativo_textos .title1{
+        font-size: 2rem;
+    }
+    
+    #comunicativo_textos .title2, #comunicativo_textos .title3{
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    #comunicativo_textos .title1::after{
+        content: "\A COMUNICATIVA";
+        white-space: pre-line;
+    }
+    
+    #comunicativo_textos .title2::after{
+        content: "\A  AUTÊNTICA";
+        white-space: pre-line;
+    }
+    
+    #comunicativo_textos .title3::after{
+        content: "\A  CULTURAL";
+        white-space: pre-line;
+    }
+    
+    #comunicativo p{
+        font-size: 1rem;
+    }
+
+    #comunicativo .kappa_desktop{
+        display: none;
+    }
+
+    #comunicativo .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 15px;
+        gap: 0;
+        margin-left: 0;
+    }
+
+    #comunicativo .card{
+        width: 300px;
+        height: 400px;
+        margin-top: 50px;
+    }
+
+    #comunicativo .card_textos .titulo_card{
+        font-size: 2rem;
+    }
+
+    /* faça parte mobile */
+    #parte{
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 100px;
+        gap: 0;
+    }    
+
+    #parte .title1{
+        font-size: 2rem;
+    }
+    
+    #parte p{
+        font-size: 1rem;
+    }
+
+    #parte img{
+        width: 323px;
+        height: 196px;
+    }
+
+    #inscrever{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .conteudo2{
+        margin-top: calc(100vh - 100px);
+        width: 264px;
+        height: 147px;
+    }
+
+    #inscrever .primeiro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        order: 1;
+    }
+
+    #inscrever #topicos{
+        margin-top: -375px;
+        margin-bottom: 150px;
+        order: 2;
+    }
+
+    #inscrever .segundo{
+        margin-top: 700px;
+        order: 3;
+    }
+
+    #inscrever .title1{
+        font-size: 2rem;
+    }
+
+    #inscrever .title2{
+        font-size: 2rem;
+    }
+
+    .segundo p{
+        margin-bottom: 20px;
+    }
+
+    #botoes_inscrever{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #botoes_inscrever button{
+        width: 171px;
+        height: 34px;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: -20px;
+    }
+
+    #topicos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .topico{
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: -25px;
+    }
+
+    #topicos .titulo_card{
+        font-size: 2rem;
+    }
+
+    #topicos .topico_texto{
+        text-align: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    #topicos .numero_topico{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 54px;
+        height: 54px;
+        margin-bottom: -20px; 
+    }
+
+    .numero_topico h1{
+        font-size: 2.5rem;
+        -webkit-text-stroke: 1px var(--branco);
+    }
+
+    /* Sobre nós mobile */
+    .sobre_nos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre_nos img{
+        width: 323px;
+        height: 196px;
+        margin-right: 0;
+    }
+
+    .sobre_nos .conteudo_sobre, .historia .conteudo_sobre{
+        text-align: center;
+        padding-left: 0 ;
+        padding-right: 0    ;
+    }       
+
+    .sobre_nos .title1, .historia .title1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .sobre_nos .title1::after{
+        content: "\A ESCOLA MODELO";
+        white-space: pre-line;
+    }
+
+    
+    .sobre_nos p, .historia p{
+        font-size: 1rem;
+    }
+
+    .sobre_nos p{
+        padding-right: 0;
+    }
+
+    .historia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .imagens .imagem{
+        display: none;
+    }
+
+    .imagens img{
+        margin-left: 0;
+    }
+
+    .faca_parte{
+        margin-bottom: -100px;
+    }
+
+    .faca_parte .title1{
+        font-size: 4rem;
+    }
+    
+    .faca_parte .title2{
+        font-size: 2rem;
+    }
+
+    .faca_parte .title2::after{
+        content: "\A ESSA HISTÓRIA FAZENDO";
+        white-space: pre-line;
+    }
+    
+    .faca_parte .title3{
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 3rem;
+        color: var(--primaria);
+        margin: 0; 
+        white-space: nowrap;
+        text-decoration: none;
     }
 
     /* Footer mobile*/
     footer{
+        margin-top: 100px;
         height: 100vh;
     }
 
