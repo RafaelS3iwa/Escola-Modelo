@@ -66,7 +66,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                     </div>
                 </div>
             </div>
-            <img src="/assets/img/icons/image.png" alt="">
+            <img src="/assets/img/icons/retangulo.png" alt="">
         </div>
     </div>
 </main>
