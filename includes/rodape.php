@@ -39,6 +39,13 @@
     });
 </script>
 
+<script>
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: false
+  });
+
+</script>
 </body>
 
 </html>

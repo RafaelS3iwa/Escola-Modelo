@@ -36,7 +36,7 @@
                 </div>
                 <div class="menu_desktop">
                     <ul>
-                        <li><a href="/paginas/metodos.php" class="active">MÉTODOS</a></li>
+                        <li><a href="/paginas/beneficios.php" class="active">BENEFÍCIOS</a></li>
                         <li>/</li>
                         <li><a href="/paginas/cursos.php">CURSOS</a></li>
                         <li>/</li>
@@ -44,7 +44,7 @@
                         <li>/</li>
                         <li><a href="/paginas/sobre.php">SOBRE</a></li>
                         <li>/</li>
-                        <li><a href="#" class="contato">CONTATO</a></li>
+                        <li><a href="/paginas/contato.php" class="contato_titulo">CONTATO</a></li>
                     </ul>
                 </div>
 
@@ -56,11 +56,11 @@
 
                 <div class="menu_mobile" id="menu_mobile">
                     <ul>
-                        <li><a href="/paginas/metodos.php" class="active">MÉTODOS</a></li>
+                        <li><a href="/paginas/beneficios.php" class="active">BENEFÍCIOS</a></li>
                         <li><a href="/paginas/cursos.php">CURSOS</a></li>
                         <li><a href="/paginas/parte.php">FAÇA PARTE</a></li>
                         <li><a href="/paginas/sobre.php">SOBRE</a></li>
-                        <li><a href="#">CONTATO</a></li>
+                        <li><a href="/paginas/contato.php" class="contato_titulo">CONTATO</a></li>
                     </ul>
                 </div>
             </div>
