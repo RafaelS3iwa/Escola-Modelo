@@ -13,7 +13,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                 Em Agosto de 1.945, com o término da Guerra, foram retomadas as atividades. Com isso, nasceu a Associação Nipo- Brasileira de Marília, que foi o berço do atual Nikkey Marília que funciona desde aquela época no endereço da Rua Paes Leme, 543.
             </p>
         </div>
-        <img src="/assets/img/complementos/kasato-maru.png" alt="">
+        <img src="/assets/img/complementos/EscolaPassado.jpeg" alt="">
     </div>
 
 

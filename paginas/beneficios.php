@@ -5,11 +5,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 
 <main>
     <div class="beneficios">
-        <h1 class="title1">POR QUE ESTUDAR JAPONÊS?</h1>
+        <h1 class="title1">POR QUE</h1>
 
         <div class="links">
             <div class="beneficio selected" onclick="abrirCarrossel.call(this)" data-target="1">
-                <h2 class="title2">DESENVOLVIMENTO<br>PESSOAL</h2>
+                <h2 class="title2 pessoal">DESENVOLVIMENTO</h2>
                 <h3 class="title3">自己成長</h3>
                 <h4 class="title4">じこせいちょう</h4>
                 <img src="/assets/img/icons/setinha.png" alt="Seta Desenvolvimento">
@@ -18,7 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="vl"></div>
 
             <div class="beneficio" onclick="abrirCarrossel.call(this)" data-target="2">
-                <h2 class="title2">IMERSÃO<br>CULTURAL</h2>
+                <h2 class="title2 cultural">IMERSÃO</h2>
                 <h3 class="title3">文化の没入</h3>
                 <h4 class="title4">ぶんかのぼつにゅう</h4>
                 <img src="/assets/img/icons/setinha.png" alt="Seta Imersão Cultural">
@@ -27,7 +27,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="vl"></div>
 
             <div class="beneficio" onclick="abrirCarrossel.call(this)" data-target="3">
-                <h2 class="title2">OPORTUNIDADES<br>PROFISSIONAIS</h2>
+                <h2 class="title2 profissional">OPORTUNIDADES</h2>
                 <h3 class="title3">キャリアの機会</h3>
                 <h4 class="title4">きゃりあのきかい</h4>
                 <img src="/assets/img/icons/setinha.png" alt="Seta Oportunidades">
