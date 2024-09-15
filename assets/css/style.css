@@ -26,6 +26,8 @@ body {
 
 header {
     width: 100%;
+    height: auto;
+    min-height: 100px;
     background-color: var(--primaria);
     display: flex;
     align-items: center;
@@ -282,9 +284,7 @@ main {
 
 .botao_sobre button {
     display: flex;
-    /* Adiciona exibição flexível */
     justify-content: center;
-    /* Alinha horizontalmente ao centro */
     align-items: center;
     width: 92px;
     height: 88px;
@@ -454,7 +454,7 @@ main {
 }
 
 .inscrever.title1 {
-    font-size: 35px;
+    font-size: 2.4rem;
     font-weight: bolder;
 }
 
@@ -628,13 +628,14 @@ main {
     align-items: flex-start;
     text-align: left;
     padding-left: 35px;
+    padding-top: 15px;
     font-family: "Poppins", sans-serif;
 }
 
 .content .title1 {
     position: relative;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .content p {
@@ -752,7 +753,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 175px;
     padding: 20px;
 }
 
@@ -768,7 +769,7 @@ main {
 
 .sobre_nos .conteudo_sobre,
 .historia .conteudo_sobre {
-    text-align: left;
+    text-align:justify;
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -777,9 +778,7 @@ main {
     font-size: 2.5rem;
 }
 
-.sobre_nos .title1::after {
-    content: " ESCOLA MODELO";
-}
+
 
 .sobre_nos p,
 .historia p {
@@ -787,7 +786,6 @@ main {
     font-weight: normal;
     font-size: 1.125rem;
     color: var(--texto);
-
 }
 
 .sobre_nos p {
@@ -797,6 +795,10 @@ main {
 .historia {
     margin-top: 50px;
     gap: 75px;
+}
+
+.historia .conteudo_sobre {
+    margin-bottom: 150px;
 }
 
 .imagens {
@@ -1060,25 +1062,13 @@ main {
     white-space: pre-line;
 }
 
-.beneficios .links .beneficio .title3 {
-    color: var(--texto);
-    font-size: 2.2rem;
-}
-
-.beneficios .links .beneficio .title4 {
-    margin-top: 0;
-    font-weight: bold;
-    font-size: 1.75rem;
-}
 
 .vl {
     border-left: 4px solid black;
     height: 225px;
 }
 
-.beneficios .links .beneficio:hover .title2,
-.beneficios .links .beneficio:hover .title3,
-.beneficios .links .beneficio:hover .title4 {
+.beneficios .links .beneficio:hover .title2 {
     color: #0099FF;
 }
 
@@ -1087,16 +1077,12 @@ main {
 }
 
 .beneficios .links .beneficio .title2,
-.beneficios .links .beneficio .title3,
-.beneficios .links .beneficio .title4,
 .beneficios .links .beneficio img {
     transition: color 0.3s ease;
     transition: filter 0.3s ease;
 }
 
-.beneficios .links .beneficio.selected .title2,
-.beneficios .links .beneficio.selected .title3,
-.beneficios .links .beneficio.selected .title4 {
+.beneficios .links .beneficio.selected .title2 {
     color: #6FE100;
 }
 
@@ -1206,8 +1192,8 @@ footer .barra {
 #footer .logo img {
     width: 100%;
     height: auto;
-    max-width: 120px;
-    max-height: 145px;
+    max-width: 225px;
+    max-height: 225px;
     margin-bottom: 25px;
 }
 
@@ -1456,9 +1442,6 @@ footer .barra {
 
     .texto_sobre p {
         font-size: 1rem;
-    }
-
-    .texto_sobre.baixo {
     }
 
     /* index parte3 mobile */
@@ -1746,7 +1729,7 @@ footer .barra {
         text-align: center;
     }
 
-    .sobre_nos .title1::after {
+    .conteudo_sobre .title1::after {
         content: "\A ESCOLA MODELO";
         white-space: pre-line;
     }
@@ -1907,15 +1890,6 @@ footer .barra {
 
     .beneficios .links .beneficio .title2.profissional::after {
         font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .title3 {
-        font-size: 1.75rem;
-    }
-
-    .beneficios .links .beneficio .title4 {
-        margin-top: 0;
-        font-size: 1.25rem;
     }
 
     .vl {
@@ -2197,9 +2171,6 @@ footer .barra {
         font-size: 1.2rem;
     }
 
-    .texto_sobre.baixo {
-    }
-
     /* index parte3 Tablet Mini */
     .kappa {
         margin-top: 0;
@@ -2316,15 +2287,6 @@ footer .barra {
 
     .beneficios .links .beneficio .title2.profissional::after {
         font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .title3 {
-        font-size: 1.75rem;
-    }
-
-    .beneficios .links .beneficio .title4 {
-        margin-top: 0;
-        font-size: 1.25rem;
     }
 
     .vl {
@@ -2578,7 +2540,7 @@ footer .barra {
         text-align: center;
     }
 
-    .sobre_nos .title1::after {
+    .conteudo_sobre .title1::after {
         content: "\A ESCOLA MODELO";
         white-space: pre-line;
     }
@@ -2948,8 +2910,7 @@ footer .barra {
         font-size: 1.75rem;
     }
 
-    .texto_sobre.baixo {
-    }
+    .texto_sobre.baixo {}
 
     /* index parte3 Tablet Mini */
     .kappa {
@@ -3035,16 +2996,6 @@ footer .barra {
 
     .beneficios .links .beneficio .title2 {
         font-size: 1.80rem;
-    }
-
-    .beneficios .links .beneficio .title3 {
-        color: var(--texto);
-        font-size: 1.75rem;
-    }
-
-    .beneficios .links .beneficio .title4 {
-        margin-top: 0;
-        font-size: 1.5rem;
     }
 
     .vl {
@@ -3313,7 +3264,7 @@ footer .barra {
         text-align: center;
     }
 
-    .sobre_nos .title1::after {
+    .conteudo_sobre .title1::after {
         content: "\A ESCOLA MODELO";
         white-space: pre-line;
     }
@@ -3498,8 +3449,9 @@ footer .barra {
     }
 }
 
- /* Específico  */
-@media (min-width: 1024px) and (max-width: 1024px) {
+/* Específico  */
+@media (min-width: 1024px) and (max-width: 1099px) {
+
     /* Header Específico */
     .menu_desktop {
         display: none;
@@ -3572,7 +3524,7 @@ footer .barra {
     }
 
     /* Index Main Específico */
-    main{
+    main {
         margin-top: 15vw;
     }
 
@@ -3678,9 +3630,6 @@ footer .barra {
         font-size: 2rem;
     }
 
-    .texto_sobre.baixo {
-    }
-
     /* index parte3 Específico */
     .kappa {
         margin-top: 0;
@@ -3767,16 +3716,6 @@ footer .barra {
         font-size: 2rem;
     }
 
-    .beneficios .links .beneficio .title3 {
-        color: var(--texto);
-        font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .title4 {
-        margin-top: 0;
-        font-size: 1.75rem;
-    }
-
     .vl {
         border-left: 2px solid black;
         height: 200px;
@@ -3817,7 +3756,7 @@ footer .barra {
         flex-direction: column-reverse;
         height: 100%;
         margin-bottom: -100px;
-        margin-top: 150px;
+        margin-top: 0;
     }
 
     .contents {
@@ -3873,7 +3812,7 @@ footer .barra {
         padding-right: 50px;
     }
 
-    .cursos .carousel-box{
+    .cursos .carousel-box {
         margin-left: 0;
         margin-top: 100px;
     }
@@ -4049,7 +3988,7 @@ footer .barra {
         text-align: center;
     }
 
-    .sobre_nos .title1::after {
+    .conteudo_sobre .title1::after {
         content: "\A ESCOLA MODELO";
         white-space: pre-line;
     }
@@ -4181,7 +4120,7 @@ footer .barra {
     .contato .cards_contato .localizacao_card .localizacao p {
         font-size: 2.25rem;
     }
-    
+
 
     .contato .cards_contato .localizacao_card .google a {
         font-size: 2.25rem;
@@ -4245,6 +4184,226 @@ footer .barra {
     }
 }
 
-@media (min-width: 1280px) and (max-width: 1680px){
+/* Notebook */
+@media (min-width: 1100px) and (max-width: 1450px) {
+    header .menu_desktop ul li {
+        margin: 0 15px;
+        font-size: 20px;
+    }
 
+    /* Index Notebook */
+    .index {
+        width: 100%;
+        max-width: 1450px;
+        min-width: 1026px;
+    }
+
+    /* Sobre Notebook */
+
+    .sobre {
+        gap: 50px;
+    }
+
+    .sobre .sobre_img {
+        margin-left: 5%;
+        min-width: 565px;
+        min-height: 516px;
+    }
+
+    .titulo_sobre {
+        font-size: 3rem;
+    }
+
+    .botoes {
+        margin-top: 0;
+    }
+
+    .botoes img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .botoes_sobre {
+        margin-bottom: 15px;
+    }
+
+    .botao_sobre button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 62px;
+        height: 58px;
+        background-color: var(--botao);
+        border-radius: 15px;
+        border-style: none;
+        margin-right: 20px;
+    }
+
+    .texto_sobre {
+        margin-top: 25px;
+    }
+
+    .texto_sobre h1 {
+        font-size: 1.5rem;
+        margin-bottom: -15px;
+    }
+
+    .texto_sobre p {
+        font-size: 1.25rem;
+    }
+
+    /* Index Parte3  Notebook */
+    .kappa_flex {
+        gap: 50px;
+    }
+
+    .card_kappa {
+        width: 100%;
+        height: auto;
+        max-width: 575px;
+        max-height: 650px;
+        padding: 10px;
+        border: 5px solid var(--primaria);
+        border-radius: 25px;
+        margin-bottom: 25px;
+    }
+
+    .kappa img {
+        width: 500px;
+        height: 500px;
+    }
+
+    /* Benefícios Notebook */
+    .beneficios .links {
+        gap: 35px;
+    }
+
+    .beneficios .links .beneficio .title2 {
+        font-size: 2rem;
+    }
+
+    .vl {
+        border-left: 4px solid black;
+        height: 150px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel .carousel-item p {
+        width: 525px;
+    }
+
+    /* Cursos Notebook */
+    .cursos {
+        padding: 0 50px;
+    }
+
+    .contents .title1 {
+        font-size: 2.55rem;
+    }
+
+    .contents .title2 {
+        font-size: 3.25rem;
+    }
+
+    .content {
+        width: 500px;
+        min-height: 115px;
+        padding-left: 25px;
+        padding-top: 15px;
+        margin-top: 15px;
+    }
+
+    .content .title1 {
+        font-size: 1.65rem;
+    }
+
+    .content p {
+        font-size: 1.15rem;
+    }
+
+    .cursos .carousel-box {
+        margin-left: 0;
+        min-width: 950px;
+    }
+
+    /* Faça Parte Notebook */
+    .parte {
+        gap: 100px;
+    }
+
+    /* Tópicos Notebook */
+    .topicos .topico_texto {
+        width: 475px;
+    }
+
+    .topicos p {
+        font-size: 1.25rem;
+    }
+
+    .topicos .numero_topico {
+        min-width: 100px;
+    }
+
+    /* Sobre Nós Notebook */
+    .sobre_nos,
+    .historia {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    .sobre_nos {
+        margin-left: 5%;
+    }
+
+    .sobre_nos img {
+        margin-right: 0;
+    }
+
+    .sobre_nos .conteudo_sobre,
+    .historia .conteudo_sobre {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sobre_nos .title1,
+    .historia .title1 {
+        font-size: 2rem;
+    }
+
+    .historia {
+        margin-top: 0;
+        gap: 25px;
+    }
+
+    .historia .conteudo_sobre {
+        margin-bottom: 150px;
+        width: 550px;
+    }
+
+    .historia .imagens img {
+        margin-left: 50px;
+    }
+
+    /* Contato Notebook */
+    .contato .cards_contato .card_contato {
+        min-width: 44.73vw;
+        min-height: 47.26vh;
+    }
+
+    .contato .cards_contato .card_contato .info_topico .title_topico {
+        font-size: 1.25rem;
+        margin-right: 0.5rem;
+    }
+    
+    .contato .cards_contato .card_contato .info_topico a {
+        font-size: 1.25rem;
+    }
+
+    .contato .cards_contato .localizacao_card .localizacao p {
+        font-size: 1.25rem;
+    }
+    
+    .contato .cards_contato .localizacao_card .google a {
+        font-size: 1.25rem;
+    }
+    
 }

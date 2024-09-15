@@ -19,7 +19,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 
                 <div class="content">
                     <h1 class="title1">OBJETIVO DO CURSO</h1>
-                    <p>Nosso objetivo é não apenas ensinar o idioma japonês, mas também capacitar você a se comunicar de forma eficaz em situações do dia a dia.</p>
+                    <p>Nosso objetivo é capacitar o aluno a se comunicar de forma eficaz em situações do dia a dia.</p>
                 </div>
 
                 <div class="content">
@@ -29,7 +29,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 
                 <div class="content">
                     <h1 class="title1">CARGA HORÁRIA</h1>
-                    <p>São de 1 a 2 aulas semanais.</p>
+                    <p>1 a 2 aulas semanais, dependendo da turma e disponibilidade.</p>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 
                 <div class="content">
                     <h1 class="title1">CARGA HORÁRIA</h1>
-                    <p>São 3 aulas semanais de 90 minutos. (Os dias podem variar com a Turma.)</p>
+                    <p>De 1 a 2 aulas semanais + 1 aula cultural(os dias e horários variam conforme a turma).</p>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="conteudos">
                 <div class="content">
                     <h1 class="title1">IDADE PARA O CURSO</h1>
-                    <p>O curso é livre para todas as idades.</p>
+                    <p>A partir de 8 anos de idade.</p>
                 </div>
 
                 <div class="content">
@@ -101,7 +101,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="conteudos">
                 <div class="content">
                     <h1 class="title1">IDADE PARA O CURSO</h1>
-                    <p>O curso é livre para todas as idades.</p>
+                    <p>A partir de 13 anos de idade.</p>
                 </div>
 
                 <div class="content">
@@ -116,7 +116,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 
                 <div class="content">
                     <h1 class="title1">CARGA HORÁRIA</h1>
-                    <p>2 aulas semanais de 90 minutos.</p>
+                    <p>De 1 a 2 aulas semanais(90 minutos cada aula).</p>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="conteudos">
                 <div class="content">
                     <h1 class="title1">IDADE PARA O CURSO</h1>
-                    <p>O curso é livre para todas as idades.</p>
+                    <p>A partir de 7 anos de idade</p>
                 </div>
 
                 <div class="content">
@@ -159,12 +159,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             <div class="conteudos">
                 <div class="content">
                     <h1 class="title1">IDADE PARA O CURSO</h1>
-                    <p>O curso é livre para todas as idades.</p>
+                    <p>A partir de 13 anos de idade</p>
                 </div>
 
                 <div class="content">
                     <h1 class="title1">OBJETIVO DO CURSO</h1>
-                    <p>Oferecer instruções detalhadas sobre o manuseio, conceitos fundamentais e práticas para a preparação de pratos da culinária japonesa.</p>
+                    <p>Oferecer instruções sobre o manuseio dos ingredientes, conceitos fundamentais e práticas para
+                        a preparação de pratos da culinária japonesa.
+                    </p>
                 </div>
 
                 <div class="content">
@@ -174,7 +176,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 
                 <div class="content">
                     <h1 class="title1">CARGA HORÁRIA</h1>
-                    <p>As Terças-Feiras das 19:30 - 21:00 hrs.</p>
+                    <p>4 aulas de 90 minutos.(datas a definir).</p>
                 </div>
             </div>
         </div>

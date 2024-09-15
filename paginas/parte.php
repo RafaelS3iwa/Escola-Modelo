@@ -8,7 +8,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
         <div class="parte">
             <img src="/assets/img/complementos/comunidade.jpg" alt="">
             <div class="conteudo">
-                <h1 class="title1">SE JUNTE<br>AGORA NA<br>NOSSA COMUNIDADE</h1>
+                <h1 class="title1">SEJA UM DE NÓS!</h1>
                 <p>Junte-se à Escola Modelo de Língua Japonesa de Marília e seja parte de uma comunidade vibrante de aprendizes e entusiastas da cultura japonesa. Oferecemos uma jornada educacional única, com cursos de idioma e uma ampla gama de atividades culturais que promovem o conhecimento, a amizade e o respeito mútuo.</p>
             </div>
         </div>
@@ -60,7 +60,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                     </div>
                     <div class="topico_texto">
                         <h1 class="titulo_topico">MATRICULE-SE</h1>
-                        <p>Preencha nosso formulário de inscrição disponível na secretaria da escola.</p>
+                        <p>Preencha nosso formulário de inscrição disponível no link abaixo.</p>
                     </div>
                 </div>
             </div>

@@ -2,12 +2,7 @@
     <div class="barra"></div>
         <div id="footer">
             <div class="logo">
-                <img src="/assets/img/logo/Logo Escola Modelo - Transparente.png" alt="">
-                <p class="titulo_logo">
-                    ESCOLA<br>
-                    MODELO DE<br>
-                    LÍNGUA JAPONESA
-                </p>
+                <img src="/assets/img/logo/Escola Modelo.png" alt="">
             </div>
 
             <div id="icons">
