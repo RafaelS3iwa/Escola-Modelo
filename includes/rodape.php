@@ -2,7 +2,7 @@
     <div class="barra"></div>
         <div id="footer">
             <div class="logo">
-                <img src="/assets/img/logo/Escola Modelo.png" alt="">
+                <img src="/assets/img/logo/Escola Modelo.png" alt="Logo da Escola Modelo de Língua Japonesa de Marília">
             </div>
 
             <div id="icons">
@@ -31,13 +31,13 @@
 <script src="/assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
+<script defer>
     $(document).ready(function(){
     $('.carousel').carousel();
     });
 </script>
 
-<script>
+<script defer>
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: false

@@ -1,3 +1,27 @@
+//Darkmode
+let darkmode = localStorage.getItem('darkmode');
+const themeSwitch = document.querySelectorAll('.data_theme'); // Alterado para selecionar por classe
+
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkmode', 'active'); 
+}
+
+const disableDarkmode = () => {
+    document.body.classList.remove('darkmode');
+    localStorage.setItem('darkmode', null);
+}
+
+if (darkmode === "active") enableDarkmode()
+
+// Iterando sobre todos os botões com a classe "data_theme" para adicionar o evento de clique
+themeSwitch.forEach((button) => {
+    button.addEventListener("click", () => {
+        darkmode = localStorage.getItem('darkmode');
+        darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+    });
+});
+
 //Muda curso
 function changeBg(bg, title) {
     const cursos = document.querySelector('.cursos');

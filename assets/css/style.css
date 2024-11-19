@@ -6,7 +6,51 @@
     --texto: #5B5B5B;
     --botao: #B0D665;
     --branco: #fff;
+    --fundo: #F5F5F5;
     --titulo_colorido: #9CC945;
+    --verde: #ADEB33;
+    --divisoria: #000000;
+    --filtro:  brightness(0) saturate(100%) invert(43%) sepia(95%) saturate(115%) hue-rotate(58deg) brightness(145%) contrast(115%);
+    --filtro_seta: brightness(0) saturate(100%) invert(0%) sepia(25%) saturate(5128%) hue-rotate(17deg) brightness(86%) contrast(110%);
+    --beneficio-carrossel: #B0C4C4;
+    --texto-beneficio: #5B5B5B;
+}
+
+.darkmode{
+    --primaria: #6A9320;
+    --sombra: #3d5511;
+    --divisao: #627837;
+    --titulo: #B0D665;
+    --texto: #CCCCCC;
+    --botao: #B0D665;
+    --branco: #fff;
+    --fundo: #1A1A1A;
+    --titulo_colorido: #9CC945;
+    --verde: #B0D665;
+    --divisoria: #526829;
+    --filtro: brightness(0) saturate(100%) invert(64%) sepia(89%) saturate(1111%) hue-rotate(44deg) brightness(101%) contrast(104%);
+    --filtro_seta: brightness(0) saturate(100%) invert(96%) sepia(14%) saturate(1541%) hue-rotate(21deg) brightness(87%) contrast(91%);
+    --beneficio-carrossel: #506161;
+    --texto-beneficio: #333333;
+}
+
+.poppins{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    color: var(--titulo);
+}
+
+.montserrat_title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+    color: var(--titulo);
+}
+
+.nunito_text{
+    font-family: "Nunito", sans-serif;
+    font-size: 1.7rem;
+    color: var(--texto);
 }
 
 * {
@@ -49,27 +93,11 @@ header {
     justify-content: center;
 }
 
-.navbar .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar p,
-.titulo_logo {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--titulo);
-    margin-right: 50px;
-    white-space: nowrap;
-}
-
 .logo img {
     width: 100%;
     height: auto;
-    min-width: 134.36px;
-    min-height: 117.1px;
+    max-width: 140px;
+    max-height: 135px;
 }
 
 .navbar .menu_desktop {
@@ -85,19 +113,13 @@ header .menu_desktop ul {
 header .menu_desktop ul li {
     display: inline-block;
     margin: 0 30px;
-    font-family: "Poppins", sans-serif;
     font-weight: bold;
-    font-size: 20px;
-    color: var(--titulo);
 }
 
 header .menu_desktop ul li a {
     text-decoration: none;
     display: inline-block;
-    font-family: "Poppins", sans-serif;
     font-weight: bold;
-    font-size: 20px;
-    color: var(--titulo);
     white-space: nowrap;
 }
 
@@ -105,11 +127,41 @@ header .menu_desktop ul li .contato_titulo {
     color: #073682;
 }
 
+header .data_theme{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;  
+    right: 20px;
+}
+
+header .data_theme svg{
+    fill: #073682;
+}
+
+header .data_theme svg:last-child{
+    display: none;
+}
+
+.darkmode .data_theme svg:first-child{
+    display: none;
+}
+
+.darkmode .data_theme svg:last-child{
+    display: block;
+}
+
 .menu_mobile {
     background-color: #0000008c;
     backdrop-filter: blur(10px);
     position: absolute;
-    top: 100px;
+    top: 150px;
     right: 0;
     height: 0;
     width: 100%;
@@ -139,8 +191,14 @@ header .menu_desktop ul li .contato_titulo {
     display: none;
 }
 
+.menu_mobile .data_theme{
+    top: calc(50svh + 15%);
+    background-color: var(--texto-beneficio);
+}
+
 /* index */
 main {
+    background-color: var(--fundo);
     padding-top: 2%;
     margin: 0 auto;
     display: flex;
@@ -175,28 +233,21 @@ main {
     margin-bottom: 175px;
 }
 
-.texto .titulo {
+.texto .montserrat_title {
     display: inline;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 2.25rem;
-    color: var(--titulo);
 }
 
-.titulo::after {
+.texto h1::after {
     content: " DA LÍNGUA JAPONESA";
 }
 
-.texto .paragrafo_index {
+.texto .nunito_text {
     display: inline;
     margin-top: 10px;
     text-align: center;
-    font-family: "Nunito", sans-serif;
-    font-size: 1.7rem;
-    color: var(--texto);
 }
 
-.texto .paragrafo_index::after {
+.texto p::after {
     content: " de Marilia onde cada aula \A é uma aventura cultural única!";
     white-space: pre-line;
 }
@@ -217,11 +268,9 @@ main {
     box-shadow: 0px 5px 0px 0px var(--sombra);
 }
 
-.botao a {
+.botao .montserrat_title {
     text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--branco);
 }
 
@@ -244,21 +293,16 @@ main {
     border-radius: 45px;
 }
 
-.titulo_sobre {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 48px;
-    color: var(--titulo);
+.sobre .montserrat_title {
+    font-size: 3rem;
     margin: 0;
     white-space: nowrap;
 }
 
-.paragrafo {
+.sobre .nunito_text {
     margin-top: 10px;
-    font-family: "Nunito", sans-serif;
     font-size: 1.375rem;
-    color: var(--texto);
-    text-align: left;
+    text-align: justify;
 }
 
 /* Botões index parte2 */
@@ -302,19 +346,14 @@ main {
     margin-top: 15px;
 }
 
-.texto_sobre h1 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
+.texto_sobre .montserrat_title {
     font-size: 2rem;
-    color: var(--titulo);
     margin: 0;
     white-space: nowrap;
 }
 
-.texto_sobre p {
-    font-family: "Nunito", sans-serif;
+.texto_sobre .nunito_text {
     font-size: 1.25rem;
-    color: var(--texto);
 }
 
 /* index parte3 */
@@ -333,34 +372,28 @@ main {
     flex-wrap: nowrap;
 }
 
-.title1,
-.title2,
-.title3,
-.title_kappa {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    color: var(--titulo);
+.titulo_kappa .title1 {
+    font-size: 2rem;
     margin: 0;
     white-space: nowrap;
 }
 
-.title1 {
-    font-size: 32px;
+.titulo_kappa .title2 {
+    font-size: 2.5rem;
+    margin: 0;
+    white-space: nowrap;
 }
 
-.title2 {
-    font-size: 40px;
-}
-
-.title3 {
-    font-size: 54px;
+.titulo_kappa .title3 {
+    font-size: 3.375rem;
     color: var(--titulo_colorido);
+    margin: 0;
+    white-space: nowrap;
 }
 
-.kappa_flex p {
-    font-family: "Nunito", sans-serif;
+.kappa_flex .nunito_text {
+    text-align: justify;
     font-size: 1.45rem;
-    color: var(--texto);
 }
 
 
@@ -377,7 +410,7 @@ main {
 }
 
 .textos_kappa .title_kappa,
-.textos_kappa p {
+.textos_kappa .nunito_text {
     padding: 0 5px;
     min-width: 300px;
     margin: 25px 285px 15px 25px;
@@ -386,180 +419,178 @@ main {
 .title_kappa {
     font-size: 2.2rem;
     color: var(--titulo_colorido);
+    margin: 0;
+    white-space: nowrap;
 }
 
-.textos_kappa p {
-    font-family: "Nunito", sans-serif;
-    font-size: 1.4rem;
-    color: var(--texto);
+.textos_kappa .nunito_text {
+    text-align: justify;
     margin: auto 25px;
 }
 
 .kappa img {
-    width: 1475px;
-    height: 500px;
+    width: 100%;
+    height: auto;
+    max-width: 479px;
+    max-height: 434px;
     padding: 5px;
 }
 
-/* faça parte */
-.parte {
+/* Benefícios */
+.beneficios {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-    gap: 150px;
-}
-
-.parte img {
-    display: block;
-    width: 400px;
-    height: 360px;
-    border-radius: 25px;
-}
-
-.parte .title1 {
-    font-size: 55px;
-}
-
-.parte p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-size: 1.25rem;
-    color: var(--texto);
-}
-
-.inscrever.desktop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 100px;
-}
-
-.inscrever.mobile {
-    display: none;
-}
-
-.conteudo2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 433px;
-    height: 340px;
 }
 
-.inscrever .primeiro {
-    margin-bottom: 25px;
-}
-
-.inscrever.title1 {
-    font-size: 2.4rem;
-    font-weight: bolder;
-}
-
-.inscrever p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-size: 1.25rem;
-    color: var(--texto);
-}
-
-.inscrever.title2 {
-    font-size: 35px;
-    font-weight: bolder;
-    margin-top: 45px;
-}
-
-.botoes_inscrever {
-    display: flex;
-    gap: 45px;
-}
-
-.botoes_inscrever button {
-    width: 190px;
-    height: 41px;
-    background-color: var(--primaria);
-    box-shadow: 0px 5px 0px 0px var(--sombra);
-    border-radius: 15px;
-    border-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.botoes_inscrever a {
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 1.125rem;
-    color: var(--branco);
-}
-
-.topicos {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: 100px;
-}
-
-.topico {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    margin-top: -55px;
-    margin-bottom: 50px;
-}
-
-.topicos .titulo_topico {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-    color: var(--primaria);
-    margin-bottom: -10px;
-}
-
-.topicos .topico_texto {
-    display: flex;
-    text-align: left;
-    align-items: start;
-    justify-content: left;
-    flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 35px;
-}
-
-.topicos p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-size: 1.375rem;
-    color: var(--texto);
-}
-
-.topicos .numero_topico {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--primaria);
-    border-radius: 50%;
-    width: auto;
-    height: auto;
-    min-width: 100px;
-}
-
-.numero_topico h1 {
-    font-family: "Roboto", sans-serif;
+.beneficios .montserrat_title {
     font-size: 3rem;
-    font-weight: bolder;
-    color: var(--primaria);
-    -webkit-text-stroke: 2px var(--branco);
-    margin-top: 25px;
 }
 
-/* cursos */
+.beneficios .montserrat_title::after {
+    content: " ESTUDAR JAPONÊS?";
+}
+
+.beneficios .links {
+    display: flex;
+    flex-direction: row;
+    margin-top: 75px;
+    gap: 50px;
+}
+
+.beneficios .links .beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.beneficios .links .beneficio .montserrat_title {
+    font-size: 2.5rem;
+}
+
+.beneficios .links .beneficio .montserrat_title.pessoal::after {
+    content: "\A PESSOAL";
+    white-space: pre-line;
+}
+
+.beneficios .links .beneficio .montserrat_title.cultural::after {
+    content: "\A CULTURAL";
+    white-space: pre-line;
+}
+
+.beneficios .links .beneficio .montserrat_title.profissional::after {
+    content: "\A PROFISSIONAIS";
+    white-space: pre-line;
+}
+
+.vl {
+    border-left: 4px solid var(--divisoria);
+    height: 225px;
+}
+
+.beneficios .links .beneficio:hover .montserrat_title {
+    color: #0099FF;
+}
+
+.beneficios .links .beneficio img{
+    filter: var(--filtro_seta);
+}
+
+.beneficios .links .beneficio:hover img {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(100%) saturate(500%) hue-rotate(190deg) brightness(95%) contrast(105%);
+}
+
+.beneficios .links .beneficio .montserrat_title,
+.beneficios .links .beneficio img {
+    transition: color 0.3s ease;
+    transition: filter 0.3s ease;
+}
+
+.beneficios .links .beneficio.selected .montserrat_title {
+    color: #6FE100;
+}
+
+.beneficios .links .beneficio.selected img {
+    filter: var(--filtro);
+}
+
+.beneficios_carrossel {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Slide - Benefícios */
+.beneficios_carrossel.active {
+    display: flex;
+    visibility: visible;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beneficio-carrossel);
+    width: 100%;
+    min-height: 75svh;
+    margin-top: 75px;
+}
+
+.beneficios .beneficios_carrossel img {
+    width: 483px;
+    height: 628px;
+    margin-left: 0;
+}
+
+.beneficios .beneficios_carrossel .carousel {
+    width: 100%;
+    max-width: 755.95px;
+    height: auto;
+    min-height: 704px;
+    margin-bottom: 100px;
+    border-radius: 50px;
+}
+
+.beneficios .beneficios_carrossel .carousel .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 50px;
+}
+
+.beneficios .beneficios_carrossel .carousel .carousel-item h2 {
+    font-size: 2.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-top: -150px;
+    color: var(--titulo);
+}
+
+.beneficios .beneficios_carrossel .carousel .carousel-item p {
+    font-family: "Nunito", sans-serif;
+    color: var(--texto-beneficio);
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: justify;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Cursos */
 .cursos {
     margin-top: 50px;
     position: relative;
@@ -567,8 +598,8 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    min-height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
     padding: 0 100px;
     background: url(/assets/img/carousel/adultoBg.jpg) no-repeat;
     background-size: cover;
@@ -590,8 +621,10 @@ main {
 }
 
 .contents {
+    margin-top: 50px;
+    margin-bottom: 50px;
     position: relative;
-    max-width: 550px;
+    max-width: 750px;
     display: none;
     visibility: hidden;
     transform: scale(0);
@@ -605,13 +638,13 @@ main {
     transition: 0.5s;
 }
 
-.contents .title1 {
-    font-size: 48px;
+.contents .montserrat_title.title1 {
     color: var(--branco);
 }
 
-.contents .title2 {
-    font-size: 65px;
+.contents .montserrat_title.title2 {
+    margin-top: -25px;
+    font-size: 3rem;    
     color: var(--branco);
 }
 
@@ -619,6 +652,7 @@ main {
     width: 684px;
     height: auto;
     min-height: 115px;
+    max-height: 195px;
     margin-top: 30px;
     background-color: var(--branco);
     border-radius: 25px;
@@ -632,16 +666,16 @@ main {
     font-family: "Poppins", sans-serif;
 }
 
-.content .title1 {
+.content .montserrat_title.title1 {
     position: relative;
     font-weight: bold;
-    font-size: 1.875rem;
+    margin-top: calc(10px + 2%);
+    margin-bottom: -2%;
 }
 
-.content p {
-    font-weight: normal;
-    font-size: 1.25rem;
-    color: var(--texto);
+.content .nunito_text {
+    font-size: 1.4rem;
+    color: var(--texto-beneficio);
 }
 
 /* content específico */
@@ -747,7 +781,154 @@ main {
     object-position: center;
 }
 
-/* sobre nós  */
+/* Faça Parte */
+.parte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    gap: 150px;
+}
+
+.parte img {
+    display: block;
+    width: 400px;
+    height: 360px;
+    border-radius: 25px;
+}
+
+.parte .montserrat_title {
+    font-size: 3.4rem;
+}
+
+.parte .nunito_text {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.inscrever.desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: justify;
+    gap: 100px;
+}
+
+.inscrever.mobile {
+    display: none;
+}
+
+.conteudo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 433px;
+    height: 340px;
+}
+
+.inscrever .primeiro {
+    margin-bottom: 25px;
+}
+
+.inscrever .montserrat_title {
+    font-size: 2.4rem;
+}
+
+.inscrever .nunito_text {
+    font-size: 1.4rem;
+}
+
+.inscrever .montserrat_title.titulo {
+    font-size: 2.20rem;
+    margin-top: 45px;
+}
+
+.botoes_inscrever {
+    display: flex;
+    gap: 45px;
+}
+
+.botoes_inscrever button {
+    width: 190px;
+    height: 41px;
+    background-color: var(--primaria);
+    box-shadow: 0px 5px 0px 0px var(--sombra);
+    border-radius: 15px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.botoes_inscrever .montserrat_title {
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: var(--branco);
+}
+
+.topicos {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.topico {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: -55px;
+    margin-bottom: 50px;
+}
+
+.topicos .titulo_topico {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--verde);
+    margin-bottom: -10px;
+}
+
+.topicos .topico_texto {
+    display: flex;
+    text-align: justify;
+    align-items: start;
+    justify-content: left;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 35px;
+}
+
+.topicos .nunito_text {
+    font-size: 1.375rem;
+}
+
+.topicos .numero_topico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primaria);
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100px;
+}
+
+.numero_topico h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--primaria);
+    -webkit-text-stroke: 2px var(--branco);
+    margin-top: 25px;
+}
+
+/* Sobre Nós  */
 .sobre_nos,
 .historia {
     display: flex;
@@ -769,26 +950,17 @@ main {
 
 .sobre_nos .conteudo_sobre,
 .historia .conteudo_sobre {
-    text-align:justify;
+    text-align: justify;
     padding-left: 100px;
     padding-right: 100px;
 }
 
-.sobre_nos .title1 {
+.sobre_nos .montserrat_title {
     font-size: 2.5rem;
 }
 
-
-
-.sobre_nos p,
-.historia p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-size: 1.125rem;
-    color: var(--texto);
-}
-
-.sobre_nos p {
+.sobre_nos .nunito_text {
+    font-size: 1.25rem;
     padding-right: 150px;
 }
 
@@ -814,8 +986,12 @@ main {
     border-radius: 25px;
 }
 
-.historia .title1 {
+.historia .montserrat_title {
     font-size: 3rem;
+}
+
+.historia .nunito_text{
+    font-size: 1.25rem;
 }
 
 .faca_parte {
@@ -856,29 +1032,32 @@ main {
     z-index: 2;
 }
 
-.faca_parte .title1,
-.faca_parte .title2 {
-    color: var(--titulo);
+.faca_parte .montserrat_title.title1,
+.faca_parte .montserrat_title.title2 {
     margin-bottom: 15px;
 }
 
-.faca_parte .title1 {
+.faca_parte .montserrat_title.title1 {
+    margin-bottom: -25px;
     font-size: 6rem;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.faca_parte .title2 {
+.faca_parte .montserrat_title.title2 {
     font-size: 2.5rem;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.faca_parte .title2::after {
+.faca_parte .montserrat_title.title2::after {
     content: " ESSA HISTÓRIA FAZENDO";
 }
 
-.faca_parte .title3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
+.faca_parte .montserrat_title.title3 {
     font-size: 3rem;
     color: var(--primaria);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: 0;
     white-space: nowrap;
     text-decoration: none;
@@ -893,7 +1072,7 @@ main {
     flex-direction: column;
 }
 
-.contato .title1 {
+.contato .montserrat_title {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 75px;
@@ -921,9 +1100,9 @@ main {
     border-radius: 35px;
 }
 
-.contato .cards_contato .card_contato .title1 {
+.contato .cards_contato .card_contato .montserrat_title {
     font-size: 2.5rem;
-    color: var(--primaria);
+    color: var(--verde);
     margin-bottom: 0;
     margin-top: 50px;
 }
@@ -952,7 +1131,7 @@ main {
 .contato .cards_contato .card_contato .info_topico .title_topico {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primaria);
+    color: var(--verde);
     margin: auto;
     margin-right: 1.5rem;
 }
@@ -964,201 +1143,49 @@ main {
     margin: auto;
 }
 
-.contato .cards_contato .localizacao_card {
+.contato .card_contato.localizacao_card {
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.contato .cards_contato .localizacao_card .title1 {
+.contato .card_contato.localizacao_card .montserrat_title {
     margin-top: -20px;
 }
 
-.contato .cards_contato .localizacao_card .title1::after {
+.contato .card_contato.localizacao_card .montserrat_title::after {
     content: " LOCALIZAÇÃO";
 }
 
-.contato .cards_contato .localizacao_card .localizacao {
+.contato .card_contato.localizacao_card .localizacao {
     margin-top: 35px;
     text-align: center;
 }
 
-.contato .cards_contato .localizacao_card .localizacao p {
+.contato .card_contato.localizacao_card .localizacao p {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--branco);
     margin-bottom: 30px;
 }
 
-.contato .cards_contato .localizacao_card .google {
+.contato .card_contato.localizacao_card .google {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.contato .cards_contato .localizacao_card .google a {
+.contato .card_contato.localizacao_card .google a {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--branco);
 }
 
-.contato .cards_contato .localizacao_card .google img {
+.contato .card_contato.localizacao_card .google img {
     width: 37px;
     height: 37px;
 }
-
-/* Benefícios */
-.beneficios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
-    flex-direction: column;
-}
-
-.beneficios .title1 {
-    font-size: 3rem;
-}
-
-.beneficios .title1::after {
-    content: " ESTUDAR JAPONÊS?";
-}
-
-.beneficios .links {
-    display: flex;
-    flex-direction: row;
-    margin-top: 75px;
-    gap: 50px;
-}
-
-.beneficios .links .beneficio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    gap: 15px;
-}
-
-.beneficios .links .beneficio .title2 {
-    font-size: 2.5rem;
-}
-
-.beneficios .links .beneficio .title2.pessoal::after {
-    content: "\A PESSOAL";
-    white-space: pre-line;
-}
-
-.beneficios .links .beneficio .title2.cultural::after {
-    content: "\A CULTURAL";
-    white-space: pre-line;
-}
-
-.beneficios .links .beneficio .title2.profissional::after {
-    content: "\A PROFISSIONAIS";
-    white-space: pre-line;
-}
-
-
-.vl {
-    border-left: 4px solid black;
-    height: 225px;
-}
-
-.beneficios .links .beneficio:hover .title2 {
-    color: #0099FF;
-}
-
-.beneficios .links .beneficio:hover img {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(100%) saturate(500%) hue-rotate(190deg) brightness(95%) contrast(105%);
-}
-
-.beneficios .links .beneficio .title2,
-.beneficios .links .beneficio img {
-    transition: color 0.3s ease;
-    transition: filter 0.3s ease;
-}
-
-.beneficios .links .beneficio.selected .title2 {
-    color: #6FE100;
-}
-
-.beneficios .links .beneficio.selected img {
-    filter: brightness(0) saturate(100%) invert(43%) sepia(95%) saturate(115%) hue-rotate(58deg) brightness(145%) contrast(115%);
-}
-
-.beneficios_carrossel {
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-/* Slide - Benefícios */
-.beneficios_carrossel.active {
-    display: flex;
-    visibility: visible;
-    height: auto;
-    position: relative;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    background-color: #B0C4C4;
-    width: 100%;
-    min-height: 75svh;
-    margin-top: 75px;
-}
-
-.beneficios .beneficios_carrossel img {
-    width: 483px;
-    height: 628px;
-    margin-left: 0;
-}
-
-.beneficios .beneficios_carrossel .carousel {
-    width: 100%;
-    max-width: 755.95px;
-    height: auto;
-    min-height: 704px;
-    margin-bottom: 100px;
-    border-radius: 50px;
-}
-
-.beneficios .beneficios_carrossel .carousel .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    border-radius: 50px;
-}
-
-.beneficios .beneficios_carrossel .carousel .carousel-item h2,
-p {
-    font-family: "Montserrat", sans-serif;
-    color: var(--titulo);
-}
-
-.beneficios .beneficios_carrossel .carousel .carousel-item h2 {
-    font-size: 2.25rem;
-    font-weight: bold;
-    margin-top: -150px;
-}
-
-.beneficios .beneficios_carrossel .carousel .carousel-item p {
-    font-size: 1.875rem;
-    font-weight: normal;
-    width: 625px;
-}
-
 
 /* footer */
 footer {
@@ -1264,7 +1291,7 @@ footer .barra {
     header {
         align-items: center;
         justify-content: center;
-        height: 100px;
+        height: 150px;
     }
 
     .menu_desktop {
@@ -1273,6 +1300,7 @@ footer .barra {
 
     #btn_fechar {
         display: block;
+        margin-left: 50%;
         width: 100%;
         max-width: 40px;
         min-width: 40px;
@@ -1312,15 +1340,13 @@ footer .barra {
         width: 0;
     }
 
-    header .logo img {
-        max-width: 92px;
-        max-height: 80.19px;
-        min-width: 60px;
-        min-height: 60px;
+    .menu_mobile .data_theme{
+        top: calc(25svh + 45%);
     }
 
-    header .logo .titulo_logo {
-        font-size: 1.15rem;
+    header .logo img {
+        margin-left: calc(50% + 50px);
+        margin-top: 5px;
     }
 
     .menu_mobile.abrir {
@@ -1344,6 +1370,8 @@ footer .barra {
 
     main {
         padding-top: 0;
+        margin-top: 150px;
+        padding-bottom: 100px;
     }
 
     .index {
@@ -1351,17 +1379,17 @@ footer .barra {
     }
 
 
-    .texto .titulo {
+    .texto .montserrat_title {
         font-size: 2rem;
         text-align: center;
     }
 
-    .titulo::after {
+    .texto h1::after {
         content: "\A DA LÍNGUA JAPONESA";
         white-space: pre-line;
     }
 
-    .texto .paragrafo_index {
+    .texto .nunito_text {
         display: inline;
         text-align: center;
         padding-right: 25px;
@@ -1369,7 +1397,7 @@ footer .barra {
         font-size: 1.15rem;
     }
 
-    .texto .paragrafo_index::after {
+    .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
         white-space: pre-line;
     }
@@ -1379,7 +1407,7 @@ footer .barra {
         height: 36px;
     }
 
-    .botao a {
+    .botao .montserrat_title {
         font-size: 1.3rem;
     }
 
@@ -1396,14 +1424,14 @@ footer .barra {
         margin-bottom: 0;
     }
 
-    .titulo_sobre {
+    .sobre .montserrat_title {
         font-size: 2rem;
         text-align: center;
     }
 
-    .paragrafo {
+    .sobre .nunito_text {
         font-size: 1.15rem;
-        text-align: center;
+        text-align: justify;
     }
 
     /* Botões index Sobre */
@@ -1433,15 +1461,23 @@ footer .barra {
 
     .texto_sobre {
         margin-top: 0;
+        width: 100%;
+        max-width: 250px;
     }
 
-    .texto_sobre h1 {
+    .texto_sobre .montserrat_title, 
+    .texto_sobre.baixo .montserrat_title  {
         font-size: 1.2rem;
-        margin-bottom: -10px;
+        margin-bottom: -5px;
+        margin-left: -15%;
     }
 
-    .texto_sobre p {
-        font-size: 1rem;
+    .texto_sobre.baixo .montserrat_title {
+        margin-left: -20%;
+    }
+
+    .texto_sobre .nunito_text {
+        font-size: 1.15rem;
     }
 
     /* index parte3 mobile */
@@ -1475,9 +1511,9 @@ footer .barra {
         font-size: 2rem;
     }
 
-    .kappa_flex p {
+    .kappa_flex .nunito_text {
         font-size: 1.2rem;
-        text-align: center;
+        text-align: justify;
         height: 100%;
     }
 
@@ -1486,7 +1522,7 @@ footer .barra {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: justify;
         width: 100%;
         height: 100%;
         max-width: 345px;
@@ -1498,7 +1534,7 @@ footer .barra {
     }
 
     .textos_kappa .title_kappa,
-    .textos_kappa p {
+    .textos_kappa .nunito_text {
         padding: 0 5px;
         margin: 15px 20px 15px 20px;
     }
@@ -1507,14 +1543,101 @@ footer .barra {
         font-size: 1.5rem;
     }
 
-    .textos_kappa p {
+    .textos_kappa .nunito_text {
         font-size: 1.2rem;
     }
 
     .kappa img {
         width: 100%;
-        height: 117px;
+        height: auto;
+        max-width: 283.59px;
+        max-height: 256px;
         margin-bottom: -100px;
+    }
+
+     /* Benefícios Mobile */
+    .beneficios{
+        margin-top: 0;
+    }
+
+    .beneficios .montserrat_title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .beneficios .montserrat_title::after {
+        content: "\A ESTUDAR JAPONÊS?";
+        white-space: pre-line;
+        font-size: 2rem;
+    }
+
+    .beneficios .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 0;
+        gap: 15px;
+    }
+
+    .beneficios .links .beneficio {
+        gap: 10px;
+    }
+
+    .beneficios .links .beneficio .montserrat_title {
+        font-size: 1.675rem;
+    }
+
+    .beneficios .links .beneficio .montserrat_title.pessoal::after {
+        font-size: 2rem;
+    }
+
+    .beneficios .links .beneficio .montserrat_title.cultural::after {
+        font-size: 2rem;
+    }
+
+    .beneficios .links .beneficio .montserrat_title.profissional::after {
+        font-size: 2rem;
+    }
+
+    .vl {
+        border-left: 0;
+        border-top: 2px solid black;
+        width: 250px;
+        height: 0;
+    }
+
+    .beneficios_carrossel.active {
+        margin-top: 50px;
+        margin-bottom: -100px;
+        height: 50svh;
+    }
+
+    .beneficios .beneficios_carrossel img {
+        width: 177px;
+        height: 229.13px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel {
+        min-height: 475px;
+        max-height: 550px;
+        border-radius: 25px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel .carousel-item {
+        border-radius: 25px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel .carousel-item h2 {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        margin-top: -100px;
+        margin-bottom: -10px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel .carousel-item p {
+        font-size: 1rem;
+        max-width: 175px;
     }
 
     /* cursos mobile */
@@ -1531,6 +1654,7 @@ footer .barra {
 
     .contents {
         margin-top: 25px;
+        margin-bottom: 0;
     }
 
     .contents.active {
@@ -1543,11 +1667,11 @@ footer .barra {
         transition: 0.5s;
     }
 
-    .contents .title1 {
+    .contents .montserrat_title.title1 {
         font-size: 2rem;
     }
 
-    .contents .title2 {
+    .contents .montserrat_title.title2 {
         font-size: 2rem;
     }
 
@@ -1563,7 +1687,7 @@ footer .barra {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: justify;
         width: 350px;
         height: auto;
         max-width: 350px;
@@ -1574,12 +1698,12 @@ footer .barra {
         border-radius: 10px;
     }
 
-    .content .title1 {
+    .content .montserrat_title.title1 {
         font-size: 1.5rem;
         margin-top: 15px;
     }
 
-    .content p {
+    .content .nunito_text {
         padding-left: 50px;
         padding-right: 50px;
     }
@@ -1597,17 +1721,18 @@ footer .barra {
         gap: 0;
     }
 
-    .parte .title1 {
+    .parte .montserrat_title {
         font-size: 2rem;
     }
 
-    .parte p {
-        font-size: 1rem;
+    .parte .nunito_text {
+        font-size: 1.35rem;
     }
 
     .parte img {
         width: 323px;
         height: 196px;
+        margin-top: 50px;
     }
 
     .inscrever.mobile {
@@ -1626,19 +1751,25 @@ footer .barra {
     }
 
     .conteudo2 {
-        width: 264px;
+        width: 100%;
+        max-width: 450px;
         height: 147px;
     }
 
-    .inscrever .title1 {
+    .inscrever.mobile .montserrat_title {
         font-size: 2rem;
     }
-
-    .inscrever .title2 {
-        font-size: 2rem;
+    
+    .inscrever.mobile .nunito_text{
+        font-size: 1.35rem;
+        text-align: justify;
     }
 
-    .segundo p {
+    .segundo{
+        margin-top: -25%;
+    }
+
+    .segundo .nunito_text {
         margin-bottom: 20px;
     }
 
@@ -1655,6 +1786,10 @@ footer .barra {
         border-radius: 10px;
         text-align: center;
         margin-bottom: -20px;
+    }
+
+    .botoes_inscrever .montserrat_title{
+        font-size: 1.125rem !important;
     }
 
     .topicos {
@@ -1708,6 +1843,7 @@ footer .barra {
         align-items: center;
         flex-direction: column;
         text-align: center;
+        margin-top: 0;
     }
 
     .sobre_nos img {
@@ -1723,24 +1859,19 @@ footer .barra {
         padding-right: 0;
     }
 
-    .sobre_nos .title1,
-    .historia .title1 {
+    .sobre_nos .montserrat_title,
+    .historia .montserrat_title {
         font-size: 2rem;
         text-align: center;
     }
 
-    .conteudo_sobre .title1::after {
-        content: "\A ESCOLA MODELO";
-        white-space: pre-line;
+    .sobre_nos .nunito_text,
+    .historia .nunito_text {
+        font-size: 1.25rem;
+        text-align: justify;
     }
 
-
-    .sobre_nos p,
-    .historia p {
-        font-size: 1rem;
-    }
-
-    .sobre_nos p {
+    .sobre_nos .nunito_text {
         padding-right: 0;
     }
 
@@ -1749,6 +1880,7 @@ footer .barra {
         justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
+        margin-top: 0;
         gap: 0;
     }
 
@@ -1757,6 +1889,7 @@ footer .barra {
     }
 
     .imagens img {
+        margin-top: -25%;
         margin-left: 0;
     }
 
@@ -1764,24 +1897,26 @@ footer .barra {
         margin-bottom: -100px;
     }
 
-    .faca_parte .title1 {
+    .texto_parte {
+        width: 100%;
+        min-width: 450px;
+    }
+
+    .faca_parte .montserrat_title.title1 {
         font-size: 4rem;
     }
 
-    .faca_parte .title2 {
-        font-size: 2rem;
+    .faca_parte .montserrat_title.title2 {
+        font-size: 1.75rem;
     }
 
-    .faca_parte .title2::after {
+    .faca_parte .montserrat_title.title2::after {
         content: "\A ESSA HISTÓRIA FAZENDO";
         white-space: pre-line;
     }
 
-    .faca_parte .title3 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
+    .faca_parte .montserrat_title.title3 {
         font-size: 3rem;
-        color: var(--primaria);
         margin: 0;
         white-space: nowrap;
         text-decoration: none;
@@ -1789,10 +1924,10 @@ footer .barra {
 
     /* Contato Mobile */
     .contato {
-        margin-top: 150px;
+        margin-top: 0;
     }
 
-    .contato .title1 {
+    .contato .montserrat_title {
         font-size: 2.5rem;
     }
 
@@ -1828,114 +1963,28 @@ footer .barra {
     }
 
     .contato .cards_contato .card_contato .info_topico .title_topico {
-        font-size: 1.45rem;
+        font-size: 1.35rem;
         margin-right: auto;
     }
 
-    .contato .cards_contato .card_contato .info_topico p,
+    .contato .cards_contato .card_contato.localizacao_card .info_topico p,
     .contato .cards_contato .card_contato .info_topico a {
-        font-size: 1.45rem;
+        font-size: 1.35rem;
     }
 
-    .contato .cards_contato .localizacao_card .title1 {
+    .contato .card_contato.localizacao_card .montserrat_title {
         margin-top: -20px;
     }
 
-    .contato .cards_contato .localizacao_card .title1::after {
+    .contato .card_contato.localizacao_card .montserrat_title::after {
         content: "\A LOCALIZAÇÃO";
         white-space: pre-line;
         margin-top: -20px;
     }
 
-    /* Benefícios Mobile */
-    .beneficios {
-        margin-top: 150px;
-    }
-
-    .beneficios .title1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .beneficios .title1::after {
-        content: "\A ESTUDAR JAPONÊS?";
-        white-space: pre-line;
-        font-size: 2rem;
-    }
-
-    .beneficios .links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50px;
-        gap: 15px;
-    }
-
-    .beneficios .links .beneficio {
-        gap: 10px;
-    }
-
-    .beneficios .links .beneficio .title2 {
-        font-size: 1.675rem;
-    }
-
-    .beneficios .links .beneficio .title2.pessoal::after {
-        font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .title2.cultural::after {
-        font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .title2.profissional::after {
-        font-size: 2rem;
-    }
-
-    .vl {
-        border-left: 0;
-        border-top: 2px solid black;
-        width: 250px;
-        height: 0;
-    }
-
-    .beneficios_carrossel.active {
-        margin-top: 50px;
-        height: 50svh;
-    }
-
-    .beneficios .beneficios_carrossel img {
-        width: 177px;
-        height: 229.13px;
-    }
-
-    .beneficios .beneficios_carrossel .carousel {
-        max-width: 238.25px;
-        /* Limita a largura máxima do carrossel */
-        min-height: 211.09px;
-        border-radius: 25px;
-    }
-
-    .beneficios .beneficios_carrossel .carousel .carousel-item {
-        border-radius: 25px;
-    }
-
-    .beneficios .beneficios_carrossel .carousel .carousel-item h2 {
-        font-size: 1.25rem;
-        margin-top: -100px;
-        margin-bottom: -15px;
-    }
-
-    .beneficios .beneficios_carrossel .carousel .carousel-item p {
-        font-size: 1rem;
-        width: 150px;
-    }
-
-
     /* Footer mobile*/
     footer {
-        margin-top: 100px;
-        height: 100vh;
+        height: 100svh;
     }
 
     #footer {
@@ -1953,9 +2002,9 @@ footer .barra {
     }
 
     #footer .logo img {
-        width: 109.52px;
-        height: 119.27px;
-        margin-bottom: -25px;
+        width: 198.33px;
+        height: 188.28px;
+        margin-bottom: 75px;
         margin-left: -45px;
     }
 
@@ -2005,7 +2054,7 @@ footer .barra {
     header {
         align-items: center;
         justify-content: center;
-        height: 125px;
+        height: 150px;
     }
 
     .menu_desktop {
@@ -2014,6 +2063,7 @@ footer .barra {
 
     #btn_fechar {
         display: block;
+        margin-left: 50%;
         width: 100%;
         max-width: 60px;
         min-width: 60px;
@@ -2054,14 +2104,8 @@ footer .barra {
     }
 
     .logo img {
-        max-width: 100px;
-        max-height: 100px;
-        min-width: 108.14px;
-        min-height: 94.26px;
-    }
-
-    header .logo .titulo_logo {
-        font-size: 1.25rem;
+        margin-left: calc(50% + 95px);
+        margin-top: 5px;
     }
 
     .menu_mobile.abrir {
@@ -2070,18 +2114,18 @@ footer .barra {
     }
 
     /* Index Main Tablet Mini */
-    .texto .titulo {
+    .texto .montserrat_title {
         margin-top: 50px;
         font-size: 2.5rem;
         text-align: center;
     }
 
-    .titulo::after {
+    .texto h1::after {
         content: "\A DA LÍNGUA JAPONESA";
         white-space: pre-line;
     }
 
-    .texto .paragrafo_index {
+    .texto .nunito_text {
         display: inline;
         text-align: center;
         padding-right: 25px;
@@ -2089,7 +2133,7 @@ footer .barra {
         font-size: 1.5rem;
     }
 
-    .texto .paragrafo_index::after {
+    .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
         white-space: pre-line;
     }
@@ -2099,8 +2143,13 @@ footer .barra {
         height: 50px;
     }
 
-    .botao a {
+    .botao .montserrat_title {
         font-size: 1.5rem;
+    }
+
+    /* Main Tablet Mini */
+    main{
+        padding-bottom: 100px;
     }
 
     /* Sobre Tablet Mini */
@@ -2123,14 +2172,14 @@ footer .barra {
         margin-bottom: 45px;
     }
 
-    .titulo_sobre {
+    .sobre .montserrat_title {
         font-size: 2rem;
         text-align: center;
     }
 
-    .paragrafo {
+    .sobre .nunito_text {
         font-size: 1.25rem;
-        text-align: center;
+        text-align: justify;
     }
 
     /* Botões index Sobre */
@@ -2162,12 +2211,17 @@ footer .barra {
         margin-top: 0;
     }
 
-    .texto_sobre h1 {
+    .texto_sobre .montserrat_title {
         font-size: 1.5rem;
         margin-bottom: -10px;
+        margin-left: -1%;
     }
 
-    .texto_sobre p {
+    .texto_sobre.baixo .montserrat_title {
+        margin-left: -27%;
+    }
+
+    .texto_sobre .nunito_text {
         font-size: 1.2rem;
     }
 
@@ -2202,7 +2256,7 @@ footer .barra {
         font-size: 2.75rem;
     }
 
-    .kappa_flex p {
+    .kappa_flex .nunito_text {
         font-size: 1.2rem;
         text-align: center;
         height: 100%;
@@ -2213,7 +2267,6 @@ footer .barra {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
         width: 100%;
         height: 100%;
         max-width: 565px;
@@ -2224,8 +2277,13 @@ footer .barra {
         padding-top: 25px;
     }
 
+    .card_kappa .nunito_text,
+    .kappa_flex .nunito_text{
+        text-align: justify;
+    }
+
     .textos_kappa .title_kappa,
-    .textos_kappa p {
+    .textos_kappa .nunito_text {
         padding: 0 5px;
         margin: 15px 20px 15px 20px;
     }
@@ -2234,14 +2292,15 @@ footer .barra {
         font-size: 2rem;
     }
 
-    .textos_kappa p {
+    .textos_kappa .nunito_text {
         font-size: 1.2rem;
     }
 
     .kappa img {
         width: 100%;
-        height: 117px;
-        margin-bottom: 0;
+        height: auto;
+        max-width: 283.59px;
+        max-height: 256px;
     }
 
     /* Benefícios Tablet Mini */
@@ -2249,12 +2308,12 @@ footer .barra {
         margin-top: 150px;
     }
 
-    .beneficios .title1 {
+    .beneficios .montserrat_title {
         font-size: 2rem;
         text-align: center;
     }
 
-    .beneficios .title1::after {
+    .beneficios .montserrat_title::after {
         content: "\A ESTUDAR JAPONÊS?";
         white-space: pre-line;
         font-size: 2rem;
@@ -2265,7 +2324,7 @@ footer .barra {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 0;
         gap: 15px;
     }
 
@@ -2273,31 +2332,32 @@ footer .barra {
         gap: 10px;
     }
 
-    .beneficios .links .beneficio .title2 {
+    .beneficios .links .beneficio .montserrat_title {
         font-size: 1.675rem;
     }
 
-    .beneficios .links .beneficio .title2.pessoal::after {
+    .beneficios .links .beneficio .montserrat_title.pessoal::after {
         font-size: 2rem;
     }
 
-    .beneficios .links .beneficio .title2.cultural::after {
+    .beneficios .links .beneficio .montserrat_title.cultural::after {
         font-size: 2rem;
     }
 
-    .beneficios .links .beneficio .title2.profissional::after {
+    .beneficios .links .beneficio .montserrat_title.profissional::after {
         font-size: 2rem;
     }
 
     .vl {
         border-left: 0;
-        border-top: 2px solid black;
+        border-top: 2px solid var(--divisoria);
         width: 250px;
         height: 0;
     }
 
     .beneficios_carrossel.active {
         margin-top: 50px;
+        margin-bottom: -100px;
         height: 50svh;
     }
 
@@ -2307,9 +2367,8 @@ footer .barra {
     }
 
     .beneficios .beneficios_carrossel .carousel {
-        max-width: 300.25px;
-        /* Limita a largura máxima do carrossel */
-        min-height: 211.09px;
+        min-height: 500px;
+        max-height: 550px;
         border-radius: 25px;
     }
 
@@ -2329,7 +2388,6 @@ footer .barra {
     }
 
     /* Cursos Tablet Mini */
-
     .cursos {
         display: flex;
         align-items: center;
@@ -2338,11 +2396,11 @@ footer .barra {
         flex-direction: column-reverse;
         height: 100%;
         margin-bottom: -100px;
-        margin-top: -50px;
+        margin-top: -15px;
     }
 
     .contents {
-        margin-top: 25px;
+        margin-top: 0;
     }
 
     .contents.active {
@@ -2353,11 +2411,11 @@ footer .barra {
         visibility: visible;
     }
 
-    .contents .title1 {
+    .contents .montserrat_title.title1 {
         font-size: 2rem;
     }
 
-    .contents .title2 {
+    .contents .montserrat_title.title2 {
         font-size: 2rem;
     }
 
@@ -2384,12 +2442,12 @@ footer .barra {
         border-radius: 10px;
     }
 
-    .content .title1 {
+    .content .montserrat_title.title1 {
         font-size: 1.5rem;
         margin-top: 15px;
     }
 
-    .content p {
+    .content .nunito_text {
         padding-left: 50px;
         padding-right: 50px;
     }
@@ -2407,11 +2465,11 @@ footer .barra {
         gap: 0;
     }
 
-    .parte .title1 {
+    .parte .montserrat_title {
         font-size: 2rem;
     }
 
-    .parte p {
+    .parte .nunito_text {
         font-size: 1.25rem;
     }
 
@@ -2426,7 +2484,7 @@ footer .barra {
         align-items: center;
         text-align: center;
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: -5%;
         margin-bottom: 55rem;
         gap: 0;
     }
@@ -2436,20 +2494,25 @@ footer .barra {
     }
 
     .conteudo2 {
-        width: 264px;
+        width: 100%;
+        max-width: 767px;
         height: 147px;
     }
 
-    .inscrever .title1 {
+    .inscrever .montserrat_title {
         font-size: 2rem;
     }
 
-    .inscrever .title2 {
-        font-size: 2rem;
+    .inscrever.mobile .nunito_text{
+        text-align: justify;
     }
 
-    .segundo p {
+    .segundo .nunito_text {
         margin-bottom: 20px;
+    }
+
+    .segundo{
+        margin-top: -15%;
     }
 
     .botoes_inscrever {
@@ -2465,6 +2528,10 @@ footer .barra {
         border-radius: 10px;
         text-align: center;
         margin-bottom: -20px;
+    }
+
+    .botoes_inscrever .montserrat_title{
+        font-size: 1.25rem !important;
     }
 
     .topicos {
@@ -2529,13 +2596,13 @@ footer .barra {
 
     .sobre_nos .conteudo_sobre,
     .historia .conteudo_sobre {
-        text-align: center;
+        text-align: justify;
         padding-left: 0;
         padding-right: 0;
     }
 
-    .sobre_nos .title1,
-    .historia .title1 {
+    .sobre_nos .montserrat_title,
+    .historia .montserrat_title {
         font-size: 2rem;
         text-align: center;
     }
@@ -2546,12 +2613,12 @@ footer .barra {
     }
 
 
-    .sobre_nos p,
-    .historia p {
+    .sobre_nos .nunito_text,
+    .historia .nunito_text {
         font-size: 1.25rem;
     }
 
-    .sobre_nos p {
+    .sobre_nos .nunito_text {
         padding-right: 0;
     }
 
@@ -2560,6 +2627,7 @@ footer .barra {
         justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
+        margin-top: 0;
         gap: 0;
     }
 
@@ -2568,6 +2636,7 @@ footer .barra {
     }
 
     .imagens img {
+        margin-top: -25%;
         margin-left: 0;
     }
 
@@ -2575,20 +2644,20 @@ footer .barra {
         margin-bottom: -100px;
     }
 
-    .faca_parte .title1 {
+    .faca_parte .montserrat_title.title1 {
         font-size: 4rem;
     }
 
-    .faca_parte .title2 {
+    .faca_parte .montserrat_title.title2 {
         font-size: 2rem;
     }
 
-    .faca_parte .title2::after {
+    .faca_parte .montserrat_title.title2::after {
         content: "\A ESSA HISTÓRIA FAZENDO";
         white-space: pre-line;
     }
 
-    .faca_parte .title3 {
+    .faca_parte .montserrat_title.title3 {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
         font-size: 3rem;
@@ -2603,7 +2672,7 @@ footer .barra {
         margin-top: 150px;
     }
 
-    .contato .title1 {
+    .contato .montserrat_title {
         font-size: 2.5rem;
     }
 
@@ -2642,7 +2711,7 @@ footer .barra {
         margin-right: auto;
     }
 
-    .contato .cards_contato .card_contato .info_topico p,
+    .contato .cards_contato .card_contato.localizacao_card .info_topico p,
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 1.45rem;
         margin-top: 15px;
@@ -2654,11 +2723,11 @@ footer .barra {
         justify-content: center;
     }
 
-    .contato .cards_contato .localizacao_card .title1 {
+    .contato .card_contato.localizacao_card .montserrat_title {
         margin-top: -20px;
     }
 
-    .contato .cards_contato .localizacao_card .title1::after {
+    .contato .card_contato.localizacao_card .montserrat_title::after {
         content: "\A LOCALIZAÇÃO";
         white-space: pre-line;
         margin-top: -20px;
@@ -2666,8 +2735,7 @@ footer .barra {
 
     /* Footer Tablet Mini */
     footer {
-        margin-top: 100px;
-        height: 100vh;
+        height: 100svh;
     }
 
     #footer {
@@ -2685,9 +2753,9 @@ footer .barra {
     }
 
     #footer .logo img {
-        max-width: 109.52px;
-        max-height: 119.27px;
-        margin-bottom: -25px;
+        max-width: 324.18px;
+        max-height: 308px;
+        margin-bottom: 75px;
         margin-left: -45px;
     }
 
@@ -2737,7 +2805,7 @@ footer .barra {
     header {
         align-items: center;
         justify-content: center;
-        height: 150px;
+        height: 200px;
     }
 
     .menu_desktop {
@@ -2745,7 +2813,7 @@ footer .barra {
     }
 
     .menu_mobile {
-        top: 150px;
+        top: 200px;
     }
 
     .menu_mobile ul li a {
@@ -2754,6 +2822,7 @@ footer .barra {
 
     #btn_fechar {
         display: block;
+        margin-left: 50%;
         width: 100%;
         max-width: 70px;
         min-width: 70px;
@@ -2793,15 +2862,22 @@ footer .barra {
         width: 0;
     }
 
-    .logo img {
-        max-width: 150px;
-        max-height: 150px;
-        min-width: 60px;
-        min-height: 60px;
+    .menu_mobile .data_theme{
+        height: 75px;
+        width: 75px;
+        top: calc(25svh + 15%);
     }
 
-    header .logo .titulo_logo {
-        font-size: 1.75rem;
+    header .data_theme svg{
+        height: 35px;
+        width: 35px;
+    }
+
+    header .logo img {
+        margin-left: calc(55% + 100px);
+        margin-top: 5px;
+        max-width: 180px;
+        max-height: 175px;
     }
 
     .menu_mobile.abrir {
@@ -2810,17 +2886,17 @@ footer .barra {
     }
 
     /* Index Main Tablet */
-    .texto .titulo {
+    .texto .montserrat_title {
         font-size: 3rem;
         text-align: center;
     }
 
-    .titulo::after {
+    .texto h1::after {
         content: "\A DA LÍNGUA JAPONESA";
         white-space: pre-line;
     }
 
-    .texto .paragrafo_index {
+    .texto .nunito_text {
         display: inline;
         text-align: center;
         padding-right: 25px;
@@ -2828,7 +2904,7 @@ footer .barra {
         font-size: 2rem;
     }
 
-    .texto .paragrafo_index::after {
+    .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
         white-space: pre-line;
     }
@@ -2838,8 +2914,14 @@ footer .barra {
         height: 57px;
     }
 
-    .botao a {
+    .botao .montserrat_title {
         font-size: 2rem;
+    }
+
+    /* Main tablet */
+    main{
+        margin-top: 150px;
+        padding-bottom: 100px;
     }
 
     /* Sobre Tablet */
@@ -2862,14 +2944,14 @@ footer .barra {
         margin-bottom: 45px;
     }
 
-    .titulo_sobre {
+    .sobre .montserrat_title {
         font-size: 3rem;
         text-align: center;
     }
 
-    .paragrafo {
+    .sobre .nunito_text {
         font-size: 2rem;
-        text-align: center;
+        text-align: justify;
     }
 
     /* Botões index Sobre */
@@ -2901,16 +2983,19 @@ footer .barra {
         margin-top: 0;
     }
 
-    .texto_sobre h1 {
+    .texto_sobre .montserrat_title {
         font-size: 2rem;
         margin-bottom: -10px;
+        margin-left: -1%;
     }
 
-    .texto_sobre p {
+    .texto_sobre.baixo .montserrat_title {
+        margin-left: calc(-10px - 30%);
+    }
+
+    .texto_sobre .nunito_text {
         font-size: 1.75rem;
     }
-
-    .texto_sobre.baixo {}
 
     /* index parte3 Tablet Mini */
     .kappa {
@@ -2943,9 +3028,9 @@ footer .barra {
         font-size: 4rem;
     }
 
-    .kappa_flex p {
+    .kappa_flex .nunito_text {
         font-size: 1.75rem;
-        text-align: center;
+        text-align: justify;
         height: 100%;
     }
 
@@ -2954,7 +3039,7 @@ footer .barra {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: justify;
         width: 100%;
         height: 100%;
         max-width: 765px;
@@ -2966,7 +3051,7 @@ footer .barra {
     }
 
     .textos_kappa .title_kappa,
-    .textos_kappa p {
+    .textos_kappa .nunito_text {
         padding: 0 5px;
         margin: 15px 20px 15px 20px;
     }
@@ -2975,32 +3060,27 @@ footer .barra {
         font-size: 3rem;
     }
 
-    .textos_kappa p {
+    .textos_kappa .nunito_text {
         font-size: 1.75rem;
-    }
-
-    .kappa img {
-        width: 100%;
-        height: 117px;
-        margin-bottom: 0;
     }
 
     /* Benefícios Tablet */
     .beneficios .links {
         gap: 15px;
+        margin-top: 25px;
     }
 
     .beneficios .links .beneficio {
-        gap: 10px;
+        gap: 15px;
     }
 
-    .beneficios .links .beneficio .title2 {
+    .beneficios .links .beneficio .montserrat_title {
         font-size: 1.80rem;
     }
 
     .vl {
-        border-left: 2px solid black;
-        height: 200px;
+        border-left: 3px solid var(--divisoria);
+        height: 150px;
     }
 
     .beneficios_carrossel.active {
@@ -3015,19 +3095,21 @@ footer .barra {
 
     .beneficios .beneficios_carrossel .carousel {
         max-width: 575.85px;
-        min-height: 600px;
+        min-height: 650px;
         margin-bottom: 100px;
         border-radius: 50px;
     }
 
     .beneficios .beneficios_carrossel .carousel .carousel-item h2 {
-        font-size: 2.75rem;
+        font-size: 2rem;
         margin-top: -150px;
     }
 
     .beneficios .beneficios_carrossel .carousel .carousel-item p {
-        font-size: 2rem;
-        width: 425px;
+        font-size: 1.75rem;
+        margin-top: 5px;
+        margin-bottom: -25px;
+        max-width: 400px;
     }
 
     /* Cursos Tablet */
@@ -3054,11 +3136,11 @@ footer .barra {
         visibility: visible;
     }
 
-    .contents .title1 {
+    .contents .montserrat_title.title1 {
         font-size: 3rem;
     }
 
-    .contents .title2 {
+    .contents .montserrat_title.title2 {
         font-size: 3rem;
     }
 
@@ -3084,12 +3166,12 @@ footer .barra {
         border-radius: 25px;
     }
 
-    .content .title1 {
+    .content .montserrat_title.title1 {
         font-size: 2.5rem;
         margin-top: 15px;
     }
 
-    .content p {
+    .content .nunito_text {
         font-size: 1.75rem;
         padding-left: 50px;
         padding-right: 50px;
@@ -3116,16 +3198,16 @@ footer .barra {
     .parte {
         flex-direction: column;
         text-align: center;
-        margin-top: 150px;
+        margin-top: 50px;
         margin-bottom: 67.45rem;
         gap: 0;
     }
 
-    .parte .title1 {
+    .parte .montserrat_title {
         font-size: 3rem;
     }
 
-    .parte p {
+    .parte .nunito_text {
         font-size: 1.75rem;
     }
 
@@ -3150,20 +3232,22 @@ footer .barra {
     }
 
     .conteudo2 {
-        width: 264px;
+        width: 100%;
+        max-width: 1023px;
         height: 147px;
     }
 
-    .inscrever .title1 {
+    .inscrever.mobile .montserrat_title {
         font-size: 3rem;
     }
 
-    .inscrever .title2 {
+    .inscrever.mobile .montserrat_title {
         font-size: 3rem;
     }
 
-    .inscrever p {
+    .inscrever.mobile .nunito_text {
         font-size: 1.75rem;
+        text-align: justify;
     }
 
     .inscrever .primeiro p {
@@ -3171,7 +3255,7 @@ footer .barra {
         min-width: 650px;
     }
 
-    .segundo p {
+    .segundo .nunito_text {
         margin-bottom: 20px;
     }
 
@@ -3190,8 +3274,8 @@ footer .barra {
         margin-bottom: -20px;
     }
 
-    .botoes_inscrever a {
-        font-size: 1.5rem;
+    .botoes_inscrever .montserrat_title {
+        font-size: 1.5rem !important;
     }
 
     .topicos {
@@ -3243,6 +3327,7 @@ footer .barra {
         align-items: center;
         flex-direction: column;
         text-align: center;
+        margin-top: 50px;
     }
 
     .sobre_nos img {
@@ -3258,8 +3343,8 @@ footer .barra {
         padding-right: 0;
     }
 
-    .sobre_nos .title1,
-    .historia .title1 {
+    .sobre_nos .montserrat_title,
+    .historia .montserrat_title {
         font-size: 3rem;
         text-align: center;
     }
@@ -3270,12 +3355,13 @@ footer .barra {
     }
 
 
-    .sobre_nos p,
-    .historia p {
+    .sobre_nos .nunito_text,
+    .historia .nunito_text {
         font-size: 1.75rem;
+        text-align: justify;
     }
 
-    .sobre_nos p {
+    .sobre_nos .nunito_text {
         padding-right: 0;
     }
 
@@ -3292,6 +3378,7 @@ footer .barra {
     }
 
     .imagens img {
+        margin-top: -25%;
         margin-left: 0;
     }
 
@@ -3299,20 +3386,20 @@ footer .barra {
         margin-bottom: -100px;
     }
 
-    .faca_parte .title1 {
+    .faca_parte .montserrat_title.title1 {
         font-size: 4rem;
     }
 
-    .faca_parte .title2 {
+    .faca_parte .montserrat_title.title2 {
         font-size: 2rem;
     }
 
-    .faca_parte .title2::after {
+    .faca_parte .montserrat_title.title2::after {
         content: "\A ESSA HISTÓRIA FAZENDO";
         white-space: pre-line;
     }
 
-    .faca_parte .title3 {
+    .faca_parte .montserrat_title.title3 {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
         font-size: 3rem;
@@ -3324,10 +3411,10 @@ footer .barra {
 
     /* Contato Tablet */
     .contato {
-        margin-top: 175px;
+        margin-top: 50px;
     }
 
-    .contato .title1 {
+    .contato .montserrat_title {
         font-size: 3rem;
     }
 
@@ -3360,7 +3447,7 @@ footer .barra {
         margin-bottom: 45px;
     }
 
-    .contato .cards_contato .card_contato .title1 {
+    .contato .cards_contato .card_contato .montserrat_title {
         font-size: 3rem;
     }
 
@@ -3369,7 +3456,7 @@ footer .barra {
         margin-right: auto;
     }
 
-    .contato .cards_contato .card_contato .info_topico p,
+    .contato .cards_contato .card_contato.localizacao_card .localizacao p,
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 1.75rem;
         margin-top: 15px;
@@ -3381,20 +3468,19 @@ footer .barra {
         justify-content: center;
     }
 
-    .contato .cards_contato .localizacao_card .title1 {
+    .contato .card_contato.localizacao_card .montserrat_title {
         margin-top: -20px;
     }
 
-    .contato .cards_contato .localizacao_card .title1::after {
-        content: "\A LOCALIZAÇÃO";
+    .contato .card_contato.localizacao_card .montserrat_title::after {
+        content: " LOCALIZAÇÃO";
         white-space: pre-line;
         margin-top: -20px;
     }
 
     /* Footer Tablet */
     footer {
-        margin-top: 100px;
-        height: 100vh;
+        height: 100svh;
     }
 
     #footer {
@@ -3412,11 +3498,12 @@ footer .barra {
     }
 
     #footer .logo img {
-        max-width: 200px;
-        max-height: 250px;
-        margin-bottom: -25px;
+        max-width: 324.18px;
+        max-height: 308px;
+        margin-bottom: 75px;
         margin-left: -45px;
     }
+
 
     #footer .logo .titulo_logo {
         font-size: 3rem;
@@ -3451,22 +3538,32 @@ footer .barra {
 
 /* Específico  */
 @media (min-width: 1024px) and (max-width: 1099px) {
+    .conteudo{
+        margin-right: 0;
+    }
 
     /* Header Específico */
+    header {
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+    }
+    
     .menu_desktop {
         display: none;
     }
 
     .menu_mobile {
-        top: 150px;
+        top: 215px;
     }
 
     .menu_mobile ul li a {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #btn_fechar {
         display: block;
+        margin-left: 50%;
         width: 100%;
         max-width: 70px;
         min-width: 70px;
@@ -3506,15 +3603,11 @@ footer .barra {
         width: 0;
     }
 
-    .logo img {
-        max-width: 175px;
-        max-height: 175px;
-        min-width: 60px;
-        min-height: 60px;
-    }
-
-    header .logo .titulo_logo {
-        font-size: 1.95rem;
+    header .logo img {
+        margin-left: calc(55% + 100px);
+        margin-top: 5px;
+        max-width: 240px;
+        max-height: 235px;
     }
 
     .menu_mobile.abrir {
@@ -3523,22 +3616,33 @@ footer .barra {
         height: 100svh;
     }
 
-    /* Index Main Específico */
-    main {
-        margin-top: 15vw;
+    .menu_mobile .data_theme{
+        height: 75px;
+        width: 75px;
+        top: calc(25svh + 15%);
     }
 
-    .texto .titulo {
+    header .data_theme svg{
+        height: 35px;
+        width: 35px;
+    }
+
+    /* Index Main Específico */
+    main {
+        padding-bottom: 100px;
+    }
+
+    .texto .montserrat_title {
         font-size: 3.5rem;
         text-align: center;
     }
 
-    .titulo::after {
+    .texto h1::after {
         content: "\A DA LÍNGUA JAPONESA";
         white-space: pre-line;
     }
 
-    .texto .paragrafo_index {
+    .texto .nunito_text {
         display: inline;
         text-align: center;
         padding-right: 25px;
@@ -3546,7 +3650,7 @@ footer .barra {
         font-size: 2.5rem;
     }
 
-    .texto .paragrafo_index::after {
+    .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
         white-space: pre-line;
     }
@@ -3556,7 +3660,7 @@ footer .barra {
         height: 57px;
     }
 
-    .botao a {
+    .botao .montserrat_title {
         font-size: 2rem;
     }
 
@@ -3580,21 +3684,22 @@ footer .barra {
         margin-bottom: 45px;
     }
 
-    .titulo_sobre {
+    .sobre .montserrat_title {
         font-size: 3.5rem;
         margin-bottom: 15px;
         text-align: center;
     }
 
-    .paragrafo {
-        font-size: 2rem;
+    .sobre .nunito_text {
+        font-size: 2.5rem;
         width: 850px;
-        text-align: center;
+        text-align: justify;
     }
 
     /* Botões index Sobre */
     .botoes {
         margin-top: 35px;
+        margin-left: 15%;
     }
 
     .botoes img {
@@ -3603,7 +3708,6 @@ footer .barra {
     }
 
     .botoes_sobre {
-        margin-left: 25px;
         margin-bottom: 15px;
     }
 
@@ -3621,12 +3725,17 @@ footer .barra {
         margin-top: 0;
     }
 
-    .texto_sobre h1 {
+    .texto_sobre .montserrat_title {
         font-size: 2.5rem;
-        margin-bottom: -25px;
+        margin-bottom: -5px;
+        margin-left: -45%;
     }
 
-    .texto_sobre p {
+    .texto_sobre.baixo .montserrat_title{
+        margin-left: calc(-10px - 49%);
+    }
+
+    .texto_sobre .nunito_text {
         font-size: 2rem;
     }
 
@@ -3661,9 +3770,9 @@ footer .barra {
         font-size: 5rem;
     }
 
-    .kappa_flex p {
-        font-size: 2rem;
-        text-align: center;
+    .kappa_flex .nunito_text {
+        font-size: 2.5rem;
+        text-align: justify;
         height: 100%;
     }
 
@@ -3684,7 +3793,7 @@ footer .barra {
     }
 
     .textos_kappa .title_kappa,
-    .textos_kappa p {
+    .textos_kappa .nunito_text {
         padding: 0 5px;
         margin: 15px 20px 15px 20px;
     }
@@ -3693,32 +3802,32 @@ footer .barra {
         font-size: 3.75rem;
     }
 
-    .textos_kappa p {
-        font-size: 2em;
-    }
-
-    .kappa img {
-        width: 100%;
-        height: 117px;
-        margin-bottom: 0;
+    .textos_kappa .nunito_text {
+        font-size: 2.5rem;
+        text-align: justify;
     }
 
     /* Benefícios Específico */
+    .beneficios {
+        margin-top: calc(100px + 25%);
+    }
+
     .beneficios .links {
         gap: 25px;
+        margin-top: 55px;
     }
 
     .beneficios .links .beneficio {
         gap: 10px;
     }
 
-    .beneficios .links .beneficio .title2 {
-        font-size: 2rem;
+    .beneficios .links .beneficio .montserrat_title {
+        font-size: 2.25rem;
     }
 
     .vl {
-        border-left: 2px solid black;
-        height: 200px;
+        border-left: 3px solid var(--divisoria);
+        height: 150px;
     }
 
     .beneficios_carrossel.active {
@@ -3732,14 +3841,18 @@ footer .barra {
     }
 
     .beneficios .beneficios_carrossel .carousel {
-        max-width: 575.85px;
+        min-width: 575.85px;
         max-width: 600px;
         height: auto;
-        min-height: 550px;
+        min-height: 700px;
+        max-height: 750px;
     }
 
     .beneficios .beneficios_carrossel .carousel .carousel-item h2 {
-        font-size: 2.75rem;
+        line-height: 1.2;
+        font-size: 2.25rem;
+        margin-top: -85px;
+        margin-bottom: -10px;
     }
 
     .beneficios .beneficios_carrossel .carousel .carousel-item p {
@@ -3756,7 +3869,7 @@ footer .barra {
         flex-direction: column-reverse;
         height: 100%;
         margin-bottom: -100px;
-        margin-top: 0;
+        margin-top: 150px;
     }
 
     .contents {
@@ -3771,11 +3884,11 @@ footer .barra {
         visibility: visible;
     }
 
-    .contents .title1 {
+    .contents .montserrat_title.title1 {
         font-size: 3rem;
     }
 
-    .contents .title2 {
+    .contents .montserrat_title.title2 {
         font-size: 3rem;
     }
 
@@ -3801,15 +3914,16 @@ footer .barra {
         border-radius: 25px;
     }
 
-    .content .title1 {
+    .content .montserrat_title.title1 {
         font-size: 2.5rem;
         margin-top: 15px;
     }
 
-    .content p {
+    .content .nunito_text {
         font-size: 2rem;
         padding-left: 50px;
         padding-right: 50px;
+        text-align: justify;
     }
 
     .cursos .carousel-box {
@@ -3842,12 +3956,12 @@ footer .barra {
         gap: 0;
     }
 
-    .parte .title1 {
+    .parte .montserrat_title {
         font-size: 4rem;
     }
 
-    .parte .conteudo p {
-        font-size: 2rem;
+    .parte .conteudo .nunito_text {
+        font-size: 2.5rem;
         width: 700px;
     }
 
@@ -3872,28 +3986,30 @@ footer .barra {
     }
 
     .conteudo2 {
-        width: 464px;
+        width: 550px;
         height: 147px;
+        margin-top: 25rem;
     }
 
-    .inscrever .title1 {
+    .inscrever.mobile .montserrat_title {
         font-size: 4rem;
     }
 
-    .inscrever .title2 {
-        font-size: 4rem;
+    .inscrever.mobile .nunito_text {
+        font-size: 2.5rem;
+        text-align: justify;
     }
 
-    .inscrever p {
-        font-size: 2rem;
-    }
-
-    .inscrever .primeiro p {
+    .inscrever.mobile .primeiro .nunito_text {
         width: 100%;
         min-width: 750px;
     }
 
-    .segundo p {
+    .segundo{
+        margin-bottom: 25rem;
+    }
+
+    .segundo .nunito_text {
         margin-bottom: 20px;
     }
 
@@ -3912,8 +4028,8 @@ footer .barra {
         margin-bottom: -20px;
     }
 
-    .botoes_inscrever a {
-        font-size: 2.25rem;
+    .botoes_inscrever .montserrat_title {
+        font-size: 2.25rem !important;
     }
 
     .topicos {
@@ -3921,7 +4037,7 @@ footer .barra {
         justify-content: center;
         flex-direction: column;
         margin-top: 5rem;
-        margin-bottom: 0;
+        margin-bottom: -50px;
     }
 
     .topico {
@@ -3945,7 +4061,7 @@ footer .barra {
     .topicos .topico_texto p {
         width: 100%;
         min-width: 650px;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .topicos .numero_topico {
@@ -3965,6 +4081,7 @@ footer .barra {
         align-items: center;
         flex-direction: column;
         text-align: center;
+        margin-top: calc(50px + 25%);
     }
 
     .sobre_nos img {
@@ -3982,8 +4099,8 @@ footer .barra {
         padding-right: 0;
     }
 
-    .sobre_nos .title1,
-    .historia .title1 {
+    .sobre_nos .montserrat_title,
+    .historia .montserrat_title {
         font-size: 4rem;
         text-align: center;
     }
@@ -3994,12 +4111,13 @@ footer .barra {
     }
 
 
-    .sobre_nos p,
-    .historia p {
-        font-size: 2rem;
+    .sobre_nos .nunito_text,
+    .historia .nunito_text {
+        font-size: 2.25rem;
+        text-align: justify;
     }
 
-    .sobre_nos p {
+    .sobre_nos .nunito_text {
         padding-right: 0;
     }
 
@@ -4019,29 +4137,30 @@ footer .barra {
         width: 500px;
         height: 454.88px;
         margin-left: 0;
+        margin-top: -25%;
     }
 
     .faca_parte {
         margin-bottom: -100px;
     }
 
-    .faca_parte .title1 {
-        font-size: 4rem;
+    .faca_parte .montserrat_title.title1 {
+        font-size: 5rem;
     }
 
-    .faca_parte .title2 {
-        font-size: 2rem;
+    .faca_parte .montserrat_title.title2 {
+        font-size: 3rem;
     }
 
-    .faca_parte .title2::after {
+    .faca_parte .montserrat_title.title2::after {
         content: "\A ESSA HISTÓRIA FAZENDO";
         white-space: pre-line;
     }
 
-    .faca_parte .title3 {
+    .faca_parte .montserrat_title.title3 {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 4rem;
         color: var(--primaria);
         margin: 0;
         white-space: nowrap;
@@ -4053,7 +4172,7 @@ footer .barra {
         margin-top: 250px;
     }
 
-    .contato .title1 {
+    .contato .montserrat_title {
         font-size: 4rem;
     }
 
@@ -4086,7 +4205,7 @@ footer .barra {
         margin-bottom: 45px;
     }
 
-    .contato .cards_contato .card_contato .title1 {
+    .contato .cards_contato .card_contato .montserrat_title {
         font-size: 4rem;
     }
 
@@ -4095,7 +4214,7 @@ footer .barra {
         margin-right: auto;
     }
 
-    .contato .cards_contato .card_contato .info_topico p,
+    .contato .cards_contato .card_contato.localizacao_card .info_topico p,
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 2.25rem;
         margin-top: 15px;
@@ -4107,29 +4226,28 @@ footer .barra {
         justify-content: center;
     }
 
-    .contato .cards_contato .localizacao_card .title1 {
+    .contato .card_contato.localizacao_card .montserrat_title {
         margin-top: -20px;
     }
 
-    .contato .cards_contato .localizacao_card .title1::after {
+    .contato .card_contato.localizacao_card .montserrat_title::after {
         content: "\A LOCALIZAÇÃO";
         white-space: pre-line;
         margin-top: -20px;
     }
 
-    .contato .cards_contato .localizacao_card .localizacao p {
+    .contato .card_contato.localizacao_card .localizacao p {
         font-size: 2.25rem;
     }
 
 
-    .contato .cards_contato .localizacao_card .google a {
+    .contato .card_contato.localizacao_card .google a {
         font-size: 2.25rem;
     }
 
     /* Footer Específico */
     footer {
-        margin-top: 100px;
-        height: 100vh;
+        height: 100svh;
     }
 
     #footer {
@@ -4147,9 +4265,9 @@ footer .barra {
     }
 
     #footer .logo img {
-        max-width: 200px;
-        max-height: 250px;
-        margin-bottom: -25px;
+        max-width: 324.18px;
+        max-height: 308px;
+        margin-bottom: 75px;
         margin-left: -45px;
     }
 
@@ -4186,6 +4304,10 @@ footer .barra {
 
 /* Notebook */
 @media (min-width: 1100px) and (max-width: 1450px) {
+    .conteudo{
+        margin-right: 0;
+    }
+
     header .menu_desktop ul li {
         margin: 0 15px;
         font-size: 20px;
@@ -4210,7 +4332,7 @@ footer .barra {
         min-height: 516px;
     }
 
-    .titulo_sobre {
+    .sobre .montserrat_title {
         font-size: 3rem;
     }
 
@@ -4243,12 +4365,12 @@ footer .barra {
         margin-top: 25px;
     }
 
-    .texto_sobre h1 {
+    .texto_sobre .montserrat_title {
         font-size: 1.5rem;
         margin-bottom: -15px;
     }
 
-    .texto_sobre p {
+    .texto_sobre .nunito_text {
         font-size: 1.25rem;
     }
 
@@ -4278,12 +4400,12 @@ footer .barra {
         gap: 35px;
     }
 
-    .beneficios .links .beneficio .title2 {
+    .beneficios .links .beneficio .montserrat_title {
         font-size: 2rem;
     }
 
     .vl {
-        border-left: 4px solid black;
+        border-left: 4px solid var(--divisoria);
         height: 150px;
     }
 
@@ -4294,14 +4416,16 @@ footer .barra {
     /* Cursos Notebook */
     .cursos {
         padding: 0 50px;
+        margin-top: 75px;
     }
 
-    .contents .title1 {
-        font-size: 2.55rem;
+    .contents {
+        margin-bottom: 75px;
     }
+    
 
-    .contents .title2 {
-        font-size: 3.25rem;
+    .contents .montserrat_title.title2 {
+        font-size: 2.5rem;    
     }
 
     .content {
@@ -4312,11 +4436,11 @@ footer .barra {
         margin-top: 15px;
     }
 
-    .content .title1 {
+    .content .montserrat_title.title1 {
         font-size: 1.65rem;
     }
 
-    .content p {
+    .content .nunito_text {
         font-size: 1.15rem;
     }
 
@@ -4327,12 +4451,31 @@ footer .barra {
 
     /* Faça Parte Notebook */
     .parte {
-        gap: 100px;
+        gap: 150px;
+        width: 100%;
+        margin-bottom: 50px;
     }
 
+    .parte .montserrat_title {
+        font-size: 3rem;
+        width: 500px;
+    }
+
+    .inscrever.desktop{
+        padding-bottom: 50px;
+    }
+    
     /* Tópicos Notebook */
+    .topicos {
+        margin-top: 50px;
+    }
+
+    .topicos .topico{
+        margin-bottom: 0;
+    }
+
     .topicos .topico_texto {
-        width: 475px;
+        width: 450px;
     }
 
     .topicos p {
@@ -4346,12 +4489,12 @@ footer .barra {
     /* Sobre Nós Notebook */
     .sobre_nos,
     .historia {
-        margin-top: 150px;
+        margin-top: 100px;
         padding: 20px;
     }
 
     .sobre_nos {
-        margin-left: 5%;
+        margin-left: 0;
     }
 
     .sobre_nos img {
@@ -4364,9 +4507,13 @@ footer .barra {
         padding-right: 0;
     }
 
-    .sobre_nos .title1,
-    .historia .title1 {
-        font-size: 2rem;
+    .sobre_nos .montserrat_title,
+    .historia .montserrat_title {
+        font-size: 2.5rem;
+    }
+
+    .sobre_nos .nunito_text{
+        padding-right: 45px;
     }
 
     .historia {
@@ -4380,7 +4527,7 @@ footer .barra {
     }
 
     .historia .imagens img {
-        margin-left: 50px;
+        margin-left: 0;
     }
 
     /* Contato Notebook */
@@ -4398,12 +4545,11 @@ footer .barra {
         font-size: 1.25rem;
     }
 
-    .contato .cards_contato .localizacao_card .localizacao p {
+    .contato .card_contato.localizacao_card .localizacao p {
         font-size: 1.25rem;
     }
     
-    .contato .cards_contato .localizacao_card .google a {
+    .contato .card_contato.localizacao_card .google a {
         font-size: 1.25rem;
     }
-    
 }

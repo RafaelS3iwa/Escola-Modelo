@@ -1,35 +1,35 @@
 <?php
 $tituloPagina = "Benefícios de Aprender Japonês: Cultura, Carreira e Mais";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
+require_once __DIR__ . "/../includes/cabecalho.php";
 ?>
 
 <main>
     <div class="beneficios">
-        <h1 class="title1">POR QUE</h1>
+        <h1 class="montserrat_title">POR QUE</h1>
 
         <div class="links">
             <div class="beneficio selected" onclick="abrirCarrossel.call(this)" data-target="1">
-                <h2 class="title2 pessoal">DESENVOLVIMENTO</h2>
+                <h2 class="montserrat_title pessoal">DESENVOLVIMENTO</h2>
                 <img src="/assets/img/icons/setinha.png" alt="Seta Desenvolvimento">
             </div>
 
             <div class="vl"></div>
 
             <div class="beneficio" onclick="abrirCarrossel.call(this)" data-target="2">
-                <h2 class="title2 cultural">IMERSÃO</h2>
+                <h2 class="montserrat_title cultural">IMERSÃO</h2>
                 <img src="/assets/img/icons/setinha.png" alt="Seta Imersão Cultural">
             </div>
 
             <div class="vl"></div>
 
             <div class="beneficio" onclick="abrirCarrossel.call(this)" data-target="3">
-                <h2 class="title2 profissional">OPORTUNIDADES</h2>
+                <h2 class="montserrat_title profissional">OPORTUNIDADES</h2>
                 <img src="/assets/img/icons/setinha.png" alt="Seta Oportunidades">
             </div>
         </div>
 
         <div class="beneficios_carrossel active" id="carousel-1">
-            <img src="/assets/img/kappa/Kappa Professor.png" alt="">
+            <img src="/assets/img/kappa/Kappa Professor.png" alt="Imagem do Mascote Kappa">
 
             <div class="carousel carousel-slider center">
                 <div class="carousel-fixed-item center">
@@ -55,7 +55,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
         </div>
 
         <div class="beneficios_carrossel" id="carousel-2">
-            <img src="/assets/img/kappa/Kappa Professor.png" alt="">
+            <img src="/assets/img/kappa/Kappa Professor.png" alt="Imagem do Mascote Kappa">
 
             <div class="carousel carousel-slider center">
                 <div class="carousel-fixed-item center">
@@ -82,7 +82,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
         </div>
 
         <div class="beneficios_carrossel" id="carousel-3">
-            <img src="/assets/img/kappa/Kappa Professor.png" alt="">
+            <img src="/assets/img/kappa/Kappa Professor.png" alt="Imagem do Mascote Kappa">
 
             <div class="carousel carousel-slider center">
                 <div class="carousel-fixed-item center">
@@ -115,5 +115,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 </main>
 
 <?php
-require_once  $_SERVER['DOCUMENT_ROOT'] . "/includes/rodape.php";
+require_once __DIR__ . "/../includes/rodape.php";
 ?>

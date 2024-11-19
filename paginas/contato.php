@@ -1,15 +1,15 @@
 <?php
 $tituloPagina = "Entre em contato";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
+require_once __DIR__ . "/../includes/cabecalho.php";
 ?>
 
 <main>
     <div class="contato">
-        <h1 class="title1">INFORMAÇÕES DE<br>CONTATO</h1>
+        <h1 class="montserrat_title">INFORMAÇÕES DE<br>CONTATO</h1>
 
         <div class="cards_contato">
             <div class="card_contato">
-                <h1 class="title1">NOSSO CONTATO</h1>
+                <h1 class="montserrat_title">NOSSO CONTATO</h1>
 
                 <div class="informacoes">
                     <div class="info_topico">
@@ -33,7 +33,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
             </div>
 
             <div class="card_contato localizacao_card">
-                <h1 class="title1">NOSSA</h1>
+                <h1 class="montserrat_title">NOSSA</h1>
                 <div class="localizacao">
                     <p>Rua Paes Leme, 543 - <br> Alto Cafezal, Marília - SP</p>
 
@@ -48,5 +48,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
 </main>
 
 <?php
-require_once  $_SERVER['DOCUMENT_ROOT'] . "/includes/rodape.php";
+require_once __DIR__ . "/../includes/rodape.php";
 ?>
