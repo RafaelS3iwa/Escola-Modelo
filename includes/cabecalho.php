@@ -14,17 +14,14 @@
     <meta property="og:title" content="Escola Modelo de Língua Japonesa de Marília">
     <meta property="og:description" content="A Escola Modelo de Língua Japonesa de Marília oferece aulas dinâmicas e imersivas. Aprenda japonês de maneira prática e culturalmente rica. Inscreva-se agora!">
     <meta property="og:image" content="/assets/img/logo/EscolaModelo.png">
-    <!-- Adicionar a URL do site -->
-    <meta property="og:url" content="https://www.seusite.com">
+
+    <meta property="og:url" content="https://www.escolajaponesmarilia.com.br">
     <meta property="og:type" content="website">
 
-    <!-- Adicionar a URL do site -->
-    <link rel="canonical" href="https://www.seusite.com/">
-
+    <link rel="canonical" href="https://www.escolajaponesmarilia.com.br/">
     <link rel="icon" href="/assets/img/logo/EscolaModelo.png" type="image/x-icon">
-    <!-- Caso seu favicon seja em formato PNG, pode adicionar assim -->
     <link rel="icon" href="/assets/img/logo/EscolaModelo.png" type="image/png">
-    <!-- Se você tiver um ícone para dispositivos Apple (opcional) -->
+    
     <link rel="apple-touch-icon" href="/assets/img/logo/EscolaModelo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
