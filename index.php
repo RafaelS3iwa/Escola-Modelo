@@ -1,35 +1,44 @@
 <?php
-$tituloPagina = "Escola Modelo";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
+$tituloPagina = "Escola Modelo de Língua Japonesa de Marília";
+require_once __DIR__ . "/includes/cabecalho.php";
 ?>
 
 <main>
     <div class="index">
         <div class="texto">
-            <h1 class="titulo">MERGULHE NA BELEZA</h1>
-            <p class="paragrafo_index">Seja bem-vindo à Escola Modelo de Lingua Japonesa</p>
+            <h1 class="montserrat_title">MERGULHE NA BELEZA</h1>
+            <p class="nunito_text">Seja bem-vindo à Escola Modelo de Lingua Japonesa</p>
 
             <div class="botao">
-                <button><a href="/paginas/parte.php">Faça Parte!</a></button>
+                <button><a href="/paginas/parte.php" class="montserrat_title">Faça Parte!</a></button>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div id="sobre">
-            <img src="/assets/img/icons/Whatsapp.png" alt="">
+        <div class="sobre">
+            <img class="sobre_img" src="/assets/img/complementos/Escola Atual.jpeg" alt="Imagem da Escola Modelo de Língua Japonesa de Marília">
             <div class="conteudo">
-                <h1 class="titulo_sobre">UM BREVE RESUMO<br>SOBRE A NOSSA ESCOLA</h1>
-                <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laudantium expedita numquam, eum vero at labore accusamus quod alias sunt nesciunt voluptatibus molestias non ipsa quaerat tenetur, dolor officia. Accusantium veritatis et voluptatem excepturi? Expedita dolorem libero possimus autem eaque quis. Quas in unde labore quis accusantium dicta eos natus, vero, distinctio asperiores at rem molestias facilis delectus corporis quod cumque soluta quasi? Exercitationem et totam inventore impedit natus, rem repellat quam reiciendis culpa distinctio veritatis dolorem quod sint tempora minima sed recusandae at corrupti! </p>
+                <h1 class="montserrat_title">UM BREVE RESUMO<br>SOBRE A NOSSA ESCOLA</h1>
+                <p class="nunito_text">A Escola Modelo de Língua Japonesa de Marília tem o orgulho de ensinar a cultura e a língua
+                    japonesa há quase 100 anos. Com uma missão voltada para o ensino imersivo e dinâmico,
+                    buscamos não apenas ensinar o idioma, mas também conectar nossos alunos profundamente à
+                    cultura japonesa. Oferecemos aulas para todos os níveis, desde iniciantes até avançados, com
+                    foco no desenvolvimento completo das habilidades de leitura, escrita, escuta e conversação.
+                    Nosso objetivo é criar um ambiente de aprendizado envolvente e acolhedor, onde cada aluno
+                    possa desenvolver sua fluência no japonês enquanto explora as diversas facetas da cultura
+                    japonesa. Para uma imersão ainda maior, oferecemos aulas especiais de Mangá, Soroban e
+                    Culinária Japonesa, permitindo que nossos alunos vivenciem a cultura de maneira autêntica e
+                    enriquecedora.</p>
 
-                <div id="botoes">
+                <div class="botoes">
                     <div class="botoes_sobre">
                         <div class="botao_sobre">
                             <button><a href="/paginas/sobre.php"><img src="/assets/img/icons/Relógio.png" alt="Botão Timeline"></a></button>
                         </div>
                         <div class="texto_sobre">
-                            <h1>Mais detalhes sobre nós!</h1>
-                            <p>Texto Temporário</p>
+                            <h1 class="montserrat_title">Mais detalhes sobre nós!</h1>
+                            <p class="nunito_text">Confira nossa história completa!</p>
                         </div>
                     </div>
 
@@ -37,9 +46,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
                         <div class="botao_sobre">
                             <button><a href="/paginas/cursos.php"><img src="/assets/img/icons/search.png" alt="Botão Conferir Cursos"></a></button>
                         </div>
-                        <div class="texto_sobre">
-                            <h1>Confira nossos Cursos!</h1>
-                            <p>Texto Temporário</p>
+                        <div class="texto_sobre baixo">
+                            <h1 class="montserrat_title">Confira nossos Cursos!</h1>
+                            <p class="nunito_text">Veja todos os detalhes sobre os nossos cursos!</p>
                         </div>
                     </div>
                 </div>
@@ -48,29 +57,40 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
     </div>
 
     <div class="container">
-        <div id="kappa">
-            <div id="kappa_flex">
+        <div class="kappa">
+            <div class="kappa_flex">
                 <div class="conteudo">
-                    <div id="titulo_kappa">
-                        <h1 class="title1">MITOLOGIA JAPONESA</h1>
-                        <h1 class="title2">E SUA LIGAÇÃO COM</h1>
-                        <h1 class="title3">A ESCOLA MODELO</h1>
+                    <div class="titulo_kappa">
+                        <h1 class="montserrat_title title1">MITOLOGIA JAPONESA</h1>
+                        <h1 class="montserrat_title title2">E SUA LIGAÇÃO COM</h1>
+                        <h1 class="montserrat_title title3">A ESCOLA MODELO</h1>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laudantium expedita numquam, eum vero at labore accusamus quod alias sunt nesciunt voluptatibus molestias non ipsa quaerat tenetur, dolor officia. Accusantium veritatis et voluptatem excepturi? Expedita dolorem libero possimus autem eaque quis.</p>
+                    <p class="nunito_text">O KAPPA, guardião das águas na mitologia japonesa, é o mascote da nossa Escola desde 2017
+                        quando um grupo de alunos e professores criou o KAPPAKAI, evento de divulgação da cultura
+                        pop japonesa. Assim como o Kappa que está conectado com a natureza, buscamos conectar
+                        nossos alunos ao fluxo do conhecimento, explorando as profundezas da língua e cultura do
+                        Japão, guiando-os em uma jornada de descoberta, onde cada aula revela segredos e tradições
+                        milenares. Mergulhe conosco e desvende os mistérios do idioma japonês com a curiosidade e
+                        determinação do nosso mascote!</p>
                 </div>
 
-                <div id="card_kappa">
-                    <div id="textos_kappa">
-                        <h1 id="title_kappa">ALIÁS O QUE É O KAPPA?</h1>
-                        <p>O Kappa é uma criatura mitológica do folclore japonês, muitas vezes descrita como um ser aquático. Sua aparência é única, com características que lembram um híbrido entre tartaruga e humano, incluindo um prato cheio de água em sua cabeça, essencial para sua força. Os Kappas são conhecidos por viverem em rios e lagos, sendo hábeis nadadores. Eles têm um comportamento travesso, frequentemente envolvidos em travessuras que podem variar de brincadeiras inofensivas a atos mais sérios. Além disso, os Kappas são considerados guardiões das águas e das crianças, refletindo a complexa relação entre humanos e a natureza nas tradições japonesas.</p>
+                <div class="card_kappa">
+                    <div class="textos_kappa">
+                        <h1 class="montserrat_title title_kappa">ALIÁS O QUE É O KAPPA?</h1>
+                        <p class="nunito_text">Muito prazer, sou o KAPPA, um YOUKAI, ser aquático mitológico do folclore japonês. Ollhem,
+                            tenho esta aparência única: um misto entre tartaruga e humano, incluindo um prato cheio de
+                            água em sua cabeça, que é essencial para minha força. Vivo em rios e lagos, sendo um hábil
+                            nadador. Tenho um espírito brincalhão e apesar de algumas travessuras, sou também o guardião
+                            das águas e das crianças e protejo a natureza. Foi por isso que a ESCOLA MODELO me
+                            escolheu pra ser o seu MASCOTE!</p>
                     </div>
                 </div>
             </div>
-            <img src="/assets/img/icons/retangulo.png" alt="">
+            <img src="/assets/img/kappa/kappa Joinha.png" alt="Imagem do Mascote Kappa">
         </div>
     </div>
 </main>
 
 <?php
-require_once  $_SERVER['DOCUMENT_ROOT'] . "/includes/rodape.php";
+require_once __DIR__ . "/includes/rodape.php";
 ?>

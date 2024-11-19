@@ -1,51 +1,52 @@
 <?php
 $tituloPagina = "Sobre nós";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
+require_once __DIR__ . "/../includes/cabecalho.php";
 ?>
 
 <main>
     <div class="sobre_nos">
         <div class="conteudo_sobre">
-            <h1 class="title1">A MISSÃO DA </h1>
-            <p>
-                A cidade de Marília tem em suas raízes uma ligação bastante forte com a colônia japonesa visto que uma grande parte de sua população pioneira era formada de imigrantes japoneses.<br>
-                Em Agosto de 1.930 foi fundada a primeira Associação da colônia japonesa em Marília idealizada pelo Sr. ZENKITI SHIROMA, entidade esta que funcionou durante 10 anos, quando teve suas atividades paralisadas em virtude da proibição das reuniões em grupo devido a explosão da 2ª Guerra Mundial.<br>
-                Em Agosto de 1.945, com o término da Guerra, foram retomadas as atividades. Com isso, nasceu a Associação Nipo- Brasileira de Marília, que foi o berço do atual Nikkey Marília que funciona desde aquela época no endereço da Rua Paes Leme, 543.
+            <h1 class="montserrat_title">A NOSSA HISTÓRIA</h1>
+            <p class="nunito_text">
+                A cidade de Marília tem uma ligação profunda com a colônia japonesa, visto que antes de sua
+                fundação já recebia os primeiros imigrantes japoneses em sua região em 1926.
+                Em agosto de 1930, Zenkiti Shiroma idealizou e fundou a primeira Associação da colônia
+                japonesa(atual Nikkey Marília) onde iniciou as atividades educacionais para os filhos dos
+                imigrantes. Desta forma, nossa Escola existe há quase um século. Tornou-se ESCOLA MODELO
+                em 14 de dezembro de 1994, através do apoio do Governo japonês representado pela
+                JICA(Agência de Cooperação Internacional do Japão), que desde então vêm nos apoiando de
+                diversas formas como envio de voluntários no ensino do idioma, proporcionando acesso a cursos
+                para alunos e professores no Japão, etc. Assim, nossa escola vem evoluindo-se sempre no
+                intuito de melhor atender e cumprir nossa missão.
             </p>
         </div>
-        <img src="/assets/img/complementos/kasato-maru.png" alt="">
+        <img src="/assets/img/complementos/EscolaPassado.jpeg" alt="Foto da Escola em 1930">
     </div>
-
 
     <div class="historia">
         <div class="imagens">
-            <img class="imagem" src="/assets/img/complementos/sobre-2.jpg" alt="">
-            <img src="/assets/img/complementos/sobre-1.jpg" alt="">
+            <img class="imagem" src="/assets/img/complementos/sobre-2.jpg" alt="Imagem de um Templo Japonês">
+            <img src="/assets/img/complementos/sobre-1.jpg" alt="Imagem de um Pergaminho com escrita Hiragana">
         </div>
 
         <div class="conteudo_sobre">
-            <h1 class="title1">A NOSSA HISTÓRIA</h1>
-            <p>
-                A Sede Social com 2.200 m² funciona no mesmo endereço, onde são realizadas as atividades culturais e também funciona a Escola Modelo de Língua Japonesa de Marília.<br>
-
-                A Escola iniciou suas atividades em 1930 e tornou-se Escola Modelo em 1994, em parceira com o Governo do Japão através da JICA (Agência de Cooperação Internacional do Japão).<br>
-
-                Através da orientação da língua japonesa, tem como diretriz educacional, criar indivíduos cosmopolitas, perseverantes e gentis que contribuam com o desenvolvimento da sociedade brasileira, que tenham consideração pelos terceiros e que aprofundem o entendimento a respeito da cultura e tradição japonesa.<br>
-
-                Além disso, o Nikkey Marília e a Escola Modelo mantêm um excelente relacionamento com as cidades-irmãs de Marília: a cidade japonesa de Higashihiroshima e a cidade de Izumisano.
+            <h1 class="montserrat_title">A NOSSA MISSÃO</h1>
+            <p class="nunito_text">Através da orientação da língua japonesa, aprofundando o entendimento a respeito da cultura e
+                tradições japonesas, desejamos criar indivíduos perseverantes, gentis e respeitosos, e que
+                sejam cidadãos cosmopolitas que contribuam para o desenvolvimento da sociedade brasileira.
             </p>
         </div>
     </div>
 
     <div class="faca_parte">
         <div class="texto_parte">
-            <h1 class="title1">VENHA!</h1>
-            <h1 class="title2">CONTINUE COM</h1>
-            <a href="/paginas/parte.php" class="title3">PARTE DELA!</a>
+            <h1 class="montserrat_title title1">VENHA!</h1>
+            <h1 class="montserrat_title title2">CONTINUE COM</h1>
+            <a href="/paginas/parte.php" class="montserrat_title title3">PARTE DELA!</a>
         </div>
     </div>
 </main>
 
 <?php
-require_once  $_SERVER['DOCUMENT_ROOT'] . "/includes/rodape.php";
+require_once __DIR__ . "/../includes/rodape.php";
 ?>
