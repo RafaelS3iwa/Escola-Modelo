@@ -13,7 +13,7 @@
 
     <meta property="og:title" content="Escola Modelo de Língua Japonesa de Marília">
     <meta property="og:description" content="A Escola Modelo de Língua Japonesa de Marília oferece aulas dinâmicas e imersivas. Aprenda japonês de maneira prática e culturalmente rica. Inscreva-se agora!">
-    <meta property="og:image" content="/assets/img/logo/Logo Escola Modelo - Transparente.png">
+    <meta property="og:image" content="/assets/img/logo/EscolaModelo.png">
     <!-- Adicionar a URL do site -->
     <meta property="og:url" content="https://www.seusite.com">
     <meta property="og:type" content="website">
@@ -21,11 +21,11 @@
     <!-- Adicionar a URL do site -->
     <link rel="canonical" href="https://www.seusite.com/">
 
-    <link rel="icon" href="/assets/img/logo/Logo Escola Modelo - Transparente.png" type="image/x-icon">
+    <link rel="icon" href="/assets/img/logo/EscolaModelo.png" type="image/x-icon">
     <!-- Caso seu favicon seja em formato PNG, pode adicionar assim -->
-    <link rel="icon" href="/assets/img/logo/Logo Escola Modelo - Transparente.png" type="image/png">
+    <link rel="icon" href="/assets/img/logo/EscolaModelo.png" type="image/png">
     <!-- Se você tiver um ícone para dispositivos Apple (opcional) -->
-    <link rel="apple-touch-icon" href="/assets/img/logo/Logo Escola Modelo - Transparente.png">
+    <link rel="apple-touch-icon" href="/assets/img/logo/EscolaModelo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,19 +40,19 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="/"><img src="/assets/img/logo/Escola Modelo.png" alt="Logo da Escola Modelo de Língua Japonesa de Marília"></a>
+                    <a href="/"><img src="/assets/img/logo/EscolaModelo.png" alt="Logo da Escola Modelo de Língua Japonesa de Marília"></a>
                 </div>
                 <div class="menu_desktop">
                     <ul>
-                        <li class="poppins"><a href="/paginas/beneficios.php" class="poppins active">BENEFÍCIOS</a></li>
+                        <li class="poppins"><a href="/beneficios.php" class="poppins active">BENEFÍCIOS</a></li>
                         <li class="poppins">/</li>
-                        <li class="poppins"><a href="/paginas/cursos.php" class="poppins active">CURSOS</a></li>
+                        <li class="poppins"><a href="/cursos.php" class="poppins active">CURSOS</a></li>
                         <li class="poppins">/</li>
-                        <li class="poppins"><a href="/paginas/parte.php" class="poppins active">FAÇA PARTE</a></li>
+                        <li class="poppins"><a href="/parte.php" class="poppins active">FAÇA PARTE</a></li>
                         <li class="poppins">/</li>
-                        <li class="poppins"><a href="/paginas/sobre.php" class="poppins active">SOBRE</a></li>
+                        <li class="poppins"><a href="/sobre.php" class="poppins active">SOBRE</a></li>
                         <li class="poppins">/</li>
-                        <li class="poppins"><a href="/paginas/contato.php" class="poppins contato_titulo">CONTATO</a></li>
+                        <li class="poppins"><a href="/contato.php" class="poppins contato_titulo">CONTATO</a></li>
                         <button class="data_theme">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                                 <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
@@ -72,11 +72,11 @@
 
                 <div class="menu_mobile" id="menu_mobile">
                     <ul>
-                        <li class="poppins"><a href="/paginas/beneficios.php" class="poppins active">BENEFÍCIOS</a></li>
-                        <li class="poppins"><a href="/paginas/cursos.php" class="poppins">CURSOS</a></li>
-                        <li class="poppins"><a href="/paginas/parte.php" class="poppins">FAÇA PARTE</a></li>
-                        <li class="poppins"><a href="/paginas/sobre.php" class="poppins">SOBRE</a></li>
-                        <li class="poppins"><a href="/paginas/contato.php" class="poppins contato_titulo">CONTATO</a></li>
+                        <li class="poppins"><a href="/beneficios.php" class="poppins active">BENEFÍCIOS</a></li>
+                        <li class="poppins"><a href="/cursos.php" class="poppins">CURSOS</a></li>
+                        <li class="poppins"><a href="/parte.php" class="poppins">FAÇA PARTE</a></li>
+                        <li class="poppins"><a href="/sobre.php" class="poppins">SOBRE</a></li>
+                        <li class="poppins"><a href="/contato.php" class="poppins contato_titulo">CONTATO</a></li>
                         <button class="data_theme">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                                 <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
