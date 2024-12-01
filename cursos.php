@@ -193,37 +193,46 @@ require_once __DIR__ . "/includes/cabecalho.php";
                     class="carousel-item"
                     onClick="changeBg('crianca.jpeg', 'criancas');">
                     <h1>LÍNGUA JAPONESA<br>PARA CRIANÇAS</h1>
-                    <img src="/assets/img/carousel/criancaCard.png" alt="Curso de Língua Japonesa para Crianças">
+                    <img src="/assets/img/carousel/criancaCard.jpg" alt="Curso de Língua Japonesa para Crianças">
                 </div>
                 <div
                     class="carousel-item"
-                    onClick="changeBg('mangaBg.jpeg', 'manga');">
+                    onClick="changeBg('mangaBg.jpg', 'manga');">
                     <h1>CURSO DE MANGÁ</h1>
-                    <img src="/assets/img/carousel/manga.jpeg" alt="Curso de Mangá">
+                    <img src="/assets/img/carousel/mangaCard.jpg" alt="Curso de Mangá">
                 </div>
                 <div
                     class="carousel-item"
                     onClick="changeBg('jlptBg.jpg', 'jlpt');">
                     <h1>CURSO PREPARATÓRIO JLPT</h1>
-                    <img src="/assets/img/carousel/jlpt.png" alt="Curso de Preparação para JLPT">
+                    <img src="/assets/img/carousel/jlptCard.jpg" alt="Curso de Preparação para JLPT">
                 </div>
                 <div
                     class="carousel-item"
-                    onClick="changeBg('sorobanBg.png', 'soroban');">
+                    onClick="changeBg('sorobanBg.jpg', 'soroban');">
                     <h1>CURSO DE SOROBAN</h1>
-                    <img src="/assets/img/carousel/soroban.png" alt="Curso de Soroban">
+                    <img src="/assets/img/carousel/sorobanCard.jpg" alt="Curso de Soroban">
                 </div>
                 <div
                     class="carousel-item"
                     onClick="changeBg('culinariaBg.jpg', 'culinaria');">
                     <h1>CURSO DE CULINÁRIA<br>JAPONESA</h1>
-                    <img src="/assets/img/carousel/culinariaCard.png" alt="Curso de Culinária Japonesa">
+                    <img src="/assets/img/carousel/culinariaCard.jpg" alt="Curso de Culinária Japonesa">
                 </div>
             </div>
         </div>
     </div>
 </main>
 
+<script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script> 
+<script src="/assets/js/curso.js" defer></script> <!-- Script específico para cursos -->
+<script defer>
+    $(document).ready(function() {
+        $('.carousel').carousel();  // Inicializa o carrossel na página cursos
+    });
+</script>
+
 <?php
-require_once __DIR__ . "/includes/rodape.php";
+require_once __DIR__ . "/includes/rodape.php";  // Inclui o rodapé com scripts globais
 ?>

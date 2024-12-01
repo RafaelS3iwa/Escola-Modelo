@@ -196,6 +196,7 @@ header .data_theme svg:last-child{
     background-color: var(--texto-beneficio);
 }
 
+
 /* index */
 main {
     background-color: var(--fundo);
@@ -213,7 +214,7 @@ main {
 }
 
 .index {
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -252,26 +253,26 @@ main {
     white-space: pre-line;
 }
 
-.texto .botao {
+.botao .botao_estilizado {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer; 
     margin-top: 20px;
-}
-
-.botao button {
     width: 269px;
     height: 57px;
     background-color: var(--botao);
     border-radius: 41px;
-    border-style: none;
+    color: var(--branco); 
     box-shadow: 0px 5px 0px 0px var(--sombra);
+    border: none; 
 }
 
 .botao .montserrat_title {
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--branco);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* index parte2 */
@@ -287,10 +288,11 @@ main {
 .sobre .sobre_img {
     margin-right: 20px;
     width: 100%;
-    height: auto;
-    min-width: 765px;
-    min-height: 716px;
-    border-radius: 45px;
+    height: 650px; 
+    max-width: 765px;
+    max-height: 650px;
+    border-radius: 45px; 
+    object-fit: cover;
 }
 
 .sobre .montserrat_title {
@@ -326,7 +328,7 @@ main {
     margin-bottom: 45px;
 }
 
-.botao_sobre button {
+.botao_sobre .botao_estilizado {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -598,8 +600,8 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100svh;
-    min-height: 100svh;
+    padding: 120px 100px 350px; /* Top: compensação para o header; Bottom: compensação para o footer */
+    min-height: calc(100vh - 100px - 350px); /* Altura ajustada para header e footer */
     padding: 0 100px;
     background: url(/assets/img/carousel/adultoBg.jpg) no-repeat;
     background-size: cover;
@@ -850,7 +852,7 @@ main {
     gap: 45px;
 }
 
-.botoes_inscrever button {
+.botoes_inscrever .botao_estilizado {
     width: 190px;
     height: 41px;
     background-color: var(--primaria);
@@ -867,6 +869,7 @@ main {
     text-decoration: none;
     font-size: 1.125rem;
     color: var(--branco);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .topicos {
@@ -1191,7 +1194,7 @@ main {
 footer {
     background-color: var(--primaria);
     width: 100%;
-    height: 350px;
+    height: 100%;
 }
 
 footer .barra {
@@ -1345,8 +1348,10 @@ footer .barra {
     }
 
     header .logo img {
-        margin-left: calc(50% + 50px);
-        margin-top: 5px;
+        max-width: 100px; 
+        max-height: auto;
+        margin-left: auto; 
+        margin-top: 15px;
     }
 
     .menu_mobile.abrir {
@@ -1375,6 +1380,7 @@ footer .barra {
     }
 
     .index {
+        margin-top: -150px;
         background-image: url(/assets/img/complementos/kappaIndexMobile.png);
     }
 
@@ -1402,9 +1408,16 @@ footer .barra {
         white-space: pre-line;
     }
 
-    .botao button {
+    .botao .botao_estilizado {
         width: 169px;
         height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--botao);
+        border-radius: 15px;
+        border-style: none;
+        margin-right: 20px;
     }
 
     .botao .montserrat_title {
@@ -1419,8 +1432,8 @@ footer .barra {
 
     .sobre .sobre_img {
         margin-right: 0;
-        min-width: 300px;
-        min-height: 230px;
+        max-width: 400px;
+        max-height: 330px;
         margin-bottom: 0;
     }
 
@@ -1453,7 +1466,7 @@ footer .barra {
         margin-bottom: 15px;
     }
 
-    .botao_sobre button {
+    .botao_sobre .botao_estilizado {
         width: 50px;
         height: 50px;
         border-radius: 15px;
@@ -1780,7 +1793,7 @@ footer .barra {
         flex-direction: column;
     }
 
-    .botoes_inscrever button {
+    .botoes_inscrever .botao_estilizado {
         width: 171px;
         height: 34px;
         border-radius: 10px;
@@ -2138,9 +2151,16 @@ footer .barra {
         white-space: pre-line;
     }
 
-    .botao button {
+    .botao .botao_estilizado {
         width: 200px;
         height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--botao);
+        border-radius: 15px;
+        border-style: none;
+        margin-right: 20px;
     }
 
     .botao .montserrat_title {
@@ -2201,7 +2221,7 @@ footer .barra {
         margin-bottom: 15px;
     }
 
-    .botao_sobre button {
+    .botao_sobre .botao_estilizado {
         width: 65px;
         height: 65px;
         border-radius: 15px;
@@ -2522,7 +2542,7 @@ footer .barra {
         flex-direction: column;
     }
 
-    .botoes_inscrever button {
+    .botoes_inscrever .botao_estilizado {
         width: 200px;
         height: 50px;
         border-radius: 10px;
@@ -2813,7 +2833,13 @@ footer .barra {
     }
 
     .menu_mobile {
+        background-color: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(10px);
+        position: absolute;
         top: 200px;
+        height: 100vh; /* Experimente altura cheia da tela */
+        min-height: 100%; /* Limita a altura máxima */
+        transition: 0.5s;
     }
 
     .menu_mobile ul li a {
@@ -2865,7 +2891,7 @@ footer .barra {
     .menu_mobile .data_theme{
         height: 75px;
         width: 75px;
-        top: calc(25svh + 15%);
+        top: calc(25vh + 25%);
     }
 
     header .data_theme svg{
@@ -2874,10 +2900,9 @@ footer .barra {
     }
 
     header .logo img {
-        margin-left: calc(55% + 100px);
-        margin-top: 5px;
-        max-width: 180px;
-        max-height: 175px;
+        max-height: auto;
+        margin-left: auto; 
+        margin-top: 15px;
     }
 
     .menu_mobile.abrir {
@@ -2909,9 +2934,16 @@ footer .barra {
         white-space: pre-line;
     }
 
-    .botao button {
+    .botao .botao_estilizado {
         width: 269px;
         height: 57px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--botao);
+        border-radius: 15px;
+        border-style: none;
+        margin-right: 20px;
     }
 
     .botao .montserrat_title {
@@ -2922,6 +2954,11 @@ footer .barra {
     main{
         margin-top: 150px;
         padding-bottom: 100px;
+    }
+
+    .index {
+        margin-top: -150px;
+        background-image: url(/assets/img/complementos/kappaIndexMobile.png);
     }
 
     /* Sobre Tablet */
@@ -2973,7 +3010,7 @@ footer .barra {
         margin-bottom: 15px;
     }
 
-    .botao_sobre button {
+    .botao_sobre .botao_estilizado {
         width: 92px;
         height: 88px;
         border-radius: 15px;
@@ -3066,12 +3103,12 @@ footer .barra {
 
     /* Benefícios Tablet */
     .beneficios .links {
-        gap: 15px;
+        gap: 0;
         margin-top: 25px;
     }
 
     .beneficios .links .beneficio {
-        gap: 15px;
+        gap: 0;
     }
 
     .beneficios .links .beneficio .montserrat_title {
@@ -3080,7 +3117,9 @@ footer .barra {
 
     .vl {
         border-left: 3px solid var(--divisoria);
-        height: 150px;
+        height: 125px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .beneficios_carrossel.active {
@@ -3182,7 +3221,7 @@ footer .barra {
     }
 
     .carousel-item h1 {
-        font-size: 1.95rem;
+        font-size: 1.4rem;
         color: white;
         text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
     }
@@ -3266,12 +3305,12 @@ footer .barra {
         flex-direction: column;
     }
 
-    .botoes_inscrever button {
+    .botoes_inscrever .botao_estilizado {
         width: 300px;
         height: 65px;
         border-radius: 25px;
         text-align: center;
-        margin-bottom: -20px;
+        margin-bottom: 20px;
     }
 
     .botoes_inscrever .montserrat_title {
@@ -3427,6 +3466,7 @@ footer .barra {
         width: 100%;
         min-width: 750px;
         min-height: 386px;
+        margin-bottom: 75px;
     }
 
     .contato .cards_contato .card_contato .informacoes {
@@ -3480,7 +3520,7 @@ footer .barra {
 
     /* Footer Tablet */
     footer {
-        height: 100svh;
+        height: 100vh;
     }
 
     #footer {
@@ -3546,7 +3586,7 @@ footer .barra {
     header {
         align-items: center;
         justify-content: center;
-        height: 250px;
+        height: 110px;
     }
     
     .menu_desktop {
@@ -3554,21 +3594,21 @@ footer .barra {
     }
 
     .menu_mobile {
-        top: 215px;
+        top: 80px;
     }
 
     .menu_mobile ul li a {
-        font-size: 2.5rem;
+        font-size: 1rem;
     }
 
     #btn_fechar {
         display: block;
         margin-left: 50%;
         width: 100%;
-        max-width: 70px;
-        min-width: 70px;
-        min-height: 70px;
-        border: 8px solid var(--branco);
+        max-width: 60px;
+        min-width: 40px;
+        min-height: 40px;
+        border: 5px solid var(--branco);
         border-radius: 5px;
         background: transparent;
         transition: 0.5s;
@@ -3603,11 +3643,12 @@ footer .barra {
         width: 0;
     }
 
+
     header .logo img {
-        margin-left: calc(55% + 100px);
+        margin-left: auto;
         margin-top: 5px;
-        max-width: 240px;
-        max-height: 235px;
+        max-width: 100px; 
+        max-height: auto;
     }
 
     .menu_mobile.abrir {
@@ -3617,14 +3658,14 @@ footer .barra {
     }
 
     .menu_mobile .data_theme{
-        height: 75px;
-        width: 75px;
-        top: calc(25svh + 15%);
+        height: 35px;
+        width: 35px;
+        top: calc(50svh + 18%);
     }
 
     header .data_theme svg{
-        height: 35px;
-        width: 35px;
+        height: 25px;
+        width: 25px;
     }
 
     /* Index Main Específico */
@@ -3632,22 +3673,29 @@ footer .barra {
         padding-bottom: 100px;
     }
 
+    .index{
+        margin-top: -20px;
+    }
+
+    .index .texto{
+        margin-top: 150px;
+    }
+
     .texto .montserrat_title {
-        font-size: 3.5rem;
         text-align: center;
     }
 
     .texto h1::after {
-        content: "\A DA LÍNGUA JAPONESA";
+        content: " DA LÍNGUA JAPONESA";
         white-space: pre-line;
     }
 
     .texto .nunito_text {
         display: inline;
         text-align: center;
-        padding-right: 25px;
-        padding-left: 25px;
-        font-size: 2.5rem;
+        padding-right: 75px;
+        padding-left: 75px;
+        width: 75%;
     }
 
     .texto p::after {
@@ -3655,13 +3703,20 @@ footer .barra {
         white-space: pre-line;
     }
 
-    .botao button {
-        width: 269px;
-        height: 57px;
+    .botao .botao_estilizado {
+        width: 200px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--botao);
+        border-radius: 15px;
+        border-style: none;
+        margin-right: 20px;
     }
 
     .botao .montserrat_title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     /* Sobre Específico */
@@ -3679,35 +3734,33 @@ footer .barra {
 
     .sobre .sobre_img {
         margin-right: 0;
-        min-width: 450px;
-        min-height: 350px;
-        margin-bottom: 45px;
+        max-width: 400px;
+        max-height: 300px;
+        margin-bottom: 0;
     }
 
     .sobre .montserrat_title {
-        font-size: 3.5rem;
-        margin-bottom: 15px;
+        font-size: 2.5rem;
         text-align: center;
     }
 
     .sobre .nunito_text {
-        font-size: 2.5rem;
-        width: 850px;
+        font-size: 1.5rem;
         text-align: justify;
     }
 
     /* Botões index Sobre */
     .botoes {
         margin-top: 35px;
-        margin-left: 15%;
     }
 
     .botoes img {
-        width: 56px;
-        height: 56px;
+        width: 46px;
+        height: 46px;
     }
 
     .botoes_sobre {
+        margin-left: 25px;
         margin-bottom: 15px;
     }
 
@@ -3715,10 +3768,10 @@ footer .barra {
         margin-bottom: 15px;
     }
 
-    .botao_sobre button {
-        width: 100px;
-        height: 100px;
-        border-radius: 25px;
+    .botao_sobre .botao_estilizado {
+        width: 82px;
+        height: 78px;
+        border-radius: 15px;
     }
 
     .texto_sobre {
@@ -3726,23 +3779,24 @@ footer .barra {
     }
 
     .texto_sobre .montserrat_title {
-        font-size: 2.5rem;
-        margin-bottom: -5px;
-        margin-left: -45%;
+        font-size: 2rem;
+        margin-bottom: -10px;
+        margin-left: -1%;
     }
 
-    .texto_sobre.baixo .montserrat_title{
-        margin-left: calc(-10px - 49%);
+    .texto_sobre.baixo .montserrat_title {
+        margin-left: calc(-15px - 33%);
     }
 
     .texto_sobre .nunito_text {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     /* index parte3 Específico */
     .kappa {
         margin-top: 0;
         align-items: center;
+        margin-bottom: -5%;
     }
 
     .kappa_flex {
@@ -3759,19 +3813,19 @@ footer .barra {
     }
 
     .kappa .kappa_flex .titulo_kappa .title1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .kappa .kappa_flex .titulo_kappa .title2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .kappa .kappa_flex .titulo_kappa .title3 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .kappa_flex .nunito_text {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         text-align: justify;
         height: 100%;
     }
@@ -3783,33 +3837,45 @@ footer .barra {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
-        min-width: 950px;
-        min-height: 775px;
+        height: auto;
+        max-width: 889px;
+        max-height: 500px;
     }
 
     .textos_kappa {
-        padding-top: 25px;
+        padding-top: 0;
     }
 
     .textos_kappa .title_kappa,
     .textos_kappa .nunito_text {
         padding: 0 5px;
-        margin: 15px 20px 15px 20px;
+        margin: 35px 25px 15px 15px;
     }
 
     .title_kappa {
-        font-size: 3.75rem;
+        font-size: 2.5rem;
     }
 
     .textos_kappa .nunito_text {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         text-align: justify;
+    }
+
+    .kappa img {
+        width: 100%;
+        height: auto;
+        max-width: 279px;
+        max-height: 334px;
+        padding: 5px;
     }
 
     /* Benefícios Específico */
     .beneficios {
-        margin-top: calc(100px + 25%);
+        margin-top: 150px;
+    }
+
+    .beneficios .montserrat_title {
+        font-size: 2.75rem;
     }
 
     .beneficios .links {
@@ -3822,7 +3888,7 @@ footer .barra {
     }
 
     .beneficios .links .beneficio .montserrat_title {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     .vl {
@@ -3831,247 +3897,147 @@ footer .barra {
     }
 
     .beneficios_carrossel.active {
-        min-height: 50svh;
+        height: 100svh;
         margin-bottom: -100px;
     }
 
     .beneficios .beneficios_carrossel img {
-        width: 318px;
-        height: 413px;
+        width: 250px;
+        height: 313px;
     }
 
     .beneficios .beneficios_carrossel .carousel {
-        min-width: 575.85px;
-        max-width: 600px;
-        height: auto;
-        min-height: 700px;
-        max-height: 750px;
+        max-width: 555.95px;
+        min-height: 504px;
     }
 
     .beneficios .beneficios_carrossel .carousel .carousel-item h2 {
         line-height: 1.2;
-        font-size: 2.25rem;
-        margin-top: -85px;
-        margin-bottom: -10px;
+        font-size: 2rem;
+        margin-top: -25%;
+        margin-bottom: 5px;
     }
 
     .beneficios .beneficios_carrossel .carousel .carousel-item p {
-        font-size: 2rem;
+        font-size: 1.25rem;
         width: 425px;
     }
 
     /* Cursos Específico */
     .cursos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column-reverse;
-        height: 100%;
-        margin-bottom: -100px;
-        margin-top: 150px;
+        padding: 0 50px;
+        margin-top: 5%;
+        margin-bottom: -10%;
     }
 
     .contents {
-        margin-top: 25px;
+        margin-bottom: 75px;
     }
-
-    .contents.active {
-        display: block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        visibility: visible;
-    }
-
-    .contents .montserrat_title.title1 {
-        font-size: 3rem;
-    }
+    
 
     .contents .montserrat_title.title2 {
-        font-size: 3rem;
-    }
-
-    .conteudos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
+        font-size: 2.5rem;    
     }
 
     .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        height: auto;
-        max-width: 800px;
-        min-width: 750px;
-        max-height: 675px;
-        margin-top: 25px;
-        border-radius: 25px;
-    }
-
-    .content .montserrat_title.title1 {
-        font-size: 2.5rem;
+        width: 500px;
+        min-height: 115px;
+        padding-left: 25px;
+        padding-top: 15px;
         margin-top: 15px;
     }
 
-    .content .nunito_text {
+    .contents .montserrat_title.title1 {
         font-size: 2rem;
-        padding-left: 50px;
-        padding-right: 50px;
-        text-align: justify;
+    }
+    
+    .contents .montserrat_title.title2 {
+        font-size: 2.25rem;    
+    }
+    
+
+    .content .nunito_text {
+        font-size: 1.15rem;
     }
 
     .cursos .carousel-box {
         margin-left: 0;
-        margin-top: 100px;
+        min-width: 950px;
     }
-
-    .carousel-item h1 {
-        font-size: 2rem;
-        color: white;
-        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-        margin-top: 150px;
-        margin-left: 25px;
-    }
-
-    .carousel .carousel-item img {
-        min-width: 300px;
-        height: auto;
-        min-height: 525px;
-        border-radius: 10px;
-    }
-
 
     /* Faça Parte Específico */
     .parte {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 250px;
-        margin-bottom: 74.25rem;
-        gap: 0;
+        gap: 50px;
+        width: 100%;
+        margin-bottom: -5%;
+        margin-top: 150px;
+    }
+
+    .parte img{
+        margin-right: 50px;
+    }
+
+    .parte .conteudo{
+        margin-top: -10%;
     }
 
     .parte .montserrat_title {
-        font-size: 4rem;
-    }
-
-    .parte .conteudo .nunito_text {
         font-size: 2.5rem;
-        width: 700px;
+        width: 500px;
     }
 
-    .parte img {
-        width: 750px;
-        height: 500px;
+    .inscrever.desktop{
+        margin-bottom: -10%;
+        gap: 35px;
     }
 
-    .inscrever.mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-        margin-top: 0;
-        margin-bottom: 75rem;
-        gap: 0;
+    .inscrever.desktop .conteudo2{
+        margin-right: 50px;
+        margin-left: auto;
     }
 
-    .inscrever.desktop {
-        display: none;
+    .inscrever .montserrat_title {
+        font-size: 1.75rem;
     }
 
-    .conteudo2 {
-        width: 550px;
-        height: 147px;
-        margin-top: 25rem;
+    .inscrever .montserrat_title.titulo {
+        font-size: 1.75rem;
+        margin-top: 25px;
     }
 
-    .inscrever.mobile .montserrat_title {
-        font-size: 4rem;
-    }
-
-    .inscrever.mobile .nunito_text {
-        font-size: 2.5rem;
-        text-align: justify;
-    }
-
-    .inscrever.mobile .primeiro .nunito_text {
-        width: 100%;
-        min-width: 750px;
-    }
-
-    .segundo{
-        margin-bottom: 25rem;
-    }
-
-    .segundo .nunito_text {
-        margin-bottom: 20px;
-    }
-
-    .botoes_inscrever {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .botoes_inscrever button {
-        width: 350px;
-        height: 75px;
-        border-radius: 25px;
-        text-align: center;
-        margin-bottom: -20px;
+    .botoes_inscrever .botao_estilizado {
+        width: 175px;
+        height: 35px;
+        border-radius: 15px;
+        margin-right: 25px;
     }
 
     .botoes_inscrever .montserrat_title {
-        font-size: 2.25rem !important;
+        font-size: 1.25rem;
     }
 
     .topicos {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 5rem;
-        margin-bottom: -50px;
+        margin-top: 135px;
     }
 
     .topico {
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
+        margin-bottom: 15px;
     }
 
-    .topicos .topico_texto .titulo_topico {
-        font-size: 3.25rem;
-        margin-bottom: -15px;
+    .topico .topico_texto{
+        width: 27rem;
     }
-
-    .topicos .topico_texto {
-        text-align: center;
-        align-items: center;
-        margin-bottom: 25px;
-    }
-
-    .topicos .topico_texto p {
-        width: 100%;
-        min-width: 650px;
-        font-size: 2.5rem;
+    
+    .topicos .titulo_topico {
+        font-size: 1.75rem;
     }
 
     .topicos .numero_topico {
-        min-height: 200px;
-        min-width: 200px;
+        min-width: 90px;
     }
 
     .numero_topico h1 {
-        font-size: 8rem;
-        -webkit-text-stroke: 3px var(--branco);
+        font-size: 2.5rem;
     }
 
     /* Sobre Nós Específico */
@@ -4081,14 +4047,14 @@ footer .barra {
         align-items: center;
         flex-direction: column;
         text-align: center;
-        margin-top: calc(50px + 25%);
+        margin-top: 75px;
     }
 
     .sobre_nos img {
         width: 100%;
         height: auto;
-        min-width: 960px;
-        min-height: 596px;
+        max-width: 460px;
+        max-height: 296px;
         margin-right: 0;
     }
 
@@ -4097,11 +4063,12 @@ footer .barra {
         text-align: center;
         padding-left: 0;
         padding-right: 0;
+        width: 75%;
     }
 
     .sobre_nos .montserrat_title,
     .historia .montserrat_title {
-        font-size: 4rem;
+        font-size: 2rem;
         text-align: center;
     }
 
@@ -4113,7 +4080,7 @@ footer .barra {
 
     .sobre_nos .nunito_text,
     .historia .nunito_text {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
         text-align: justify;
     }
 
@@ -4127,6 +4094,7 @@ footer .barra {
         align-items: center;
         flex-direction: column-reverse;
         gap: 0;
+        margin-top: 0;
     }
 
     .imagens .imagem {
@@ -4134,8 +4102,8 @@ footer .barra {
     }
 
     .imagens img {
-        width: 500px;
-        height: 454.88px;
+        width: 450px;
+        height: 354.88px;
         margin-left: 0;
         margin-top: -25%;
     }
@@ -4145,11 +4113,11 @@ footer .barra {
     }
 
     .faca_parte .montserrat_title.title1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .faca_parte .montserrat_title.title2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .faca_parte .montserrat_title.title2::after {
@@ -4158,96 +4126,87 @@ footer .barra {
     }
 
     .faca_parte .montserrat_title.title3 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 4rem;
-        color: var(--primaria);
-        margin: 0;
-        white-space: nowrap;
-        text-decoration: none;
+        font-size: 3rem;
     }
 
     /* Contato Específico */
     .contato {
-        margin-top: 250px;
+        margin-top: 75px;
+        margin-bottom: -8%;
     }
-
+    
     .contato .montserrat_title {
-        font-size: 4rem;
+        font-size: 2.25rem;
+        margin-bottom: 25px;
     }
-
+    
     .contato .cards_contato {
-        flex-direction: column;
-        margin-bottom: 0;
+        gap: 50px;
+        margin-bottom: 50px;
     }
-
+    
     .contato .cards_contato .card_contato {
         width: 100%;
-        min-width: 950px;
-        min-height: 450px;
+        max-width: 50vw;
+        max-height: 50.26vh;
     }
-
-    .contato .cards_contato .card_contato .informacoes {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-        width: auto;
-    }
-
-    .contato .cards_contato .card_contato .info_topico {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .contato .cards_contato .card_contato .info_topico:last-child {
-        margin-bottom: 45px;
-    }
-
+    
     .contato .cards_contato .card_contato .montserrat_title {
-        font-size: 4rem;
+        font-size: 1.5rem;
+        margin-top: 25px;
+        margin-bottom: -5%;
     }
-
+    
+    .contato .cards_contato .card_contato .informacoes {
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    
+    .contato .cards_contato .card_contato .info_topico {
+        margin-bottom: 25px;
+    }
+    
     .contato .cards_contato .card_contato .info_topico .title_topico {
-        font-size: 2.5rem;
-        margin-right: auto;
+        font-size: 1.15rem;
+        margin-right: 15px;
     }
-
-    .contato .cards_contato .card_contato.localizacao_card .info_topico p,
+    
     .contato .cards_contato .card_contato .info_topico a {
-        font-size: 2.25rem;
+        font-size: 1rem;
+    }
+    
+    .contato .card_contato.localizacao_card .montserrat_title {
         margin-top: 15px;
     }
-
-    .contato .cards_contato .card_contato .info_topico .contato_whats {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .contato .card_contato.localizacao_card .montserrat_title {
-        margin-top: -20px;
-    }
-
+    
     .contato .card_contato.localizacao_card .montserrat_title::after {
-        content: "\A LOCALIZAÇÃO";
-        white-space: pre-line;
-        margin-top: -20px;
+        content: " LOCALIZAÇÃO";
     }
-
+    
+    
     .contato .card_contato.localizacao_card .localizacao p {
-        font-size: 2.25rem;
+        font-size: 1.15rem;
+        margin-bottom: 30px;
     }
-
-
+    
+    .contato .card_contato.localizacao_card .google {
+        gap: 10px;
+    }
+    
     .contato .card_contato.localizacao_card .google a {
-        font-size: 2.25rem;
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: var(--branco);
+    }
+    
+    .contato .card_contato.localizacao_card .google img {
+        width: 27px;
+        height: 27px;
     }
 
     /* Footer Específico */
     footer {
-        height: 100svh;
+        height: 125%;
     }
 
     #footer {
@@ -4256,36 +4215,17 @@ footer .barra {
         height: max-content;
     }
 
-    #footer .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
     #footer .logo img {
-        max-width: 324.18px;
-        max-height: 308px;
-        margin-bottom: 75px;
-        margin-left: -45px;
-    }
-
-    #footer .logo .titulo_logo {
-        font-size: 3rem;
-    }
-
-    #icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 224.18px;
+        max-height: 208px;
+        margin-bottom: 55px;
     }
 
     #icons img {
-        max-width: 66px;
-        max-height: 65.05px;
-        margin-right: 25px;
-        margin-left: 35px;
+        max-width: 46px;
+        max-height: 45.05px;
+        margin-right: auto;
+        margin-left: 45px;
     }
 
     .conteudo {
@@ -4293,17 +4233,21 @@ footer .barra {
     }
 
     .informacoes {
-        justify-content: flex-start;
-        align-items: center;
+        margin-left: 55px;
+    }
+
+    .informacoes img {
+        width: 27px;
+        height: 27px;
     }
 
     .informacoes a {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
-/* Notebook */
-@media (min-width: 1100px) and (max-width: 1450px) {
+/* Tablet Horizontal */
+@media (min-width: 1100px) and (max-width: 1280px) {
     .conteudo{
         margin-right: 0;
     }
@@ -4313,14 +4257,14 @@ footer .barra {
         font-size: 20px;
     }
 
-    /* Index Notebook */
+    /* Index Tablet Horizontal */
     .index {
         width: 100%;
         max-width: 1450px;
         min-width: 1026px;
     }
 
-    /* Sobre Notebook */
+    /* Sobre Tablet Horizontal */
 
     .sobre {
         gap: 50px;
@@ -4349,7 +4293,7 @@ footer .barra {
         margin-bottom: 15px;
     }
 
-    .botao_sobre button {
+    .botao_sobre .botao_estilizado {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -4374,20 +4318,20 @@ footer .barra {
         font-size: 1.25rem;
     }
 
-    /* Index Parte3  Notebook */
+    /* Index Parte3  Tablet Horizontal */
     .kappa_flex {
         gap: 50px;
     }
 
+    .kappa_flex .nunito_text {
+        text-align: justify;
+        font-size: 1.25rem;
+    }
+
     .card_kappa {
-        width: 100%;
-        height: auto;
+        margin-left: 50px;
         max-width: 575px;
         max-height: 650px;
-        padding: 10px;
-        border: 5px solid var(--primaria);
-        border-radius: 25px;
-        margin-bottom: 25px;
     }
 
     .kappa img {
@@ -4395,7 +4339,7 @@ footer .barra {
         height: 500px;
     }
 
-    /* Benefícios Notebook */
+    /* Benefícios Tablet Horizontal */
     .beneficios .links {
         gap: 35px;
     }
@@ -4405,6 +4349,8 @@ footer .barra {
     }
 
     .vl {
+        margin-left: 25px;
+        margin-right: 25px;
         border-left: 4px solid var(--divisoria);
         height: 150px;
     }
@@ -4413,7 +4359,7 @@ footer .barra {
         width: 525px;
     }
 
-    /* Cursos Notebook */
+    /* Cursos Tablet Horizontal */
     .cursos {
         padding: 0 50px;
         margin-top: 75px;
@@ -4449,11 +4395,15 @@ footer .barra {
         min-width: 950px;
     }
 
-    /* Faça Parte Notebook */
+    /* Faça Parte Tablet Horizontal */
     .parte {
-        gap: 150px;
+        gap: 100px;
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 0;
+    }
+
+    .parte img{
+        margin-right: 100px;
     }
 
     .parte .montserrat_title {
@@ -4464,8 +4414,29 @@ footer .barra {
     .inscrever.desktop{
         padding-bottom: 50px;
     }
+
+    .inscrever.desktop .conteudo2{
+        margin-right: 50px;
+        margin-left: auto;
+    }
+
+    .inscrever .montserrat_title {
+        font-size: 2rem;
+    }
+
+    .botoes_inscrever .botao_estilizado {
+        width: 175px;
+        height: 50px;
+        border-radius: 15px;
+        margin-right: 25px;
+    }
+
+    .botoes_inscrever .montserrat_title {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
     
-    /* Tópicos Notebook */
+    /* Tópicos Tablet Horizontal */
     .topicos {
         margin-top: 50px;
     }
@@ -4486,7 +4457,7 @@ footer .barra {
         min-width: 100px;
     }
 
-    /* Sobre Nós Notebook */
+    /* Sobre Nós Tablet Horizontal */
     .sobre_nos,
     .historia {
         margin-top: 100px;
@@ -4527,13 +4498,15 @@ footer .barra {
     }
 
     .historia .imagens img {
-        margin-left: 0;
+        margin-left: auto;
+        margin-right: 15px;
     }
 
-    /* Contato Notebook */
+    /* Contato Tablet Horizontal */
     .contato .cards_contato .card_contato {
         min-width: 44.73vw;
         min-height: 47.26vh;
+        margin-right: 25px;
     }
 
     .contato .cards_contato .card_contato .info_topico .title_topico {
@@ -4552,4 +4525,316 @@ footer .barra {
     .contato .card_contato.localizacao_card .google a {
         font-size: 1.25rem;
     }
+}
+
+@media (min-width: 1281px) and (max-width: 1451px){
+    .conteudo{
+        margin-right: 0;
+    }
+
+    header .menu_desktop ul li {
+        margin: 0 15px;
+        font-size: 20px;
+    }
+
+    /* Index Tablet Horizontal */
+    .index {
+        width: 100%;
+        max-width: 1450px;
+        min-width: 1026px;
+    }
+
+    .index .texto{
+        margin-top: 100px;
+    }
+
+    /* Sobre Tablet Horizontal */
+
+    .sobre {
+        gap: 50px;
+    }
+
+    .sobre .sobre_img {
+        margin-left: 5%;
+        min-width: 565px;
+        min-height: 516px;
+    }
+
+    .sobre .montserrat_title {
+        font-size: 3rem;
+    }
+
+    .botoes {
+        margin-top: 0;
+    }
+
+    .botoes img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .botoes_sobre {
+        margin-bottom: 15px;
+    }
+
+    .botao_sobre .botao_estilizado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 62px;
+        height: 58px;
+        background-color: var(--botao);
+        border-radius: 15px;
+        border-style: none;
+        margin-right: 20px;
+    }
+
+    .texto_sobre {
+        margin-top: 25px;
+    }
+
+    .texto_sobre .montserrat_title {
+        font-size: 1.5rem;
+        margin-bottom: -15px;
+    }
+
+    .texto_sobre .nunito_text {
+        font-size: 1.25rem;
+    }
+
+    /* Index Parte3  Tablet Horizontal */
+    .kappa_flex {
+        gap: 50px;
+    }
+
+    .kappa_flex .nunito_text {
+        text-align: justify;
+        font-size: 1.25rem;
+    }
+
+    .card_kappa {
+        margin-left: 50px;
+        max-width: 575px;
+        max-height: 650px;
+    }
+
+    .kappa img {
+        width: 500px;
+        height: 500px;
+    }
+
+    /* Benefícios Tablet Horizontal */
+    .beneficios .links {
+        gap: 35px;
+    }
+
+    .beneficios .links .beneficio .montserrat_title {
+        font-size: 2rem;
+    }
+
+    .vl {
+        margin-left: 25px;
+        margin-right: 25px;
+        border-left: 4px solid var(--divisoria);
+        height: 150px;
+    }
+
+    .beneficios_carrossel.active {
+        height: 75svh;
+        margin-bottom: 0;
+    }
+
+    .beneficios .beneficios_carrossel img {
+        width: 318px;
+        height: 413px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel {
+        max-width: 475.85px;
+        min-height: 550px;
+        margin-bottom: 100px;
+        border-radius: 50px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel .carousel-item p {
+        width: 425px;
+        font-size: 1.25rem;
+    }
+
+    /* Cursos Tablet Horizontal */
+    .cursos {
+        padding: 0 50px;
+        margin-top: 50px;
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+    .contents {
+        margin-bottom: 75px;
+    }
+    
+
+    .contents .montserrat_title.title2 {
+        font-size: 2.5rem;    
+    }
+
+    .content {
+        width: 500px;
+        min-height: 115px;
+        padding-left: 25px;
+        padding-top: 15px;
+        margin-top: 15px;
+    }
+
+    .content .montserrat_title.title1 {
+        font-size: 1.65rem;
+    }
+
+    .content .nunito_text {
+        font-size: 1.15rem;
+    }
+
+    .cursos .carousel-box {
+        margin-left: 0;
+        min-width: 950px;
+    }
+
+    /* Faça Parte Tablet Horizontal */
+    .parte {
+        gap: 100px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .parte img{
+        margin-right: 100px;
+    }
+
+    .parte .montserrat_title {
+        font-size: 3rem;
+        width: 500px;
+    }
+
+    .inscrever.desktop{
+        padding-bottom: 50px;
+    }
+
+    .inscrever.desktop .conteudo2{
+        margin-right: 50px;
+        margin-left: auto;
+    }
+
+    .inscrever .montserrat_title {
+        font-size: 2rem;
+    }
+
+    .botoes_inscrever .botao_estilizado {
+        width: 175px;
+        height: 50px;
+        border-radius: 15px;
+        margin-right: 25px;
+    }
+
+    .botoes_inscrever .montserrat_title {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Tópicos Tablet Horizontal */
+    .topicos {
+        margin-top: 50px;
+    }
+
+    .topicos .topico{
+        margin-bottom: 0;
+    }
+
+    .topicos .topico_texto {
+        width: 450px;
+    }
+
+    .topicos p {
+        font-size: 1.25rem;
+    }
+
+    .topicos .numero_topico {
+        min-width: 100px;
+    }
+
+    /* Sobre Nós Tablet Horizontal */
+    .sobre_nos,
+    .historia {
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    .sobre_nos {
+        margin-left: 0;
+    }
+
+    .sobre_nos .conteudo_sobre{
+        margin-right: 75px;
+        margin-left: 50px;
+    }
+
+    .sobre_nos img {
+        max-width: 650px;
+        max-height: 400px;
+        margin-left: 0;
+    }
+
+    .sobre_nos .conteudo_sobre,
+    .historia .conteudo_sobre {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sobre_nos .montserrat_title,
+    .historia .montserrat_title {
+        font-size: 2.5rem;
+    }
+
+    .sobre_nos .nunito_text{
+        width: 600px;
+        padding-right: 0;
+    }
+
+    .historia {
+        margin-top: 0;
+        gap: 25px;
+    }
+
+    .historia .conteudo_sobre {
+        margin-bottom: 150px;
+        width: 550px;
+    }
+
+    .historia .imagens img {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    /* Contato Tablet Horizontal */
+    .contato .cards_contato .card_contato {
+        min-width: 44.73vw;
+        min-height: 350px;
+    }
+
+    .contato .cards_contato .card_contato .info_topico .title_topico {
+        font-size: 1.25rem;
+        margin-right: 0.5rem;
+    }
+    
+    .contato .cards_contato .card_contato .info_topico a {
+        font-size: 1.25rem;
+    }
+
+    .contato .card_contato.localizacao_card .localizacao p {
+        font-size: 1.25rem;
+    }
+    
+    .contato .card_contato.localizacao_card .google a {
+        font-size: 1.25rem;
+    }
+
 }

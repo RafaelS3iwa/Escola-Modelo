@@ -38,7 +38,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                     <p>Rua Paes Leme, 543 - <br> Alto Cafezal, Marília - SP</p>
 
                     <div class="google">
-                        <img src="/assets/img/icons/localizacaoVerde.png" alt="Ícone Google Maps">
+                        <img src="/assets/img/icons/localizacaoVerde.png" alt="Ícone Google Maps" width="100" height="100">
                         <a href="https://www.google.com/maps/place/Associação+Cultural+e+Esportiva+Nikkey+de+Marília/@-22.2177047,-49.9542978,15z/data=!4m14!1m7!3m6!1s0x94bfd73c3013178d:0x80f33cf43ff320a0!2sAssociação+Cultural+e+Esportiva+Nikkey+de+Marília!8m2!3d-22.2177047!4d-49.9542978!16s%2Fg%2F1ts1tb7d!3m5!1s0x94bfd73c3013178d:0x80f33cf43ff320a0!8m2!3d-22.2177047!4d-49.9542978!16s%2Fg%2F1ts1tb7d?entry=ttu" target="_blank">Google Maps</a>
                     </div>
                 </div>

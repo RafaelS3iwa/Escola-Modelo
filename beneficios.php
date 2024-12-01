@@ -111,8 +111,18 @@ require_once __DIR__ . "/includes/cabecalho.php";
             </div>
         </div>
     </div>
-
 </main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+<script src="/assets/js/beneficio.js"></script>
+<script>
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+
+</script>
 
 <?php
 require_once __DIR__ . "/includes/rodape.php";

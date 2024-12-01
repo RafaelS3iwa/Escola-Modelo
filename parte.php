@@ -27,8 +27,13 @@ require_once __DIR__ . "/includes/cabecalho.php";
                     <p class="nunito_text">Faça agora seu agendamento pelo E-mail ou Whatsapp.</p>
 
                     <div class="botoes_inscrever">
-                        <button><a href="" onclick="window.location.href='mailto:' + 'nihongakko' + '@' + 'nikkeymarilia.com.br'; return false;" target="_blank" class="montserrat_title">E-mail</a></button>
-                        <button><a href="https://wa.me/5514981195399" target="_blank" class="montserrat_title">Whatsapp</a></button>
+                        <button href="" onclick="window.location.href='mailto:' + 'nihongakko' + '@' + 'nikkeymarilia.com.br'; return false;" target="_blank" class="montserrat_title botao_estilizado" aria-label="Clique para enviar um E-mail">E-mail</button>
+                        <a href="https://wa.me/5514981195399"
+                            target="_blank"
+                            class="montserrat_title botao_estilizado"
+                            aria-label="Clique para enviar uma mensagem por WhatsApp">
+                            Whatsapp
+                        </a>
                     </div>
                 </div>
             </div>
@@ -110,8 +115,13 @@ require_once __DIR__ . "/includes/cabecalho.php";
                     <p class="nunito_text">Faça agora seu agendamento pelo E-mail ou Whatsapp.</p>
 
                     <div class="botoes_inscrever">
-                        <button><a href="" onclick="window.location.href='mailto:' + 'nihongakko' + '@' + 'nikkeymarilia.com.br'; return false;" target="_blank" class="montserrat_title">E-mail</a></button>
-                        <button><a href="https://wa.me/5514981195399" target="_blank" class="montserrat_title">Whatsapp</a></button>
+                        <button href="" onclick="window.location.href='mailto:' + 'nihongakko' + '@' + 'nikkeymarilia.com.br'; return false;" target="_blank" class="montserrat_title botao_estilizado" aria-label="Clique para enviar um E-mail">E-mail</button>
+                        <a href="https://wa.me/5514981195399"
+                            target="_blank"
+                            class="montserrat_title botao_estilizado"
+                            aria-label="Clique para enviar uma mensagem por WhatsApp">
+                            Whatsapp
+                        </a>
                     </div>
                 </div>
             </div>
