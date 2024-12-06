@@ -44,7 +44,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                         <h1>1</h1>
                     </div>
                     <div class="topico_texto">
-                        <h1 class="titulo_topico">ESCOLHA SEU CURSO</h1>
+                        <h1 class="poppins">ESCOLHA SEU CURSO</h1>
                         <p class="nunito_text">Decida entre nossas opções de cursos de língua japonesa, aulas culturais, e mais.</p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                         <h1>2</h1>
                     </div>
                     <div class="topico_texto">
-                        <h1 class="titulo_topico">ENTRE EM CONTATO</h1>
+                        <h1 class="poppins">ENTRE EM CONTATO</h1>
                         <p class="nunito_text">Agende uma visita para conhecer nossa escola, os professores e as instalações.</p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                         <h1>3</h1>
                     </div>
                     <div class="topico_texto">
-                        <h1 class="titulo_topico">MATRICULE-SE</h1>
+                        <h1 class="poppins">MATRICULE-SE</h1>
                         <p class="nunito_text">Preencha nosso formulário de inscrição disponível no link abaixo.</p>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                             <h1>1</h1>
                         </div>
                         <div class="topico_texto">
-                            <h1 class="titulo_topico">ESCOLHA SEU CURSO</h1>
+                            <h1 class="poppins">ESCOLHA SEU CURSO</h1>
                             <p class="nunito_text">Decida entre nossas opções de cursos de língua japonesa, aulas culturais, e mais.</p>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                             <h1>2</h1>
                         </div>
                         <div class="topico_texto">
-                            <h1 class="titulo_topico">ENTRE EM CONTATO</h1>
+                            <h1 class="poppins">ENTRE EM CONTATO</h1>
                             <p class="nunito_text">Agende uma visita para conhecer nossa escola, os professores e as instalações.</p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                             <h1>3</h1>
                         </div>
                         <div class="topico_texto">
-                            <h1 class="titulo_topico">MATRICULE-SE</h1>
+                            <h1 class="poppins">MATRICULE-SE</h1>
                             <p class="nunito_text">Preencha nosso formulário de inscrição disponível na secretaria da escola.</p>
                         </div>
                     </div>

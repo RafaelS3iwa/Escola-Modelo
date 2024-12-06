@@ -38,7 +38,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
                 <div class="carousel-item white" href="#one!">
                     <h2>Aumento da capacidade<br>de memorização.</h2>
                     <p> Estudar japonês exige memorização de caracteres kanji, hiragana e katakana, o que ajuda a
-                        exercitar o cérebro, estimula a concentração e a melhora as habilidades cognitivas.
+                        exercitar o cérebro, estimula a concentração e melhora as habilidades cognitivas.
                     </p>
                 </div>
                 <div class="carousel-item white" href="#two!">

@@ -38,6 +38,48 @@ require_once __DIR__ . "/includes/cabecalho.php";
         </div>
     </div>
 
+    <div class="equipe">
+        <div class="conteudo_equipe">
+            <h1 class="montserrat_title">A EQUIPE POR TRÁS DO SITE</h1>
+            <p class="nunito_text">
+                Este projeto é o resultado de um esforço conjunto realizado em 2024, marcado pela dedicação, criatividade, colaboração e resiliência de uma equipe altamente comprometida. 
+                Cada integrante desempenhou um papel fundamental, trazendo suas habilidades únicas para superar desafios e transformar esta visão em realidade.
+
+                <br>A equipe descrita abaixo reflete a composição e os cargos à época da entrega deste projeto, 
+                celebrando a união de talentos e o trabalho árduo que fizeram desta ação um marco importante para a instituição.
+            </p>
+        </div>
+        <div class="equipe_desenvolvimento">
+            <div class="conteudo_equipe">
+                <div class="equipe_membro">
+                    <h1 class="montserrat_title">Diretora - Erika Sasazaki</h1>
+                    <p class="nunito_text">Garantiu que o projeto estivesse alinhado aos objetivos estratégicos da escola, promovendo excelência e coesão.</p>
+                </div>
+                <div class="equipe_membro">
+                    <h1 class="montserrat_title">Professora - Lyca Nakamura</h1>
+                    <p class="nunito_text">Contribuiu com dedicação total, compartilhando sua visão pedagógica e colaborando de forma essencial para o êxito do projeto.</p>
+                </div>
+                <div class="equipe_membro">
+                    <h1 class="montserrat_title">Professora - Agnes Yuba</h1>
+                    <p class="nunito_text">Ofereceu suporte valioso na criação de conteúdos e em outras etapas, enriquecendo o projeto com seu talento e compromisso.</p>
+                </div>
+            </div>
+            <div class="conteudo_equipe">
+                <div class="equipe_membro">
+                    <h1 class="montserrat_title">Gestor de Projeto - Fábio Murakami</h1>
+                    <p class="nunito_text">Liderou as fases de desenvolvimento com foco na integração e eficiência, assegurando a harmonia em cada etapa do processo.</p>
+                </div>
+                <div class="equipe_membro">
+                    <h1 class="montserrat_title">Desenvolvedor - Rafael Inoue</h1>
+                    <p class="nunito_text">Transformou ideias em soluções digitais com precisão técnica, dando vida às propostas de maneira criativa e funcional.</p>
+                </div>
+                <div class="equipe_membro">
+                    <h1 class="montserrat_title">Agradecimentos Especiais</h1>
+                    <p class="nunito_text">Agradecemos profundamente a todos que contribuíram no início, lançando as bases sólidas para o sucesso desta iniciativa.</p>
+                </div>
+            </div>
+        </div>
+
     <div class="faca_parte">
         <div class="texto_parte">
             <h1 class="montserrat_title title1">VENHA!</h1>

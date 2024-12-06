@@ -10,13 +10,13 @@
     --titulo_colorido: #9CC945;
     --verde: #ADEB33;
     --divisoria: #000000;
-    --filtro:  brightness(0) saturate(100%) invert(43%) sepia(95%) saturate(115%) hue-rotate(58deg) brightness(145%) contrast(115%);
+    --filtro: brightness(0) saturate(100%) invert(43%) sepia(95%) saturate(115%) hue-rotate(58deg) brightness(145%) contrast(115%);
     --filtro_seta: brightness(0) saturate(100%) invert(0%) sepia(25%) saturate(5128%) hue-rotate(17deg) brightness(86%) contrast(110%);
     --beneficio-carrossel: #B0C4C4;
     --texto-beneficio: #5B5B5B;
 }
 
-.darkmode{
+.darkmode {
     --primaria: #6A9320;
     --sombra: #3d5511;
     --divisao: #627837;
@@ -34,20 +34,21 @@
     --texto-beneficio: #333333;
 }
 
-.poppins{
+.poppins {
     font-family: "Poppins", sans-serif;
+    font-weight: bold;
     font-size: 1.25rem;
     color: var(--titulo);
 }
 
-.montserrat_title{
+.montserrat_title {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 2.25rem;
     color: var(--titulo);
 }
 
-.nunito_text{
+.nunito_text {
     font-family: "Nunito", sans-serif;
     font-size: 1.7rem;
     color: var(--texto);
@@ -98,6 +99,7 @@ header {
     height: auto;
     max-width: 140px;
     max-height: 135px;
+    margin-left: auto;
 }
 
 .navbar .menu_desktop {
@@ -111,23 +113,18 @@ header .menu_desktop ul {
 }
 
 header .menu_desktop ul li {
-    display: inline-block;
     margin: 0 30px;
-    font-weight: bold;
 }
 
-header .menu_desktop ul li a {
+header .menu_desktop ul li .poppins {
     text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-    white-space: nowrap;
 }
 
 header .menu_desktop ul li .contato_titulo {
     color: #073682;
 }
 
-header .data_theme{
+header .data_theme {
     height: 50px;
     width: 50px;
     padding: 0;
@@ -137,23 +134,23 @@ header .data_theme{
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 20px;  
+    top: 20px;
     right: 20px;
 }
 
-header .data_theme svg{
+header .data_theme svg {
     fill: #073682;
 }
 
-header .data_theme svg:last-child{
+header .data_theme svg:last-child {
     display: none;
 }
 
-.darkmode .data_theme svg:first-child{
+.darkmode .data_theme svg:first-child {
     display: none;
 }
 
-.darkmode .data_theme svg:last-child{
+.darkmode .data_theme svg:last-child {
     display: block;
 }
 
@@ -173,10 +170,7 @@ header .data_theme svg:last-child{
     text-align: right;
 }
 
-.menu_mobile ul li a {
-    font-family: "Poppins", sans-serif;
-    font-weight: bolder;
-    font-size: 20px;
+.menu_mobile ul li .poppins {
     padding: 20px 30px;
     color: var(--branco);
     text-decoration: none;
@@ -191,11 +185,10 @@ header .data_theme svg:last-child{
     display: none;
 }
 
-.menu_mobile .data_theme{
+.menu_mobile .data_theme {
     top: calc(50svh + 15%);
     background-color: var(--texto-beneficio);
 }
-
 
 /* index */
 main {
@@ -205,12 +198,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.conteudo {
-    display: flex;
-    flex-direction: column;
-    margin-right: 50px;
 }
 
 .index {
@@ -257,15 +244,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer; 
+    cursor: pointer;
     margin-top: 20px;
     width: 269px;
     height: 57px;
     background-color: var(--botao);
     border-radius: 41px;
-    color: var(--branco); 
+    color: var(--branco);
     box-shadow: 0px 5px 0px 0px var(--sombra);
-    border: none; 
+    border: none;
 }
 
 .botao .montserrat_title {
@@ -288,10 +275,10 @@ main {
 .sobre .sobre_img {
     margin-right: 20px;
     width: 100%;
-    height: 650px; 
+    height: 650px;
     max-width: 765px;
     max-height: 650px;
-    border-radius: 45px; 
+    border-radius: 45px;
     object-fit: cover;
 }
 
@@ -374,23 +361,24 @@ main {
     flex-wrap: nowrap;
 }
 
-.titulo_kappa .title1 {
-    font-size: 2rem;
+.titulo_kappa .title1,
+.titulo_kappa .title2,
+.titulo_kappa .title3 {
     margin: 0;
     white-space: nowrap;
 }
 
+.titulo_kappa .title1 {
+    font-size: 2rem;
+}
+
 .titulo_kappa .title2 {
     font-size: 2.5rem;
-    margin: 0;
-    white-space: nowrap;
 }
 
 .titulo_kappa .title3 {
     font-size: 3.375rem;
     color: var(--titulo_colorido);
-    margin: 0;
-    white-space: nowrap;
 }
 
 .kappa_flex .nunito_text {
@@ -501,7 +489,7 @@ main {
     color: #0099FF;
 }
 
-.beneficios .links .beneficio img{
+.beneficios .links .beneficio img {
     filter: var(--filtro_seta);
 }
 
@@ -600,8 +588,10 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 120px 100px 350px; /* Top: compensação para o header; Bottom: compensação para o footer */
-    min-height: calc(100vh - 100px - 350px); /* Altura ajustada para header e footer */
+    padding: 120px 100px 350px;
+    /* Top: compensação para o header; Bottom: compensação para o footer */
+    min-height: calc(100vh - 100px - 350px);
+    /* Altura ajustada para header e footer */
     padding: 0 100px;
     background: url(/assets/img/carousel/adultoBg.jpg) no-repeat;
     background-size: cover;
@@ -646,7 +636,7 @@ main {
 
 .contents .montserrat_title.title2 {
     margin-top: -25px;
-    font-size: 3rem;    
+    font-size: 3rem;
     color: var(--branco);
 }
 
@@ -855,6 +845,7 @@ main {
 .botoes_inscrever .botao_estilizado {
     width: 190px;
     height: 41px;
+    cursor: pointer;
     background-color: var(--primaria);
     box-shadow: 0px 5px 0px 0px var(--sombra);
     border-radius: 15px;
@@ -866,7 +857,6 @@ main {
 }
 
 .botoes_inscrever .montserrat_title {
-    text-decoration: none;
     font-size: 1.125rem;
     color: var(--branco);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
@@ -887,9 +877,7 @@ main {
     margin-bottom: 50px;
 }
 
-.topicos .titulo_topico {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
+.topicos .poppins {
     font-size: 2rem;
     color: var(--verde);
     margin-bottom: -10px;
@@ -993,8 +981,42 @@ main {
     font-size: 3rem;
 }
 
-.historia .nunito_text{
+.historia .nunito_text {
     font-size: 1.25rem;
+}
+
+.equipe, .equipe .conteudo_equipe, .equipe .equipe_membro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.equipe .montserrat_title{
+    margin-bottom: -0.5%;
+    color: var(--titulo_colorido);
+}
+
+.equipe .nunito_text{
+    font-size: 1.25rem;
+    width: 55%;
+    text-align: center;
+}
+
+.equipe .equipe_desenvolvimento{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    max-width: 65%;
+}
+
+.equipe .equipe_desenvolvimento .montserrat_title{
+    font-size: 1.75rem;
+}
+
+.equipe .equipe_desenvolvimento .nunito_text{
+    text-align: center;
+    width: 75%;
 }
 
 .faca_parte {
@@ -1020,7 +1042,6 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Ajuste a opacidade conforme necessário */
     z-index: 1;
 }
 
@@ -1212,29 +1233,18 @@ footer .barra {
 }
 
 #footer .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-left: 50px;
-}
-
-#footer .logo img {
     width: 100%;
     height: auto;
-    max-width: 225px;
-    max-height: 225px;
+    max-width: 200px;
+    max-height: 200px;
     margin-bottom: 25px;
+    margin-left: 50px;
 }
 
 #icons {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#icons a {
-    text-decoration: none;
 }
 
 #icons img {
@@ -1258,12 +1268,8 @@ footer .barra {
     height: 37px;
 }
 
-.informacoes a {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
+.informacoes .poppins {
     text-decoration: none;
-    color: var(--titulo);
-    font-size: 1.25rem;
     margin-left: 20px;
 }
 
@@ -1279,11 +1285,7 @@ footer .barra {
 }
 
 /* Mobile ajustes */
-
 @media (max-width: 450px) {
-    .conteudo {
-        margin-right: 0;
-    }
 
     html,
     body {
@@ -1292,7 +1294,6 @@ footer .barra {
 
     /* Header mobile */
     header {
-        align-items: center;
         justify-content: center;
         height: 150px;
     }
@@ -1343,14 +1344,13 @@ footer .barra {
         width: 0;
     }
 
-    .menu_mobile .data_theme{
+    .menu_mobile .data_theme {
         top: calc(25svh + 45%);
     }
 
     header .logo img {
-        max-width: 100px; 
+        max-width: 100px;
         max-height: auto;
-        margin-left: auto; 
         margin-top: 15px;
     }
 
@@ -1359,34 +1359,27 @@ footer .barra {
         height: 100svh;
     }
 
-    .title1 {
-        font-size: 1rem;
+    .montserrat_title {
+        font-size: 2rem;
     }
 
-    .title2 {
-        font-size: 1.25rem;
-    }
-
-    .title3 {
-        font-size: 1.5rem;
+    .nunito_text {
+        font-size: 1.15rem;
     }
 
     /* Main e além Mobile*/
 
     main {
-        padding-top: 0;
-        margin-top: 150px;
+        margin-top: 25px;
         padding-bottom: 100px;
     }
 
     .index {
-        margin-top: -150px;
         background-image: url(/assets/img/complementos/kappaIndexMobile.png);
     }
 
 
     .texto .montserrat_title {
-        font-size: 2rem;
         text-align: center;
     }
 
@@ -1400,24 +1393,15 @@ footer .barra {
         text-align: center;
         padding-right: 25px;
         padding-left: 25px;
-        font-size: 1.15rem;
     }
 
     .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
-        white-space: pre-line;
     }
 
     .botao .botao_estilizado {
         width: 169px;
         height: 36px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--botao);
-        border-radius: 15px;
-        border-style: none;
-        margin-right: 20px;
     }
 
     .botao .montserrat_title {
@@ -1434,7 +1418,6 @@ footer .barra {
         margin-right: 0;
         max-width: 400px;
         max-height: 330px;
-        margin-bottom: 0;
     }
 
     .sobre .montserrat_title {
@@ -1478,8 +1461,8 @@ footer .barra {
         max-width: 250px;
     }
 
-    .texto_sobre .montserrat_title, 
-    .texto_sobre.baixo .montserrat_title  {
+    .texto_sobre .montserrat_title,
+    .texto_sobre.baixo .montserrat_title {
         font-size: 1.2rem;
         margin-bottom: -5px;
         margin-left: -15%;
@@ -1496,12 +1479,9 @@ footer .barra {
     /* index parte3 mobile */
     .kappa {
         margin-top: 0;
-        align-items: center;
     }
 
     .kappa_flex {
-        display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
         gap: 0;
@@ -1526,7 +1506,6 @@ footer .barra {
 
     .kappa_flex .nunito_text {
         font-size: 1.2rem;
-        text-align: justify;
         height: 100%;
     }
 
@@ -1536,8 +1515,6 @@ footer .barra {
         justify-content: center;
         align-items: center;
         text-align: justify;
-        width: 100%;
-        height: 100%;
         max-width: 345px;
         max-height: 565px;
     }
@@ -1548,7 +1525,6 @@ footer .barra {
 
     .textos_kappa .title_kappa,
     .textos_kappa .nunito_text {
-        padding: 0 5px;
         margin: 15px 20px 15px 20px;
     }
 
@@ -1561,18 +1537,12 @@ footer .barra {
     }
 
     .kappa img {
-        width: 100%;
-        height: auto;
         max-width: 283.59px;
         max-height: 256px;
         margin-bottom: -100px;
     }
 
-     /* Benefícios Mobile */
-    .beneficios{
-        margin-top: 0;
-    }
-
+    /* Benefícios Mobile */
     .beneficios .montserrat_title {
         font-size: 2rem;
         text-align: center;
@@ -1585,7 +1555,6 @@ footer .barra {
     }
 
     .beneficios .links {
-        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -1601,21 +1570,15 @@ footer .barra {
         font-size: 1.675rem;
     }
 
-    .beneficios .links .beneficio .montserrat_title.pessoal::after {
-        font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .montserrat_title.cultural::after {
-        font-size: 2rem;
-    }
-
+    .beneficios .links .beneficio .montserrat_title.pessoal::after,
+    .beneficios .links .beneficio .montserrat_title.cultural::after,
     .beneficios .links .beneficio .montserrat_title.profissional::after {
         font-size: 2rem;
     }
 
     .vl {
         border-left: 0;
-        border-top: 2px solid black;
+        border-top: 2px solid var(--divisoria);
         width: 250px;
         height: 0;
     }
@@ -1655,14 +1618,10 @@ footer .barra {
 
     /* cursos mobile */
     .cursos {
-        display: flex;
-        align-items: center;
         justify-content: center;
-        text-align: center;
         flex-direction: column-reverse;
         height: 100%;
         margin-bottom: -100px;
-        margin-top: -50px;
     }
 
     .contents {
@@ -1671,19 +1630,10 @@ footer .barra {
     }
 
     .contents.active {
-        display: block;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        visibility: visible;
-        transform: scale(1);
-        transition: 0.5s;
     }
 
-    .contents .montserrat_title.title1 {
-        font-size: 2rem;
-    }
-
+    .contents .montserrat_title.title1,
     .contents .montserrat_title.title2 {
         font-size: 2rem;
     }
@@ -1713,7 +1663,6 @@ footer .barra {
 
     .content .montserrat_title.title1 {
         font-size: 1.5rem;
-        margin-top: 15px;
     }
 
     .content .nunito_text {
@@ -1772,13 +1721,13 @@ footer .barra {
     .inscrever.mobile .montserrat_title {
         font-size: 2rem;
     }
-    
-    .inscrever.mobile .nunito_text{
+
+    .inscrever.mobile .nunito_text {
         font-size: 1.35rem;
         text-align: justify;
     }
 
-    .segundo{
+    .segundo {
         margin-top: -25%;
     }
 
@@ -1796,19 +1745,16 @@ footer .barra {
     .botoes_inscrever .botao_estilizado {
         width: 171px;
         height: 34px;
-        border-radius: 10px;
         text-align: center;
         margin-bottom: -20px;
     }
 
-    .botoes_inscrever .montserrat_title{
+    .botoes_inscrever .montserrat_title {
         font-size: 1.125rem !important;
     }
 
     .topicos {
-        display: flex;
         justify-content: center;
-        flex-direction: column;
         margin-top: 5rem;
         margin-bottom: 0;
     }
@@ -1820,54 +1766,37 @@ footer .barra {
         align-items: center;
     }
 
-    .topicos .titulo_topico {
-        font-size: 2rem;
-    }
-
     .topicos .topico_texto {
-        text-align: center;
+        text-align: justify;
         align-items: center;
         margin-bottom: 25px;
     }
 
-    .topicos .topico_texto p {
+    .topicos .topico_texto .nunito_text {
         width: auto;
         min-width: 350px;
     }
 
     .topicos .numero_topico {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         margin-bottom: -20px;
         min-width: 95px;
     }
 
-    .numero_topico h1 {
-        font-size: 3rem;
-        -webkit-text-stroke: 2px var(--branco);
-    }
-
     /* Sobre nós mobile */
     .sobre_nos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
         text-align: center;
-        margin-top: 0;
+        margin-top: 100px;
     }
 
     .sobre_nos img {
-        width: 323px;
-        height: 196px;
+        max-width: 323px;
+        max-height: 196px;
         margin-right: 0;
     }
 
     .sobre_nos .conteudo_sobre,
     .historia .conteudo_sobre {
-        text-align: center;
         padding-left: 0;
         padding-right: 0;
     }
@@ -1878,20 +1807,11 @@ footer .barra {
         text-align: center;
     }
 
-    .sobre_nos .nunito_text,
-    .historia .nunito_text {
-        font-size: 1.25rem;
-        text-align: justify;
-    }
-
     .sobre_nos .nunito_text {
         padding-right: 0;
     }
 
     .historia {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column-reverse;
         margin-top: 0;
         gap: 0;
@@ -1902,17 +1822,28 @@ footer .barra {
     }
 
     .imagens img {
-        margin-top: -25%;
+        margin-top: -45%;
         margin-left: 0;
+    }
+
+    .equipe .montserrat_title{
+        font-size: 1.75rem;
+    }
+
+    .equipe .nunito_text, .equipe .equipe_desenvolvimento, .equipe .equipe_desenvolvimento .nunito_text{
+        width: 90%;
+    }
+
+    .equipe .equipe_desenvolvimento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        max-width: 90%;
     }
 
     .faca_parte {
         margin-bottom: -100px;
-    }
-
-    .texto_parte {
-        width: 100%;
-        min-width: 450px;
     }
 
     .faca_parte .montserrat_title.title1 {
@@ -1928,18 +1859,7 @@ footer .barra {
         white-space: pre-line;
     }
 
-    .faca_parte .montserrat_title.title3 {
-        font-size: 3rem;
-        margin: 0;
-        white-space: nowrap;
-        text-decoration: none;
-    }
-
     /* Contato Mobile */
-    .contato {
-        margin-top: 0;
-    }
-
     .contato .montserrat_title {
         font-size: 2.5rem;
     }
@@ -1950,20 +1870,10 @@ footer .barra {
         margin-bottom: 0;
     }
 
-    .contato .cards_contato .card_contato {
-        width: 100%;
-        max-width: 450px;
-        min-width: 350px;
-        min-height: 386px;
-    }
-
     .contato .cards_contato .card_contato .informacoes {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-left: 0;
-        width: auto;
     }
 
     .contato .cards_contato .card_contato .info_topico {
@@ -1980,14 +1890,10 @@ footer .barra {
         margin-right: auto;
     }
 
-    .contato .cards_contato .card_contato.localizacao_card .info_topico p,
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 1.35rem;
     }
 
-    .contato .card_contato.localizacao_card .montserrat_title {
-        margin-top: -20px;
-    }
 
     .contato .card_contato.localizacao_card .montserrat_title::after {
         content: "\A LOCALIZAÇÃO";
@@ -1996,10 +1902,6 @@ footer .barra {
     }
 
     /* Footer mobile*/
-    footer {
-        height: 100svh;
-    }
-
     #footer {
         justify-content: center;
         flex-direction: column;
@@ -2007,57 +1909,20 @@ footer .barra {
     }
 
     #footer .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    #footer .logo img {
-        width: 198.33px;
-        height: 188.28px;
-        margin-bottom: 75px;
-        margin-left: -45px;
-    }
-
-    #footer .logo .titulo_logo {
-        font-size: 1.25rem;
-    }
-
-    #icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 200px;
+        max-height: 200px;
+        margin-left: 0;
     }
 
     #icons img {
-        width: 43.54px;
-        height: 42.91px;
-        margin-right: 25px;
-        margin-left: 35px;
-    }
-
-    .conteudo {
-        margin-top: 50px;
-    }
-
-    .informacoes {
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .informacoes p {
-        font-size: 1rem;
+        max-width: 43.54px;
+        max-height: 42.91px;
+        margin: 35px;
     }
 }
 
 /* Mini Tablet */
 @media (min-width: 451px) and (max-width: 767px) {
-    .conteudo {
-        margin-right: 0;
-    }
-
     html,
     body {
         overflow-x: hidden;
@@ -2065,7 +1930,6 @@ footer .barra {
 
     /* Header Tablet Mini */
     header {
-        align-items: center;
         justify-content: center;
         height: 150px;
     }
@@ -2117,7 +1981,6 @@ footer .barra {
     }
 
     .logo img {
-        margin-left: calc(50% + 95px);
         margin-top: 5px;
     }
 
@@ -2138,58 +2001,50 @@ footer .barra {
         white-space: pre-line;
     }
 
+    /* Main Tablet Mini */
+    main {
+        margin-top: 25px;
+        padding-bottom: 100px;
+    }
+
+    .index {
+        background-image: url(/assets/img/complementos/kappaIndexMobile.png);
+    }
+
+    .texto .montserrat_title {
+        text-align: center;
+    }
+
+    .texto h1::after {
+        content: "\A DA LÍNGUA JAPONESA";
+    }
+
     .texto .nunito_text {
         display: inline;
         text-align: center;
         padding-right: 25px;
         padding-left: 25px;
-        font-size: 1.5rem;
     }
 
     .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
-        white-space: pre-line;
-    }
-
-    .botao .botao_estilizado {
-        width: 200px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--botao);
-        border-radius: 15px;
-        border-style: none;
-        margin-right: 20px;
     }
 
     .botao .montserrat_title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
-    /* Main Tablet Mini */
-    main{
-        padding-bottom: 100px;
-    }
-
-    /* Sobre Tablet Mini */
+    /* Sobre Mobile */
     .sobre {
+        margin-top: 25px;
         flex-direction: column;
-        margin-top: 20px;
         gap: 0;
-    }
-
-    .sobre .conteudo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .sobre .sobre_img {
         margin-right: 0;
-        min-width: 400px;
-        min-height: 300px;
-        margin-bottom: 45px;
+        max-width: 400px;
+        max-height: 330px;
     }
 
     .sobre .montserrat_title {
@@ -2198,22 +2053,16 @@ footer .barra {
     }
 
     .sobre .nunito_text {
-        font-size: 1.25rem;
         text-align: justify;
     }
 
     /* Botões index Sobre */
-    .botoes {
-        margin-top: 35px;
-    }
-
     .botoes img {
         width: 35px;
         height: 35px;
     }
 
     .botoes_sobre {
-        margin-left: 25px;
         margin-bottom: 15px;
     }
 
@@ -2224,11 +2073,7 @@ footer .barra {
     .botao_sobre .botao_estilizado {
         width: 65px;
         height: 65px;
-        border-radius: 15px;
-    }
-
-    .texto_sobre {
-        margin-top: 0;
+        border-radius: 25px;
     }
 
     .texto_sobre .montserrat_title {
@@ -2238,7 +2083,7 @@ footer .barra {
     }
 
     .texto_sobre.baixo .montserrat_title {
-        margin-left: -27%;
+        margin-left: -30%;
     }
 
     .texto_sobre .nunito_text {
@@ -2248,12 +2093,9 @@ footer .barra {
     /* index parte3 Tablet Mini */
     .kappa {
         margin-top: 0;
-        align-items: center;
     }
 
     .kappa_flex {
-        display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
         gap: 0;
@@ -2264,61 +2106,25 @@ footer .barra {
         margin-top: 15px;
     }
 
-    .kappa .kappa_flex .titulo_kappa .title1 {
-        font-size: 1.75rem;
-    }
-
-    .kappa .kappa_flex .titulo_kappa .title2 {
-        font-size: 2.25rem;
-    }
-
-    .kappa .kappa_flex .titulo_kappa .title3 {
-        font-size: 2.75rem;
-    }
-
-    .kappa_flex .nunito_text {
-        font-size: 1.2rem;
-        text-align: center;
-        height: 100%;
-    }
-
     /* card_kappa */
     .card_kappa {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        max-width: 565px;
-        max-height: 445px;
+        max-width: 665px;
+        max-height: 545px;
     }
 
-    .textos_kappa {
-        padding-top: 25px;
-    }
-
-    .card_kappa .nunito_text,
-    .kappa_flex .nunito_text{
-        text-align: justify;
+    .textos_kappa .title_kappa {
+        text-align: center;
     }
 
     .textos_kappa .title_kappa,
     .textos_kappa .nunito_text {
-        padding: 0 5px;
-        margin: 15px 20px 15px 20px;
-    }
-
-    .title_kappa {
-        font-size: 2rem;
-    }
-
-    .textos_kappa .nunito_text {
-        font-size: 1.2rem;
+        margin: 25px 50px 25px 50px;
     }
 
     .kappa img {
-        width: 100%;
-        height: auto;
         max-width: 283.59px;
         max-height: 256px;
     }
@@ -2329,49 +2135,29 @@ footer .barra {
     }
 
     .beneficios .montserrat_title {
-        font-size: 2rem;
+        font-size: 2.25rem;
         text-align: center;
     }
 
     .beneficios .montserrat_title::after {
         content: "\A ESTUDAR JAPONÊS?";
         white-space: pre-line;
-        font-size: 2rem;
     }
 
     .beneficios .links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
         margin-top: 0;
         gap: 15px;
     }
 
-    .beneficios .links .beneficio {
-        gap: 10px;
-    }
-
     .beneficios .links .beneficio .montserrat_title {
-        font-size: 1.675rem;
-    }
-
-    .beneficios .links .beneficio .montserrat_title.pessoal::after {
-        font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .montserrat_title.cultural::after {
-        font-size: 2rem;
-    }
-
-    .beneficios .links .beneficio .montserrat_title.profissional::after {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .vl {
         border-left: 0;
         border-top: 2px solid var(--divisoria);
-        width: 250px;
+        width: 350px;
         height: 0;
     }
 
@@ -2382,13 +2168,13 @@ footer .barra {
     }
 
     .beneficios .beneficios_carrossel img {
-        width: 177px;
-        height: 229.13px;
+        max-width: 283px;
+        max-height: 350px;
     }
 
     .beneficios .beneficios_carrossel .carousel {
-        min-height: 500px;
-        max-height: 550px;
+        max-width: 450.95px;
+        max-height: 475px;
         border-radius: 25px;
     }
 
@@ -2398,25 +2184,21 @@ footer .barra {
 
     .beneficios .beneficios_carrossel .carousel .carousel-item h2 {
         font-size: 1.5rem;
-        margin-top: -100px;
+        margin-top: -20%;
         margin-bottom: -15px;
     }
 
     .beneficios .beneficios_carrossel .carousel .carousel-item p {
         font-size: 1.25rem;
-        width: 250px;
+        max-width: 350px;
     }
 
     /* Cursos Tablet Mini */
     .cursos {
-        display: flex;
-        align-items: center;
         justify-content: center;
-        text-align: center;
         flex-direction: column-reverse;
         height: 100%;
         margin-bottom: -100px;
-        margin-top: -15px;
     }
 
     .contents {
@@ -2424,17 +2206,10 @@ footer .barra {
     }
 
     .contents.active {
-        display: block;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        visibility: visible;
     }
 
-    .contents .montserrat_title.title1 {
-        font-size: 2rem;
-    }
-
+    .contents .montserrat_title.title1,
     .contents .montserrat_title.title2 {
         font-size: 2rem;
     }
@@ -2451,7 +2226,7 @@ footer .barra {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: justify;
         width: 100%;
         height: auto;
         min-width: 450px;
@@ -2464,7 +2239,6 @@ footer .barra {
 
     .content .montserrat_title.title1 {
         font-size: 1.5rem;
-        margin-top: 15px;
     }
 
     .content .nunito_text {
@@ -2495,7 +2269,8 @@ footer .barra {
 
     .parte img {
         width: 350px;
-        height: 200px;
+        height: 280px;
+        margin-bottom: -50px;
     }
 
     .inscrever.mobile {
@@ -2504,7 +2279,7 @@ footer .barra {
         align-items: center;
         text-align: center;
         flex-direction: column;
-        margin-top: -5%;
+        margin-top: -15%;
         margin-bottom: 55rem;
         gap: 0;
     }
@@ -2523,7 +2298,7 @@ footer .barra {
         font-size: 2rem;
     }
 
-    .inscrever.mobile .nunito_text{
+    .inscrever.mobile .nunito_text {
         text-align: justify;
     }
 
@@ -2531,7 +2306,7 @@ footer .barra {
         margin-bottom: 20px;
     }
 
-    .segundo{
+    .segundo {
         margin-top: -15%;
     }
 
@@ -2545,78 +2320,56 @@ footer .barra {
     .botoes_inscrever .botao_estilizado {
         width: 200px;
         height: 50px;
-        border-radius: 10px;
-        text-align: center;
         margin-bottom: -20px;
     }
 
-    .botoes_inscrever .montserrat_title{
-        font-size: 1.25rem !important;
+    .botoes_inscrever .montserrat_title {
+        font-size: 1.25rem;
     }
 
     .topicos {
-        display: flex;
         justify-content: center;
-        flex-direction: column;
         margin-top: 5rem;
         margin-bottom: 0;
     }
 
     .topico {
         justify-content: center;
-        text-align: center;
         flex-direction: column;
         align-items: center;
     }
 
-    .topicos .titulo_card {
-        font-size: 2rem;
-    }
-
     .topicos .topico_texto {
-        text-align: center;
+        text-align: justify;
         align-items: center;
         margin-bottom: 25px;
     }
 
-    .topicos .topico_texto p {
+    .topicos .topico_texto .nunito_text {
         width: auto;
         min-width: 350px;
     }
 
     .topicos .numero_topico {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         margin-bottom: -20px;
         min-width: 95px;
     }
 
-    .numero_topico h1 {
-        font-size: 3rem;
-        -webkit-text-stroke: 2px var(--branco);
-    }
-
     /* Sobre nós Tablet Mini */
     .sobre_nos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
         text-align: center;
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
     .sobre_nos img {
-        width: 323px;
-        height: 196px;
+        max-height: 300px;
+        max-width: 550px;
         margin-right: 0;
     }
 
     .sobre_nos .conteudo_sobre,
     .historia .conteudo_sobre {
-        text-align: justify;
         padding-left: 0;
         padding-right: 0;
     }
@@ -2632,20 +2385,11 @@ footer .barra {
         white-space: pre-line;
     }
 
-
-    .sobre_nos .nunito_text,
-    .historia .nunito_text {
-        font-size: 1.25rem;
-    }
-
     .sobre_nos .nunito_text {
         padding-right: 0;
     }
 
     .historia {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column-reverse;
         margin-top: 0;
         gap: 0;
@@ -2664,32 +2408,14 @@ footer .barra {
         margin-bottom: -100px;
     }
 
-    .faca_parte .montserrat_title.title1 {
-        font-size: 4rem;
-    }
-
-    .faca_parte .montserrat_title.title2 {
-        font-size: 2rem;
-    }
-
     .faca_parte .montserrat_title.title2::after {
         content: "\A ESSA HISTÓRIA FAZENDO";
         white-space: pre-line;
     }
 
-    .faca_parte .montserrat_title.title3 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 3rem;
-        color: var(--primaria);
-        margin: 0;
-        white-space: nowrap;
-        text-decoration: none;
-    }
-
     /* Contato Tablet Mini */
     .contato {
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
     .contato .montserrat_title {
@@ -2703,18 +2429,14 @@ footer .barra {
     }
 
     .contato .cards_contato .card_contato {
-        width: 100%;
-        min-width: 450px;
-        min-height: 386px;
+        min-width: 60.73vw;
+        min-height: 62.26vh;
     }
 
     .contato .cards_contato .card_contato .informacoes {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-left: 0;
-        width: auto;
     }
 
     .contato .cards_contato .card_contato .info_topico {
@@ -2731,20 +2453,9 @@ footer .barra {
         margin-right: auto;
     }
 
-    .contato .cards_contato .card_contato.localizacao_card .info_topico p,
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 1.45rem;
         margin-top: 15px;
-    }
-
-    .contato .cards_contato .card_contato .info_topico .contato_whats {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .contato .card_contato.localizacao_card .montserrat_title {
-        margin-top: -20px;
     }
 
     .contato .card_contato.localizacao_card .montserrat_title::after {
@@ -2754,10 +2465,6 @@ footer .barra {
     }
 
     /* Footer Tablet Mini */
-    footer {
-        height: 100svh;
-    }
-
     #footer {
         justify-content: center;
         flex-direction: column;
@@ -2765,11 +2472,7 @@ footer .barra {
     }
 
     #footer .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        margin-left: 12%;
     }
 
     #footer .logo img {
@@ -2779,21 +2482,10 @@ footer .barra {
         margin-left: -45px;
     }
 
-    #footer .logo .titulo_logo {
-        font-size: 1.25rem;
-    }
-
-    #icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     #icons img {
-        max-width: 35.51px;
-        max-height: 35px;
-        margin-right: 25px;
-        margin-left: 35px;
+        max-width: 43.54px;
+        max-height: 42.91px;
+        margin: 35px;
     }
 
     .conteudo {
@@ -2804,17 +2496,10 @@ footer .barra {
         justify-content: flex-start;
         align-items: center;
     }
-
-    .informacoes p {
-        font-size: 1rem;
-    }
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .conteudo {
-        margin-right: 0;
-    }
 
     html,
     body {
@@ -2823,9 +2508,8 @@ footer .barra {
 
     /* Header Tablet */
     header {
-        align-items: center;
         justify-content: center;
-        height: 200px;
+        height: 175px;
     }
 
     .menu_desktop {
@@ -2834,16 +2518,9 @@ footer .barra {
 
     .menu_mobile {
         background-color: rgba(0, 0, 0, 0.55);
-        backdrop-filter: blur(10px);
-        position: absolute;
-        top: 200px;
-        height: 100vh; /* Experimente altura cheia da tela */
-        min-height: 100%; /* Limita a altura máxima */
-        transition: 0.5s;
-    }
-
-    .menu_mobile ul li a {
-        font-size: 2rem;
+        top: 175px;
+        height: 100vh;
+        min-height: 100%;
     }
 
     #btn_fechar {
@@ -2888,20 +2565,12 @@ footer .barra {
         width: 0;
     }
 
-    .menu_mobile .data_theme{
-        height: 75px;
-        width: 75px;
-        top: calc(25vh + 25%);
-    }
-
-    header .data_theme svg{
-        height: 35px;
-        width: 35px;
+    .menu_mobile .data_theme {
+        top: calc(35% + 25px);
     }
 
     header .logo img {
-        max-height: auto;
-        margin-left: auto; 
+        margin-left: auto;
         margin-top: 15px;
     }
 
@@ -2910,10 +2579,13 @@ footer .barra {
         height: 100svh;
     }
 
-    /* Index Main Tablet */
-    .texto .montserrat_title {
-        font-size: 3rem;
-        text-align: center;
+    /* Main tablet */
+    main {
+        padding-bottom: 100px;
+    }
+
+    .index{
+        margin-top: 200px;
     }
 
     .texto h1::after {
@@ -2922,87 +2594,52 @@ footer .barra {
     }
 
     .texto .nunito_text {
-        display: inline;
-        text-align: center;
-        padding-right: 25px;
-        padding-left: 25px;
-        font-size: 2rem;
+        width: 75%;
     }
 
     .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
-        white-space: pre-line;
     }
 
     .botao .botao_estilizado {
-        width: 269px;
-        height: 57px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 200px;
+        height: 45px;
         background-color: var(--botao);
-        border-radius: 15px;
-        border-style: none;
-        margin-right: 20px;
     }
 
     .botao .montserrat_title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
-    /* Main tablet */
-    main{
-        margin-top: 150px;
-        padding-bottom: 100px;
-    }
-
-    .index {
-        margin-top: -150px;
-        background-image: url(/assets/img/complementos/kappaIndexMobile.png);
-    }
-
-    /* Sobre Tablet */
+    /* Sobre Mobile */
     .sobre {
+        margin-top: 25px;
         flex-direction: column;
-        margin-top: 20px;
         gap: 0;
-    }
-
-    .sobre .conteudo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .sobre .sobre_img {
         margin-right: 0;
-        min-width: 400px;
-        min-height: 300px;
-        margin-bottom: 45px;
+        max-width: 400px;
+        max-height: 330px;
     }
 
     .sobre .montserrat_title {
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
     }
 
     .sobre .nunito_text {
-        font-size: 2rem;
         text-align: justify;
     }
 
     /* Botões index Sobre */
-    .botoes {
-        margin-top: 35px;
-    }
-
     .botoes img {
-        width: 56px;
-        height: 56px;
+        width: 35px;
+        height: 35px;
     }
 
     .botoes_sobre {
-        margin-left: 25px;
         margin-bottom: 15px;
     }
 
@@ -3011,38 +2648,31 @@ footer .barra {
     }
 
     .botao_sobre .botao_estilizado {
-        width: 92px;
-        height: 88px;
-        border-radius: 15px;
-    }
-
-    .texto_sobre {
-        margin-top: 0;
+        width: 65px;
+        height: 65px;
+        border-radius: 25px;
     }
 
     .texto_sobre .montserrat_title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: -10px;
         margin-left: -1%;
     }
 
     .texto_sobre.baixo .montserrat_title {
-        margin-left: calc(-10px - 30%);
+        margin-left: -30%;
     }
 
     .texto_sobre .nunito_text {
-        font-size: 1.75rem;
+        font-size: 1.2rem;
     }
 
     /* index parte3 Tablet Mini */
     .kappa {
         margin-top: 0;
-        align-items: center;
     }
 
     .kappa_flex {
-        display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
         gap: 0;
@@ -3053,52 +2683,27 @@ footer .barra {
         margin-top: 15px;
     }
 
-    .kappa .kappa_flex .titulo_kappa .title1 {
-        font-size: 2rem;
-    }
-
-    .kappa .kappa_flex .titulo_kappa .title2 {
-        font-size: 3rem;
-    }
-
-    .kappa .kappa_flex .titulo_kappa .title3 {
-        font-size: 4rem;
-    }
-
-    .kappa_flex .nunito_text {
-        font-size: 1.75rem;
-        text-align: justify;
-        height: 100%;
-    }
-
     /* card_kappa */
     .card_kappa {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: justify;
-        width: 100%;
-        height: 100%;
-        max-width: 765px;
-        max-height: 575px;
+        max-width: 665px;
+        max-height: 545px;
     }
 
-    .textos_kappa {
-        padding-top: 25px;
+    .textos_kappa .title_kappa {
+        text-align: center;
     }
 
     .textos_kappa .title_kappa,
     .textos_kappa .nunito_text {
-        padding: 0 5px;
-        margin: 15px 20px 15px 20px;
+        margin: 25px 50px 25px 50px;
     }
 
-    .title_kappa {
-        font-size: 3rem;
-    }
-
-    .textos_kappa .nunito_text {
-        font-size: 1.75rem;
+    .kappa img {
+        max-width: 283.59px;
+        max-height: 256px;
     }
 
     /* Benefícios Tablet */
@@ -3237,7 +2842,7 @@ footer .barra {
     .parte {
         flex-direction: column;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 200px;
         margin-bottom: 67.45rem;
         gap: 0;
     }
@@ -3308,8 +2913,6 @@ footer .barra {
     .botoes_inscrever .botao_estilizado {
         width: 300px;
         height: 65px;
-        border-radius: 25px;
-        text-align: center;
         margin-bottom: 20px;
     }
 
@@ -3318,27 +2921,19 @@ footer .barra {
     }
 
     .topicos {
-        display: flex;
         justify-content: center;
-        flex-direction: column;
         margin-top: 5rem;
         margin-bottom: 0;
     }
 
     .topico {
         justify-content: center;
-        text-align: center;
         flex-direction: column;
         align-items: center;
     }
 
-    .topicos .topico_texto .titulo_topico {
-        font-size: 2.5rem;
-        margin-bottom: -15px;
-    }
-
     .topicos .topico_texto {
-        text-align: center;
+        text-align: justify;
         align-items: center;
         margin-bottom: 25px;
     }
@@ -3366,7 +2961,7 @@ footer .barra {
         align-items: center;
         flex-direction: column;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 150px;
     }
 
     .sobre_nos img {
@@ -3396,7 +2991,7 @@ footer .barra {
 
     .sobre_nos .nunito_text,
     .historia .nunito_text {
-        font-size: 1.75rem;
+        font-size: 1.45rem;
         text-align: justify;
     }
 
@@ -3421,6 +3016,21 @@ footer .barra {
         margin-left: 0;
     }
 
+    .equipe .nunito_text{
+        font-size: 1.35rem;
+        width: 75%;
+    }
+    
+    .equipe .equipe_desenvolvimento{
+        margin-top: 0;
+        max-width: 77%;
+    }
+
+    .equipe .equipe_desenvolvimento .nunito_text{
+        width: 77%;
+        font-size: 1.30rem;
+    }
+
     .faca_parte {
         margin-bottom: -100px;
     }
@@ -3438,19 +3048,9 @@ footer .barra {
         white-space: pre-line;
     }
 
-    .faca_parte .montserrat_title.title3 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 3rem;
-        color: var(--primaria);
-        margin: 0;
-        white-space: nowrap;
-        text-decoration: none;
-    }
-
     /* Contato Tablet */
     .contato {
-        margin-top: 50px;
+        margin-top: 150px;
     }
 
     .contato .montserrat_title {
@@ -3530,36 +3130,12 @@ footer .barra {
     }
 
     #footer .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    #footer .logo img {
-        max-width: 324.18px;
-        max-height: 308px;
         margin-bottom: 75px;
-        margin-left: -45px;
-    }
-
-
-    #footer .logo .titulo_logo {
-        font-size: 3rem;
-    }
-
-    #icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-left: 0;
     }
 
     #icons img {
-        max-width: 66px;
-        max-height: 65.05px;
-        margin-right: 25px;
-        margin-left: 35px;
+        margin: 35px;
     }
 
     .conteudo {
@@ -3570,35 +3146,26 @@ footer .barra {
         justify-content: flex-start;
         align-items: center;
     }
-
-    .informacoes a {
-        font-size: 1.5rem;
-    }
 }
 
 /* Específico  */
 @media (min-width: 1024px) and (max-width: 1099px) {
-    .conteudo{
+    .conteudo {
         margin-right: 0;
     }
 
     /* Header Específico */
     header {
-        align-items: center;
         justify-content: center;
         height: 110px;
     }
-    
+
     .menu_desktop {
         display: none;
     }
 
     .menu_mobile {
         top: 80px;
-    }
-
-    .menu_mobile ul li a {
-        font-size: 1rem;
     }
 
     #btn_fechar {
@@ -3645,10 +3212,9 @@ footer .barra {
 
 
     header .logo img {
-        margin-left: auto;
-        margin-top: 5px;
-        max-width: 100px; 
+        max-width: 100px;
         max-height: auto;
+        margin-top: 5px;
     }
 
     .menu_mobile.abrir {
@@ -3657,13 +3223,13 @@ footer .barra {
         height: 100svh;
     }
 
-    .menu_mobile .data_theme{
+    .menu_mobile .data_theme {
         height: 35px;
         width: 35px;
         top: calc(50svh + 18%);
     }
 
-    header .data_theme svg{
+    header .data_theme svg {
         height: 25px;
         width: 25px;
     }
@@ -3673,11 +3239,11 @@ footer .barra {
         padding-bottom: 100px;
     }
 
-    .index{
+    .index {
         margin-top: -20px;
     }
 
-    .index .texto{
+    .index .texto {
         margin-top: 150px;
     }
 
@@ -3700,19 +3266,11 @@ footer .barra {
 
     .texto p::after {
         content: " de Marilia onde cada aula é uma aventura cultural única!";
-        white-space: pre-line;
     }
 
     .botao .botao_estilizado {
         width: 200px;
         height: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--botao);
-        border-radius: 15px;
-        border-style: none;
-        margin-right: 20px;
     }
 
     .botao .montserrat_title {
@@ -3726,17 +3284,10 @@ footer .barra {
         gap: 0;
     }
 
-    .sobre .conteudo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .sobre .sobre_img {
         margin-right: 0;
         max-width: 400px;
         max-height: 300px;
-        margin-bottom: 0;
     }
 
     .sobre .montserrat_title {
@@ -3835,9 +3386,6 @@ footer .barra {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        width: 100%;
-        height: auto;
         max-width: 889px;
         max-height: 500px;
     }
@@ -3858,12 +3406,9 @@ footer .barra {
 
     .textos_kappa .nunito_text {
         font-size: 1.5rem;
-        text-align: justify;
     }
 
     .kappa img {
-        width: 100%;
-        height: auto;
         max-width: 279px;
         max-height: 334px;
         padding: 5px;
@@ -3933,10 +3478,9 @@ footer .barra {
     .contents {
         margin-bottom: 75px;
     }
-    
 
     .contents .montserrat_title.title2 {
-        font-size: 2.5rem;    
+        font-size: 2.5rem;
     }
 
     .content {
@@ -3950,11 +3494,10 @@ footer .barra {
     .contents .montserrat_title.title1 {
         font-size: 2rem;
     }
-    
+
     .contents .montserrat_title.title2 {
-        font-size: 2.25rem;    
+        font-size: 2.25rem;
     }
-    
 
     .content .nunito_text {
         font-size: 1.15rem;
@@ -3973,11 +3516,11 @@ footer .barra {
         margin-top: 150px;
     }
 
-    .parte img{
+    .parte img {
         margin-right: 50px;
     }
 
-    .parte .conteudo{
+    .parte .conteudo {
         margin-top: -10%;
     }
 
@@ -3986,12 +3529,12 @@ footer .barra {
         width: 500px;
     }
 
-    .inscrever.desktop{
+    .inscrever.desktop {
         margin-bottom: -10%;
         gap: 35px;
     }
 
-    .inscrever.desktop .conteudo2{
+    .inscrever.desktop .conteudo2 {
         margin-right: 50px;
         margin-left: auto;
     }
@@ -4024,12 +3567,12 @@ footer .barra {
         margin-bottom: 15px;
     }
 
-    .topico .topico_texto{
+    .topico .topico_texto {
         width: 27rem;
     }
-    
-    .topicos .titulo_topico {
-        font-size: 1.75rem;
+
+    .topicos .poppins {
+        font-size: 1.5rem;
     }
 
     .topicos .numero_topico {
@@ -4042,17 +3585,12 @@ footer .barra {
 
     /* Sobre Nós Específico */
     .sobre_nos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
         text-align: center;
         margin-top: 75px;
     }
 
     .sobre_nos img {
-        width: 100%;
-        height: auto;
         max-width: 460px;
         max-height: 296px;
         margin-right: 0;
@@ -4060,7 +3598,6 @@ footer .barra {
 
     .sobre_nos .conteudo_sobre,
     .historia .conteudo_sobre {
-        text-align: center;
         padding-left: 0;
         padding-right: 0;
         width: 75%;
@@ -4072,26 +3609,11 @@ footer .barra {
         text-align: center;
     }
 
-    .conteudo_sobre .title1::after {
-        content: "\A ESCOLA MODELO";
-        white-space: pre-line;
-    }
-
-
-    .sobre_nos .nunito_text,
-    .historia .nunito_text {
-        font-size: 1.5rem;
-        text-align: justify;
-    }
-
     .sobre_nos .nunito_text {
         padding-right: 0;
     }
 
     .historia {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column-reverse;
         gap: 0;
         margin-top: 0;
@@ -4102,10 +3624,26 @@ footer .barra {
     }
 
     .imagens img {
-        width: 450px;
-        height: 354.88px;
         margin-left: 0;
         margin-top: -25%;
+    }
+
+    .equipe .nunito_text{
+        width: 72%;
+    }
+
+    .equipe .equipe_desenvolvimento{
+        margin-top: 0;
+        max-width: 80%;
+    }
+
+    .equipe .equipe_desenvolvimento .conteudo_equipe{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .equipe .equipe_desenvolvimento .nunito_text{
+        width: 80%;
     }
 
     .faca_parte {
@@ -4113,11 +3651,7 @@ footer .barra {
     }
 
     .faca_parte .montserrat_title.title1 {
-        font-size: 4rem;
-    }
-
-    .faca_parte .montserrat_title.title2 {
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     .faca_parte .montserrat_title.title2::after {
@@ -4125,80 +3659,74 @@ footer .barra {
         white-space: pre-line;
     }
 
-    .faca_parte .montserrat_title.title3 {
-        font-size: 3rem;
-    }
-
     /* Contato Específico */
     .contato {
         margin-top: 75px;
         margin-bottom: -8%;
     }
-    
+
     .contato .montserrat_title {
         font-size: 2.25rem;
-        margin-bottom: 25px;
     }
-    
+
     .contato .cards_contato {
         gap: 50px;
         margin-bottom: 50px;
     }
-    
+
     .contato .cards_contato .card_contato {
-        width: 100%;
         max-width: 50vw;
         max-height: 50.26vh;
     }
-    
+
     .contato .cards_contato .card_contato .montserrat_title {
         font-size: 1.5rem;
         margin-top: 25px;
         margin-bottom: -5%;
     }
-    
+
     .contato .cards_contato .card_contato .informacoes {
         margin-left: 50px;
         margin-top: 50px;
     }
-    
+
     .contato .cards_contato .card_contato .info_topico {
         margin-bottom: 25px;
     }
-    
+
     .contato .cards_contato .card_contato .info_topico .title_topico {
         font-size: 1.15rem;
         margin-right: 15px;
     }
-    
+
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 1rem;
     }
-    
+
     .contato .card_contato.localizacao_card .montserrat_title {
         margin-top: 15px;
     }
-    
+
     .contato .card_contato.localizacao_card .montserrat_title::after {
         content: " LOCALIZAÇÃO";
     }
-    
-    
+
+
     .contato .card_contato.localizacao_card .localizacao p {
         font-size: 1.15rem;
         margin-bottom: 30px;
     }
-    
+
     .contato .card_contato.localizacao_card .google {
         gap: 10px;
     }
-    
+
     .contato .card_contato.localizacao_card .google a {
         font-size: 1.15rem;
         font-weight: bold;
         color: var(--branco);
     }
-    
+
     .contato .card_contato.localizacao_card .google img {
         width: 27px;
         height: 27px;
@@ -4215,63 +3743,42 @@ footer .barra {
         height: max-content;
     }
 
-    #footer .logo img {
-        max-width: 224.18px;
-        max-height: 208px;
-        margin-bottom: 55px;
+    #footer .logo {
+        max-width: 150px;
+        max-height: 150px;
+        margin-left: -5px;
     }
 
     #icons img {
-        max-width: 46px;
-        max-height: 45.05px;
-        margin-right: auto;
-        margin-left: 45px;
+        max-width: 43.54px;
+        max-height: 42.91px;
+        margin: 35px;
     }
 
     .conteudo {
-        margin-top: 50px;
-    }
-
-    .informacoes {
-        margin-left: 55px;
-    }
-
-    .informacoes img {
-        width: 27px;
-        height: 27px;
-    }
-
-    .informacoes a {
-        font-size: 1rem;
+        margin-top: 25px;
     }
 }
 
 /* Tablet Horizontal */
 @media (min-width: 1100px) and (max-width: 1280px) {
-    .conteudo{
-        margin-right: 0;
-    }
-
     header .menu_desktop ul li {
         margin: 0 15px;
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     /* Index Tablet Horizontal */
-    .index {
-        width: 100%;
-        max-width: 1450px;
-        min-width: 1026px;
+    .index{
+        padding-top: 200px;
     }
 
     /* Sobre Tablet Horizontal */
-
     .sobre {
-        gap: 50px;
+        margin-top: 25px;
     }
 
     .sobre .sobre_img {
-        margin-left: 5%;
+        margin-left: 2%;
         min-width: 565px;
         min-height: 516px;
     }
@@ -4294,9 +3801,6 @@ footer .barra {
     }
 
     .botao_sobre .botao_estilizado {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 62px;
         height: 58px;
         background-color: var(--botao);
@@ -4355,6 +3859,21 @@ footer .barra {
         height: 150px;
     }
 
+    .beneficios .beneficios_carrossel img {
+        max-width: 383px;
+        max-height: 500px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel {
+        max-width: 550.95px;
+        min-height: 605px;
+        border-radius: 25px;
+    }
+
+    .beneficios .beneficios_carrossel .carousel .carousel-item h2 {
+        margin-top: -20%;
+    }
+
     .beneficios .beneficios_carrossel .carousel .carousel-item p {
         width: 525px;
     }
@@ -4368,10 +3887,10 @@ footer .barra {
     .contents {
         margin-bottom: 75px;
     }
-    
+
 
     .contents .montserrat_title.title2 {
-        font-size: 2.5rem;    
+        font-size: 2.5rem;
     }
 
     .content {
@@ -4402,7 +3921,7 @@ footer .barra {
         margin-bottom: 0;
     }
 
-    .parte img{
+    .parte img {
         margin-right: 100px;
     }
 
@@ -4411,11 +3930,11 @@ footer .barra {
         width: 500px;
     }
 
-    .inscrever.desktop{
+    .inscrever.desktop {
         padding-bottom: 50px;
     }
 
-    .inscrever.desktop .conteudo2{
+    .inscrever.desktop .conteudo2 {
         margin-right: 50px;
         margin-left: auto;
     }
@@ -4435,13 +3954,13 @@ footer .barra {
         font-size: 1.5rem;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     }
-    
+
     /* Tópicos Tablet Horizontal */
     .topicos {
         margin-top: 50px;
     }
 
-    .topicos .topico{
+    .topicos .topico {
         margin-bottom: 0;
     }
 
@@ -4464,26 +3983,13 @@ footer .barra {
         padding: 20px;
     }
 
-    .sobre_nos {
-        margin-left: 0;
-    }
-
-    .sobre_nos img {
-        margin-right: 0;
-    }
-
     .sobre_nos .conteudo_sobre,
     .historia .conteudo_sobre {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .sobre_nos .montserrat_title,
-    .historia .montserrat_title {
-        font-size: 2.5rem;
-    }
-
-    .sobre_nos .nunito_text{
+    .sobre_nos .nunito_text {
         padding-right: 45px;
     }
 
@@ -4502,6 +4008,24 @@ footer .barra {
         margin-right: 15px;
     }
 
+    .equipe .nunito_text{
+        width: 72%;
+    }
+
+    .equipe .equipe_desenvolvimento{
+        margin-top: 0;
+        max-width: 80%;
+    }
+
+    .equipe .equipe_desenvolvimento .conteudo_equipe{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .equipe .equipe_desenvolvimento .nunito_text{
+        width: 70%;
+    }
+
     /* Contato Tablet Horizontal */
     .contato .cards_contato .card_contato {
         min-width: 44.73vw;
@@ -4513,7 +4037,7 @@ footer .barra {
         font-size: 1.25rem;
         margin-right: 0.5rem;
     }
-    
+
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 1.25rem;
     }
@@ -4521,14 +4045,15 @@ footer .barra {
     .contato .card_contato.localizacao_card .localizacao p {
         font-size: 1.25rem;
     }
-    
+
     .contato .card_contato.localizacao_card .google a {
         font-size: 1.25rem;
     }
 }
 
-@media (min-width: 1281px) and (max-width: 1451px){
-    .conteudo{
+/* Notebook */
+@media (min-width: 1281px) and (max-width: 1451px) {
+    .conteudo {
         margin-right: 0;
     }
 
@@ -4537,19 +4062,11 @@ footer .barra {
         font-size: 20px;
     }
 
-    /* Index Tablet Horizontal */
-    .index {
-        width: 100%;
-        max-width: 1450px;
-        min-width: 1026px;
-    }
-
-    .index .texto{
+    .index .texto {
         margin-top: 100px;
     }
 
-    /* Sobre Tablet Horizontal */
-
+    /* Sobre Notebook */
     .sobre {
         gap: 50px;
     }
@@ -4578,15 +4095,9 @@ footer .barra {
     }
 
     .botao_sobre .botao_estilizado {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 62px;
-        height: 58px;
-        background-color: var(--botao);
-        border-radius: 15px;
-        border-style: none;
-        margin-right: 20px;
+        width: 65px;
+        height: 65px;
+        border-radius: 25px;
     }
 
     .texto_sobre {
@@ -4602,7 +4113,7 @@ footer .barra {
         font-size: 1.25rem;
     }
 
-    /* Index Parte3  Tablet Horizontal */
+    /* Index Parte3  Notebook */
     .kappa_flex {
         gap: 50px;
     }
@@ -4623,7 +4134,7 @@ footer .barra {
         height: 500px;
     }
 
-    /* Benefícios Tablet Horizontal */
+    /* Benefícios Notebook */
     .beneficios .links {
         gap: 35px;
     }
@@ -4661,7 +4172,7 @@ footer .barra {
         font-size: 1.25rem;
     }
 
-    /* Cursos Tablet Horizontal */
+    /* Cursos Notebook */
     .cursos {
         padding: 0 50px;
         margin-top: 50px;
@@ -4672,10 +4183,9 @@ footer .barra {
     .contents {
         margin-bottom: 75px;
     }
-    
 
     .contents .montserrat_title.title2 {
-        font-size: 2.5rem;    
+        font-size: 2.5rem;
     }
 
     .content {
@@ -4699,14 +4209,14 @@ footer .barra {
         min-width: 950px;
     }
 
-    /* Faça Parte Tablet Horizontal */
+    /* Faça Parte Notebook */
     .parte {
         gap: 100px;
         width: 100%;
         margin-bottom: 0;
     }
 
-    .parte img{
+    .parte img {
         margin-right: 100px;
     }
 
@@ -4715,11 +4225,11 @@ footer .barra {
         width: 500px;
     }
 
-    .inscrever.desktop{
+    .inscrever.desktop {
         padding-bottom: 50px;
     }
 
-    .inscrever.desktop .conteudo2{
+    .inscrever.desktop .conteudo2 {
         margin-right: 50px;
         margin-left: auto;
     }
@@ -4739,13 +4249,13 @@ footer .barra {
         font-size: 1.5rem;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     }
-    
-    /* Tópicos Tablet Horizontal */
+
+    /* Tópicos Notebook */
     .topicos {
         margin-top: 50px;
     }
 
-    .topicos .topico{
+    .topicos .topico {
         margin-bottom: 0;
     }
 
@@ -4761,7 +4271,7 @@ footer .barra {
         min-width: 100px;
     }
 
-    /* Sobre Nós Tablet Horizontal */
+    /* Sobre Nós Notebook */
     .sobre_nos,
     .historia {
         margin-top: 100px;
@@ -4772,7 +4282,7 @@ footer .barra {
         margin-left: 0;
     }
 
-    .sobre_nos .conteudo_sobre{
+    .sobre_nos .conteudo_sobre {
         margin-right: 75px;
         margin-left: 50px;
     }
@@ -4794,7 +4304,7 @@ footer .barra {
         font-size: 2.5rem;
     }
 
-    .sobre_nos .nunito_text{
+    .sobre_nos .nunito_text {
         width: 600px;
         padding-right: 0;
     }
@@ -4814,7 +4324,7 @@ footer .barra {
         margin-right: 15px;
     }
 
-    /* Contato Tablet Horizontal */
+    /* Contato Notebook */
     .contato .cards_contato .card_contato {
         min-width: 44.73vw;
         min-height: 350px;
@@ -4824,7 +4334,7 @@ footer .barra {
         font-size: 1.25rem;
         margin-right: 0.5rem;
     }
-    
+
     .contato .cards_contato .card_contato .info_topico a {
         font-size: 1.25rem;
     }
@@ -4832,9 +4342,8 @@ footer .barra {
     .contato .card_contato.localizacao_card .localizacao p {
         font-size: 1.25rem;
     }
-    
+
     .contato .card_contato.localizacao_card .google a {
         font-size: 1.25rem;
     }
-
 }
