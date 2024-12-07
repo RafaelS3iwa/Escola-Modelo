@@ -87,7 +87,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
 
                 <div class="content">
                     <h1 class="montserrat_title title1">CARGA HORÁRIA</h1>
-                    <p class="nunito_text">Sábado das 9:00 - 10:30 hrs</p>
+                    <p class="nunito_text">Sábado das 9:00 - 10:30 hrs.</p>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
             <div class="conteudos">
                 <div class="content">
                     <h1 class="montserrat_title title1">IDADE PARA O CURSO</h1>
-                    <p class="nunito_text">A partir de 7 anos de idade</p>
+                    <p class="nunito_text">A partir de 7 anos de idade.</p>
                 </div>
 
                 <div class="content">
@@ -145,7 +145,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
 
                 <div class="content">
                     <h1 class="montserrat_title title1">CARGA HORÁRIA</h1>
-                    <p class="nunito_text">2 aulas semanais de 50 minutos</p>
+                    <p class="nunito_text">2 aulas semanais de 50 minutos.</p>
                 </div>
             </div>
         </div>
@@ -159,7 +159,7 @@ require_once __DIR__ . "/includes/cabecalho.php";
             <div class="conteudos">
                 <div class="content">
                     <h1 class="montserrat_title title1">IDADE PARA O CURSO</h1>
-                    <p class="nunito_text">A partir de 13 anos de idade</p>
+                    <p class="nunito_text">A partir de 13 anos de idade.</p>
                 </div>
 
                 <div class="content">

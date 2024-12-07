@@ -1345,7 +1345,7 @@ footer .barra {
     }
 
     .menu_mobile .data_theme {
-        top: calc(25svh + 45%);
+        top: calc(50svh + 20%);
     }
 
     header .logo img {
@@ -2500,7 +2500,6 @@ footer .barra {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
-
     html,
     body {
         overflow-x: hidden;
@@ -2566,7 +2565,7 @@ footer .barra {
     }
 
     .menu_mobile .data_theme {
-        top: calc(35% + 25px);
+        top: 65%;
     }
 
     header .logo img {
